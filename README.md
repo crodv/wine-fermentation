@@ -1,56 +1,62 @@
 # Wine fermentation
 
-Proyecto independiente para revisar los datos y reconstruir el modelo de fermentación de mosto natural.
+Modelo de mosto natural con cinco estados: biomasa viable X, YAN N, glucosa G, fructosa F y etanol E.
+La mortalidad se conserva en X. Se eliminaron los estados de biomasa muerta y glicerol, y los dos parámetros de producción de glicerol.
+La capa de CO₂ conserva su formulación histórica v3 completa.
 
-## Pruebas de compatibilidad disponibles
+## Notebooks activos
 
-| Prueba | SOURCE | EXECUTED |
+| Ensayo | SOURCE (sin resultados) | EXECUTED (resultados y figuras) |
 |---|---|---|
-| Estados LAB004–009, tres theta | [Código](notebooks/01_current_model_theta_comparison.source.ipynb) | [Resultados y figuras](notebooks/01_current_model_theta_comparison.executed.ipynb) |
-| Química y CO₂ LAB016–021, formulación principal v3 | [Código](notebooks/02_current_co2_v3_comparison.source.ipynb) | [Resultados y figuras](notebooks/02_current_co2_v3_comparison.executed.ipynb) |
+| Recalibración química LAB004–009 | [Código](notebooks/01_recalibration_theta_nv2.source.ipynb) | [Resultados](notebooks/01_recalibration_theta_nv2.executed.ipynb) |
+| Evaluación química LAB019–021 y CO₂ LAB016–021 | [Código](notebooks/02_co2_theta_nv2.source.ipynb) | [Resultados](notebooks/02_co2_theta_nv2.executed.ipynb) |
 
-Estas pruebas conservan el modelo actual de siete estados, incluyendo biomasa muerta, glicerol, mortalidad y mantenimiento atenuado. La capa de CO₂ conserva oxígeno, activación, trayectorias con/sin nutrición, multiplicador transitorio y reservorio implícito. Constituyen una referencia de migración; todavía no aplican las simplificaciones discutidas para el modelo nuevo.
+Ejecutar SOURCE desde un kernel limpio del entorno Conda oficial `fermentation`, activado completamente con sus scripts de `activate.d`.
+Los notebooks localizan la raíz y leen `src/`; no requieren instalar el paquete ni leer `pyomo-doe`.
+Los SOURCE y EXECUTED contienen las mismas celdas. Cada SOURCE vuelve a ejecutar los ajustes; para consultar curvas abrir EXECUTED.
 
-## Parámetros
+## Parámetros y recalibración
 
-Los tres vectores de diecisiete parámetros están en `configs/theta/`:
+`configs/theta/theta_full.json` y `theta_new.json` son copias históricas intactas en la parametrización efectiva anterior.
+El cargador las convierte de forma algebraica a parámetros físicos, sin corregir sus valores.
+`theta_nv2.json` contiene los 15 parámetros físicos del modelo reducido; **no es intercambiable directamente con un vector antiguo de 17 parámetros**.
+`theta_defaults.json` queda como referencia de los notebooks históricos.
 
-- `theta_full.json`: vector natural completo histórico.
-- `theta_new.json`: reajuste de la rama `recalibration`; no es el ajuste con rendimientos restringidos.
-- `theta_defaults.json`: definición utilizada por los notebooks históricos y v3: `theta_full` con **solo seis** parámetros heredados (`sN`, `qXG`, `qXF`, `sG`, `sF`, `m0`) sustituidos por sus defaults. No es el vector completo `DEFAULT_THETA`.
+La optimización parte exactamente de theta_full. Como su Y_E/F excede 0.5114, SLSQP admite ese inicio no factible;
+después se refina mediante mínimos cuadrados acotados. Ambos rendimientos de etanol están limitados a 0.5114 g/g.
+Se ajustan mu0, Yxn, betaG0, betaF0, Yeg, Yef, Kig0, Kie0 y Kd0.
+Se mantienen Kn0, Kg0, Kf0, Yxg, Yxf y m0 en theta_full. Fijar magnitudes físicas difiere de fijar sus antiguos cocientes s/q.
+El objetivo usa muestras posteriores a la inicial de X, N, G, F y E de LAB004–009 depurados, con los errores de medición históricos.
+No se ajustan iniciales, horarios de nutrición, temperatura ni leyes térmicas. Intentos de integración con estados negativos sustanciales se rechazan.
+Las cotas operativas y el inicio exacto se registran en el notebook y los resultados. No se afirma óptimo global ni identificabilidad.
 
-La comparación de estados no recalibra ningún theta. En CO₂ los theta también permanecen congelados: Z1 ajusta únicamente `matrix_gain`; Z2 ajusta `kCO2_release_h`, `CO2sat_scale` y `matrix_gain`. Se presentan ajuste conjunto descriptivo y transferencias entre LAB019–021 y LAB016–018. Las mezclas positivas exploratorias de v3 no se incluyen porque cambian la formulación.
+En CO₂ se comparan primero los tres theta con los mismos coeficientes de capa congelados del ensayo anterior.
+Después Z1 ajusta ganancia y Z2 liberación, escala de saturación y ganancia, conservando la fuente, oxígeno y nutrición.
+LAB019–021 no participa en la recalibración química. Si se usa para calibrar gas, es entrenamiento de gas;
+la transferencia de gas se evalúa por separado en LAB016–018 y en sentido inverso. `all_six` es descriptivo.
 
-## Ejecución
+## Organización
 
-Usar el entorno oficial Conda `fermentation`, activado con sus scripts de `activate.d`. Abrir un SOURCE con ese kernel y ejecutar todas sus celdas desde un kernel limpio. El notebook localiza la raíz del proyecto y carga las funciones de `src/`; no requiere instalación editable. No se ha instalado ni actualizado ningún paquete.
+- `src/wine_fermentation/model.py`: cinco estados y parámetros físicos.
+- `src/wine_fermentation/co2.py`: funciones históricas de CO₂ conectadas a cinco estados.
+- `src/wine_fermentation/data.py`: preparación común LAB004–009.
+- `notebooks/`: los dos ensayos activos, cada uno SOURCE/EXECUTED.
+- `notebooks/historical/`: los cuatro notebooks de comprobación anteriores, con sus resultados retenidos y sus imports actualizados.
+- `src/wine_fermentation/historical/`: implementación de siete estados que permite ejecutar esas comprobaciones sin usar el modelo nuevo.
+- `configs/recalibration_nv2.json`: selección de parámetros, convergencia y objetivo químico.
+- `results/co2_fit_parameters.csv`: único resultado externo, con los coeficientes Z1/Z2 de CO₂ del ensayo nuevo a precisión completa.
+- `configs/co2_reference_parameters.csv`: coeficientes anteriores, congelados para la comparación; no se sobrescriben al ejecutar los notebooks históricos.
+- `data/original/` y `data/cleaned/`: fuentes originales y depuradas **separadas e intactas**.
+- `data/compatibility/`: entradas derivadas mínimas y referencias de las pruebas ya copiadas; no sustituyen los archivos experimentales originales.
+- `data/sources.csv`: inventario y hashes de la copia inicial.
+- `docs/model.md`: ecuaciones activas y alcance de la reducción.
+- `docs/memoria/`: documento de titulación y archivos asociados, conservados sin cambios.
+- `docs/reference/`: auditoría temporal conservada por solicitud del usuario.
 
-Los SOURCE se conservan sin outputs ni contadores. Los EXECUTED contienen las mismas celdas de código y Markdown, ejecutadas sin errores. Todas las figuras permanecen inline; los CSV numéricos están en `results/compatibility_states/` y `results/compatibility_co2_v3/`.
+Los horarios propuestos de nutrición LAB004–009 siguen siendo supuestos, no registros confirmados.
+Se conserva la diferencia entre iniciales medidas, homologadas o estimadas de los ensayos anteriores.
+La reproducción numérica no valida por sí misma los mecanismos históricos de CO₂.
 
-## Organización y datos
+## Política de resultados
 
-- `data/original/`: fuentes conservadas, sin sobrescribirlas. `CO2_FILT` identifica exportaciones previamente filtradas. La ubicación de un libro como fuente no convierte sus valores heredados u homologados en mediciones directas.
-- `data/cleaned/`: datos depurados separados. LAB004–012 tiene Excel original y depurado independientes. LAB019–021 conserva su CSV YAN corregido y el Excel original separado; todavía no se ha creado otro Excel depurado.
-- `data/processed/`: reservado para la preparación nueva.
-- `data/sources.csv`: inventario de la copia inicial y sus hashes.
-- `data/compatibility/`: entradas derivadas mínimas y referencias archivadas necesarias **solo para estas pruebas autorizadas**. No sustituyen las fuentes originales ni definen el futuro procedimiento de preparación.
-- `configs/compatibility_provenance.json`: procedencia y hashes de las funciones, vectores y entradas de compatibilidad.
-- `src/wine_fermentation/current_model.py`: ecuaciones, integrador y preparación mínima actuales; funciones extraídas estáticamente y verificadas sin cambiar sus cuerpos.
-- `src/wine_fermentation/current_co2.py`: funciones compartidas de fuente y simulación utilizadas por la prueba v3. Las funciones específicas de filtrado y ajuste están dentro de su SOURCE.
-- `tests/reference/original_core_predictions.npz`: referencias del RHS y del integrador para comprobar el traslado.
-- `references/Zenteno_2010.pdf`: fuente bibliográfica.
-- `docs/reference/temporal_audit_lab001_018_2026-09-09.md`: auditoría histórica conservada sin editar. Sus rutas y conclusiones corresponden a su contexto original; no es la especificación del modelo nuevo.
-
-El Excel natural original procede de `main`, commit `3b1d20d99c08e7186b14802b37db964571de0ca3`; el depurado y `theta_new`, de `recalibration`, commit `16a8500ac3ca79260e0ba59f9657f82724a2f2de`. Los datos completos de CO₂ y temperatura LAB019–021 son archivos reales materializados desde los objetos LFS. Los notebooks nuevos no leen ni importan archivos desde `pyomo-doe` o su `.git`.
-
-## Verificaciones y alcance
-
-`results/notebook_execution_checks.json` registra identidad SOURCE/EXECUTED, figuras, errores, paridad y conservación de fuentes. El RHS y las trayectorias de comprobación coinciden con las referencias originales; también se comparan las observaciones procesadas y las curvas v3 con parámetros congelados.
-
-Las referencias CSV de comparación se leen con `float_precision='round_trip'`: redondear tiempos casi coincidentes con un pulso puede alterar la comparación puntual del flujo. Esta precisión de lectura no cambia las ecuaciones ni deduplica la malla histórica.
-
-`results/compatibility_co2_v3/refit_vs_archived.csv` muestra por separado los nuevos reajustes Z1/Z2 frente a los archivados. La equivalencia de ecuaciones se comprueba con parámetros congelados; un reajuste local puede terminar en un mínimo numérico distinto. No se afirma unicidad ni óptimo global.
-
-Las condiciones iniciales y nutriciones se mantienen según cada prueba histórica. Los horarios propuestos de LAB004–009 siguen siendo supuestos, no registros confirmados. Que las pruebas se ejecuten y reproduzcan referencias no valida todos los mecanismos ni resuelve los rendimientos físicos históricos.
-
-Git no está inicializado y no se modificó el repositorio anterior. La especificación del modelo definitivo y cualquier simplificación se desarrollarán por separado.
+Las figuras, tablas y comprobaciones se consultan en los EXECUTED sin ejecutar ni leer `results/`. Los notebooks activos y archivados no exportan PNG, trayectorias, métricas, trazas ni checkpoints auxiliares. El notebook químico conserva theta_nv2 y su registro en `configs/`; el de CO₂ guarda únicamente `results/co2_fit_parameters.csv`. Para recalcular o actualizar un ajuste se ejecuta su SOURCE. Las ejecuciones antiguas de los EXECUTED se conservaron; la limpieza no repitió optimizaciones.

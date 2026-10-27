@@ -1,1 +1,1 @@
-"""Independent prediction checks for wine fermentation."""
+"""Five-state natural-must fermentation model and retained historical CO2 layer."""

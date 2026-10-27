@@ -1,0 +1,60 @@
+{
+  "initial_theta": "theta_full",
+  "initial_exact": true,
+  "parameterization": "physical",
+  "free": [
+    "mu0",
+    "Yxn",
+    "betaG0",
+    "betaF0",
+    "Yeg",
+    "Yef",
+    "Kig0",
+    "Kie0",
+    "Kd0"
+  ],
+  "fixed": {
+    "Kn0": 0.008995989685077126,
+    "Kg0": 4.400775419123265,
+    "Kf0": 19.296083508118652,
+    "Yxg": 0.9660935553477866,
+    "Yxf": 1.1098958529485594,
+    "m0": 0.0183385793928771
+  },
+  "yield_maximum": 0.5114,
+  "training_labs": [
+    "LAB004",
+    "LAB005",
+    "LAB006",
+    "LAB007",
+    "LAB008",
+    "LAB009"
+  ],
+  "holdout_labs": [
+    "LAB019",
+    "LAB020",
+    "LAB021"
+  ],
+  "objective": "mean squared standardized residual; X,N,G,F,E; t>0; no priors",
+  "slsqp": {
+    "success": true,
+    "status": 0,
+    "message": "Optimization terminated successfully",
+    "iterations": 40
+  },
+  "refinement": {
+    "success": true,
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 16,
+    "optimality": 21.62991294598426
+  },
+  "selected": "bounded_least_squares",
+  "initial_objective": 10.871082366515202,
+  "final_objective": 6.311699039634804,
+  "max_residual_change_tight_integration": 4.207467739103521e-05,
+  "total_calls": 533,
+  "rejected_invalid_trials": 9,
+  "elapsed_s": 126.42099999999846,
+  "interpretation": "Local constrained fit, not a global optimum or proof of parameter identifiability"
+}

@@ -1,0 +1,57 @@
+{
+  "original_repository_status": "",
+  "new_repository_status_before": " D references/Zenteno_2010.pdf\n?? docs/memoria/.gitignore\n?? docs/memoria/README.md\n?? docs/memoria/cap0.tex\n?? docs/memoria/cap1.tex\n?? docs/memoria/eso-pic.sty\n?? docs/memoria/fig/usmLogo.png\n?? docs/memoria/float.sty\n?? docs/memoria/main.pdf\n?? docs/memoria/main.tex\n?? docs/memoria/referencias.tex\n?? docs/memoria/setspace.sty\n?? docs/memoria/soul.sty\n?? docs/memoria/thesis.cls\n?? references/Coleman_2024.pdf\n?? references/EKF/1-s2.0-S0959152421001189-main.pdf\n?? references/EKF/1-s2.0-S0959152423000410-main.pdf\n?? references/EKF/Estrutura_De_Compensao_De_Atraso_Baseado_No_EKF_Para_Sistemas_No-Lineares_Multivariveis.pdf\n?? references/EKF/Jianlin_2010.pdf\n?? references/EKF/Jianlin_2010_2.pdf\n?? references/EKF/Lima_2024.pdf\n?? \"references/EKF/Model-based Prediction, Fault Estimation and Optimal Control.pdf\"\n?? \"references/EKF/manuscript 2025-10-31.pdf\"\n?? references/Fleurial_2024.pdf\n?? references/Nelson_2024.pdf\n?? references/Petre_2019.pdf\n?? references/RDavid_2011.pdf\n?? references/Sensor_omega/FMAA2100_2200_2300_2400.pdf\n?? references/Sensor_omega/M2842.pdf\n?? references/Yabo_2023.pdf\n?? references/Zenteno_Model_2020_Full.m\n?? references/codigo_GUI/NEW_GUI_filtrado_vCTORREALBA_EZO_USB.py\n?? references/codigo_GUI/NEW_GUI_filtrado_vFINAL.py\n?? references/modeling/Coleman_2007.pdf\n?? references/modeling/Colombie_2006.pdf\n?? references/modeling/David_2012.pdf\n?? references/modeling/Fernandez_2007.pdf\n?? references/modeling/Gee_Ramirez_1994.pdf\n?? references/modeling/Malherbe_2004.pdf\n?? references/modeling/Seguinot_2018.pdf\n?? references/modeling/Zenteno_2010.pdf\n?? references/modeling/mathematics-13-01653-v2.pdf\n",
+  "archived": [
+    {
+      "source": "notebooks/01_current_model_theta_comparison.executed.ipynb",
+      "destination": "notebooks/historical/01_current_model_theta_comparison.executed.ipynb",
+      "old_sha256": "edf12e6889d3c313d106ee21454e1422c70ef274d6b0d1b8f2777499152b293e",
+      "new_sha256": "695cd8e8942345652d19d7737854348cd02a62a783c19f9eda14b309bf421ba3",
+      "change": "import paths only; existing outputs retained"
+    },
+    {
+      "source": "notebooks/01_current_model_theta_comparison.source.ipynb",
+      "destination": "notebooks/historical/01_current_model_theta_comparison.source.ipynb",
+      "old_sha256": "80e93220c1166f50a52e33ca64340ed6d35dc690925406899184cb93330ed52b",
+      "new_sha256": "1c2258fef99ae095deab4cf2adda2598e6a46ab4ae3e15fc09dbac4d069789d5",
+      "change": "import paths only; existing outputs retained"
+    },
+    {
+      "source": "notebooks/02_current_co2_v3_comparison.executed.ipynb",
+      "destination": "notebooks/historical/02_current_co2_v3_comparison.executed.ipynb",
+      "old_sha256": "b5514b41f11739b1fe744d4199a1b9f4c11977a48c17b9a0b3f230795245793f",
+      "new_sha256": "64b54621a07d4370af5aa7bfa3ef7806d5fd3ed7dd970895bee20aefb6f36294",
+      "change": "import paths only; existing outputs retained"
+    },
+    {
+      "source": "notebooks/02_current_co2_v3_comparison.source.ipynb",
+      "destination": "notebooks/historical/02_current_co2_v3_comparison.source.ipynb",
+      "old_sha256": "e2fa416910959c1a0680f2629933bfd605594099ee62b0d101251b7e426a0192",
+      "new_sha256": "ca389ea77d217de11f5ceab3164201166ca239616f81fe55620ddcf798cfefd2",
+      "change": "import paths only; existing outputs retained"
+    },
+    {
+      "source": "src/wine_fermentation/current_model.py",
+      "destination": "src\\wine_fermentation\\historical\\current_model.py",
+      "old_sha256": "b201be16cbb1934d546d2bcba7c611add75c58be258470790b390c8ca1d5edde",
+      "new_sha256": "b201be16cbb1934d546d2bcba7c611add75c58be258470790b390c8ca1d5edde",
+      "change": "moved without code changes"
+    },
+    {
+      "source": "src/wine_fermentation/current_co2.py",
+      "destination": "src\\wine_fermentation\\historical\\current_co2.py",
+      "old_sha256": "fbfdd5d111d8e47130cc4f792aaf63eb12acb581dd9ae7284c38692f86a5ad57",
+      "new_sha256": "fbfdd5d111d8e47130cc4f792aaf63eb12acb581dd9ae7284c38692f86a5ad57",
+      "change": "moved without code changes"
+    }
+  ],
+  "gas_functions_unchanged": [
+    "o2_saturation_mg_l",
+    "production",
+    "csat",
+    "release",
+    "finish"
+  ],
+  "historical_model_sha256": "b201be16cbb1934d546d2bcba7c611add75c58be258470790b390c8ca1d5edde",
+  "historical_co2_sha256": "fbfdd5d111d8e47130cc4f792aaf63eb12acb581dd9ae7284c38692f86a5ad57"
+}
