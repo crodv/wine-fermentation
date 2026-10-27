@@ -1,0 +1,7 @@
+* text=auto
+*.xlsx binary
+*.pdf binary
+data/original/** -text
+data/cleaned/** -text
+data/original/natural/lab019_021/backup_global_co2_completo.csv filter=lfs diff=lfs merge=lfs -text
+data/original/natural/lab019_021/backup_global_temperatura_completo.csv filter=lfs diff=lfs merge=lfs -text

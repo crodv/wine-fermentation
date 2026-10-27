@@ -1,0 +1,144 @@
+{
+  "source_commit": "3b1d20d99c08e7186b14802b37db964571de0ca3",
+  "theta_new_commit": "16a8500ac3ca79260e0ba59f9657f82724a2f2de",
+  "source_status_before": "",
+  "source_file_sha256": {
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\shared\\run_new_must_glycerol_estimability_doe.py": "1571a1d5eddb4daba1a27374529daf9b4d56d6a6de0fcd4ead82d9064d481905",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\co2_lab016_021_recalibration_v2\\manifest.json": "f9c5efdc19c67bbb16d8eec30f76060f07f090b23422d6b5b7e869def6b37e68",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\estimability_historical_natural\\theta_natural_full.csv": "3876c53d0b4dc6f4126ffb4f8e0999a8455c90f283c345a110be33e86504b46e",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\co2_lab016_021_recalibration_v2\\initial_conditions.csv": "a9392dfe49357a2f35e155b6aac0d612ee4472b72ace4718ef7c61ed44a6bba8",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\co2_lab016_021_recalibration_v2\\chemistry_observations_corrected_YAN.csv": "caf299f8fe5ff92b42808cf791a0cce5600f220729ed768c37d2369ef6b796b3",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\co2_lab016_021_recalibration_v2\\density_sugar_comparison\\density_sugar_points.csv": "148b6afd56598a7e0638011d09ab09c24f2f32b9351e81268b9685fbe0847323",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\co2_lab016_021_recalibration_v2\\biomass_lab016_018.csv": "677c9c72a7707c78b27e689f6134c67328d20ac5b31664a5094e1ff5c9af120a",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\co2_lab016_021_recalibration_v2\\sensor_audit.csv": "8d935e27d383f2b75e707de01df9cc5d1918ca5c44debdc3cb8b0402515e20cf",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\coverage.csv": "4f624c163f909406e30cc65b0a20692c49476bac39091bf3bef76407d754effd",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\observations_10min.csv": "79f836143dc8cf7e522bb6e0124fffd968b03e64800c694c7e6f353ba338752b",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\fit_parameters.csv": "e9da3ed11cc4f529866326fadfc682a4dbb836473d72ecdcef4e360b104bf369",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\numerical_checks.csv": "09f0c06a10389c75c7cac3e34dbc3b24ad88b13b40dc8b8f436458e31eec04dc",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\clock_change_audit.csv": "034a9268fd0ddf5a4d8ebabf9667ede2ea92724c0451b2409053381c14126bb5",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\chemistry_trajectories.csv": "54f9becdf25836d98bb08fe92dc2f4dd847836af9dbc41eea7a55c3f8ed7fa72",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3_artifacts\\gas_trajectories.csv": "bf3aa5518e4570750c12dd287ec7f4f4c286951cf1b81a8cadc77008612099f8",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\results\\estimability_historical_natural\\process_temperature_30min.csv": "22b8b0154946445bddc95ee3bd5a2a115dda6d01056f907e8f8592b7403c1b4f",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\EKF\\_post_activity_prediction.py": "c6aa53fb7feebae0ce96f3b1d45ff2fc64850ba0a36637e035b63714d08bbdc6",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\pilot_2025\\run_pilot_2025_co2_solubility_integrated_doe.py": "f3e3950be6e9c496de90ac4f6e9998c22796e024d4ed1dc847ac907110849965",
+    "D:\\claud\\Desktop\\Universidad\\Memoria\\Model\\pyomo-doe\\fermentation_model\\laboratory_2026\\notebooks\\diagnostics\\co2_lab016_021_recalibration_v3.source.ipynb": "d9bf4c8f1cd126459a10a858160e564913a3896b209ce8da05d78a67315b4ad9"
+  },
+  "compatibility_inputs": [
+    {
+      "source": "fermentation_model/laboratory_2026/results/co2_lab016_021_recalibration_v2/initial_conditions.csv",
+      "source_sha256": "a9392dfe49357a2f35e155b6aac0d612ee4472b72ace4718ef7c61ed44a6bba8",
+      "destination": "data/compatibility/co2_v3/initial_conditions_v2.csv",
+      "destination_sha256": "a9392dfe49357a2f35e155b6aac0d612ee4472b72ace4718ef7c61ed44a6bba8",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/results/co2_lab016_021_recalibration_v2/chemistry_observations_corrected_YAN.csv",
+      "source_sha256": "caf299f8fe5ff92b42808cf791a0cce5600f220729ed768c37d2369ef6b796b3",
+      "destination": "data/compatibility/co2_v3/chemistry_v2.csv",
+      "destination_sha256": "caf299f8fe5ff92b42808cf791a0cce5600f220729ed768c37d2369ef6b796b3",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/results/co2_lab016_021_recalibration_v2/density_sugar_comparison/density_sugar_points.csv",
+      "source_sha256": "148b6afd56598a7e0638011d09ab09c24f2f32b9351e81268b9685fbe0847323",
+      "destination": "data/compatibility/co2_v3/density_v2.csv",
+      "destination_sha256": "148b6afd56598a7e0638011d09ab09c24f2f32b9351e81268b9685fbe0847323",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/results/co2_lab016_021_recalibration_v2/biomass_lab016_018.csv",
+      "source_sha256": "677c9c72a7707c78b27e689f6134c67328d20ac5b31664a5094e1ff5c9af120a",
+      "destination": "data/compatibility/co2_v3/biomass_v2.csv",
+      "destination_sha256": "677c9c72a7707c78b27e689f6134c67328d20ac5b31664a5094e1ff5c9af120a",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/results/co2_lab016_021_recalibration_v2/sensor_audit.csv",
+      "source_sha256": "8d935e27d383f2b75e707de01df9cc5d1918ca5c44debdc3cb8b0402515e20cf",
+      "destination": "data/compatibility/co2_v3/sensor_audit.csv",
+      "destination_sha256": "8d935e27d383f2b75e707de01df9cc5d1918ca5c44debdc3cb8b0402515e20cf",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/coverage.csv",
+      "source_sha256": "4f624c163f909406e30cc65b0a20692c49476bac39091bf3bef76407d754effd",
+      "destination": "data/compatibility/co2_v3/reference/coverage.csv",
+      "destination_sha256": "4f624c163f909406e30cc65b0a20692c49476bac39091bf3bef76407d754effd",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/observations_10min.csv",
+      "source_sha256": "79f836143dc8cf7e522bb6e0124fffd968b03e64800c694c7e6f353ba338752b",
+      "destination": "data/compatibility/co2_v3/reference/observations_10min.csv",
+      "destination_sha256": "79f836143dc8cf7e522bb6e0124fffd968b03e64800c694c7e6f353ba338752b",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/fit_parameters.csv",
+      "source_sha256": "e9da3ed11cc4f529866326fadfc682a4dbb836473d72ecdcef4e360b104bf369",
+      "destination": "data/compatibility/co2_v3/reference/fit_parameters.csv",
+      "destination_sha256": "e9da3ed11cc4f529866326fadfc682a4dbb836473d72ecdcef4e360b104bf369",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/numerical_checks.csv",
+      "source_sha256": "09f0c06a10389c75c7cac3e34dbc3b24ad88b13b40dc8b8f436458e31eec04dc",
+      "destination": "data/compatibility/co2_v3/reference/numerical_checks.csv",
+      "destination_sha256": "09f0c06a10389c75c7cac3e34dbc3b24ad88b13b40dc8b8f436458e31eec04dc",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/clock_change_audit.csv",
+      "source_sha256": "034a9268fd0ddf5a4d8ebabf9667ede2ea92724c0451b2409053381c14126bb5",
+      "destination": "data/compatibility/co2_v3/reference/clock_change_audit.csv",
+      "destination_sha256": "034a9268fd0ddf5a4d8ebabf9667ede2ea92724c0451b2409053381c14126bb5",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/chemistry_trajectories.csv",
+      "source_sha256": "54f9becdf25836d98bb08fe92dc2f4dd847836af9dbc41eea7a55c3f8ed7fa72",
+      "destination": "data/compatibility/co2_v3/reference/chemistry_trajectories.csv",
+      "destination_sha256": "5534c9031b52bb8464b59ad80399aa4659a6ae3ba5b60aa36832ffccd13df4f7",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/notebooks/diagnostics/co2_lab016_021_recalibration_v3_artifacts/gas_trajectories.csv",
+      "source_sha256": "bf3aa5518e4570750c12dd287ec7f4f4c286951cf1b81a8cadc77008612099f8",
+      "destination": "data/compatibility/co2_v3/reference/gas_trajectories.csv",
+      "destination_sha256": "1016bfc6de198691d16d1a7dcae9ee2c33f2b35103a8e615b877305d9f7fc247",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    },
+    {
+      "source": "fermentation_model/shared/results/secondary_metabolite_data_review/secondary_metabolite_long.csv",
+      "source_sha256": "b3059b80c6504b3f4da8a9c5a80b697b48f0c3c86a0403a514f0c0fa50b28418",
+      "destination": "data/compatibility/chemistry/observations_cleaned_lab004_009.csv",
+      "destination_sha256": "6e567f3155c1ae4a760d2fe4f58421e32038481d2aa10de392da0a15e25d8fc9",
+      "revision": "16a8500ac3ca79260e0ba59f9657f82724a2f2de"
+    },
+    {
+      "source": "fermentation_model/laboratory_2026/results/estimability_historical_natural/process_temperature_30min.csv",
+      "source_sha256": "22b8b0154946445bddc95ee3bd5a2a115dda6d01056f907e8f8592b7403c1b4f",
+      "destination": "data/compatibility/chemistry/clocks.csv",
+      "destination_sha256": "f81eb7a66bde46d456936e1cab8f3ddf125c2d7d70f4c0fd1715338cccbbcc8a",
+      "revision": "3b1d20d99c08e7186b14802b37db964571de0ca3"
+    }
+  ],
+  "original_model_functions": {
+    "_first_finite": "732e0798d08944065682b92a2c0f1135622da9c524404be8675abb9cbce38011",
+    "_initials_from_group": "8ece9c9b636fb36e296c1b3406b04216782a4763de0639b24a59f3dc0dba2857",
+    "make_batches": "50cfd74a2fc6f02cc0a276c24504dbe1938c6ac8a90e21259d87ee6318e5809c",
+    "temperature_at": "eeb5847d9ed150c9861c57ce4935e57b86f428527c097ac0e4f0aa740d56932f",
+    "kinetic_terms": "2f68af359e0b998d5728557f0b1f0c26dc8702ebf49f616f663846cde0b6cb36",
+    "rhs": "162b04c0033f0cac103580cf7b7d8f91b887d32db796016e1d849273ab04fbc5",
+    "initial_vector": "b1f120617c087b3890195e2e03b74a11330577dde6354fb559bcdc47e83575ee",
+    "_pulse_events": "f2ab99279048f6e3d88191016ab0f73f422bcf361a0e7632958441d270c84e79",
+    "simulate": "6646d5d013a33611d78a3aade34585399b920a0c4b58794ab7adcd6b4a8c0b63",
+    "sigma_for_state": "b1e95bf54dfad7fd2ffe6846359cb67387cade22e5325b7a3c99f0c10c3506a3",
+    "operational_sample_times": "12a9e48015c4824490a0299ae37d64dd7b5e29e9e3a3de58915df2287fadbb66"
+  },
+  "source_code_extracted_statically": true,
+  "original_notebook_executed": false,
+  "original_repository_imported_at_runtime": false,
+  "git_initialized": false,
+  "theta_defaults_definition": "full theta with six inherited defaults, consistent with v3"
+}
