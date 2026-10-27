@@ -10,10 +10,11 @@ La capa de CO₂ conserva su formulación histórica v3 completa.
 |---|---|---|
 | Recalibración química LAB004–009 | [Código](notebooks/01_recalibration_theta_nv2.source.ipynb) | [Resultados](notebooks/01_recalibration_theta_nv2.executed.ipynb) |
 | Evaluación química LAB019–021 y CO₂ LAB016–021 | [Código](notebooks/02_co2_theta_nv2.source.ipynb) | [Resultados](notebooks/02_co2_theta_nv2.executed.ipynb) |
+| Balance de CO₂: etanol y crecimiento, completo y por tramos | [Código](notebooks/diagnostics/01_co2_mass_balance.source.ipynb) | [Resultados](notebooks/diagnostics/01_co2_mass_balance.executed.ipynb) |
 
 Ejecutar SOURCE desde un kernel limpio del entorno Conda oficial `fermentation`, activado completamente con sus scripts de `activate.d`.
 Los notebooks localizan la raíz y leen `src/`; no requieren instalar el paquete ni leer `pyomo-doe`.
-Los SOURCE y EXECUTED contienen las mismas celdas. Cada SOURCE vuelve a ejecutar los ajustes; para consultar curvas abrir EXECUTED.
+Los SOURCE y EXECUTED contienen las mismas celdas. Los SOURCE de recalibración vuelven a ejecutar sus ajustes; el diagnóstico solo evalúa los datos y los theta existentes. Para consultar curvas abrir EXECUTED.
 
 ## Parámetros y recalibración
 

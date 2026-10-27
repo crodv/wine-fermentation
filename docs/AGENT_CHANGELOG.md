@@ -9,3 +9,13 @@
 
 - Archivos: `notebooks/` (cuatro parejas SOURCE/EXECUTED, incluidas las de historical), `configs/co2_reference_parameters.csv`, `results/co2_fit_parameters.csv`, `README.md`.
 - Cambio: limpieza de 64 archivos auxiliares y temporales de results; conservados los coeficientes de CO2 a precisión completa. Eliminadas las exportaciones automáticas de CSV/PNG auxiliares; referencia de comparación reubicada en configs. Verificadas las cuatro parejas y sus 36 figuras sin alterar outputs ni recalibrar. pyomo-doe sin modificaciones.
+
+### 2026-10-27 16:06 -03:00
+
+- Archivos: `notebooks/diagnostics/01_co2_mass_balance.source.ipynb`, `notebooks/diagnostics/01_co2_mass_balance.executed.ipynb`, `README.md`.
+- Cambio: diagnóstico de CO2 acumulado desde inoculación y por tramos, comparando etanol solo y crecimiento más etanol de Zenteno. Incluye referencias experimentales LAB019–021, cobertura LAB016–021, sensibilidad de conversión y cinco figuras inline. Ejecutado sin errores, sin recalibración ni exportaciones en results; modelos, parámetros y pyomo-doe sin cambios.
+
+### 2026-10-27 16:49 -03:00
+
+- Archivos: `notebooks/diagnostics/01_co2_mass_balance.source.ipynb`, `notebooks/diagnostics/01_co2_mass_balance.executed.ipynb`.
+- Cambio: incorporado CO2 disuelto inicial de carbodoseur con temperaturas confirmadas del log: 0.907, 0.730 y 0.829 g/L; LAB021 y sus cálculos derivados permanecen provisionales. Reejecutado el diagnóstico con inventario final requerido, escenario final cero y figura adicional; conservadas las inconsistencias negativas como diagnóstico. Sin recalibración, exportaciones en results ni cambios en pyomo-doe.
