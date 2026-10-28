@@ -1,0 +1,102 @@
+{
+  "previous_single_partition_fit": {
+    "kLa": 0.430692192822693,
+    "gain": 0.6645808412958578,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied.",
+    "training_labs": [
+      "LAB016",
+      "LAB017",
+      "LAB018"
+    ],
+    "objective": 0.06031452087104118,
+    "solubility_status": "provisional_inherited_correlation",
+    "Cd0_unmeasured": "0 assumed for LAB016-018"
+  },
+  "experiments": {
+    "train_019_021": {
+      "kLa": 19.999971437134683,
+      "gain": 0.604172081169656,
+      "success": true,
+      "message": "`gtol` termination condition is satisfied.",
+      "training": "train_019_021",
+      "training_labs": [
+        "LAB019",
+        "LAB020",
+        "LAB021"
+      ],
+      "holdout_labs": [
+        "LAB016",
+        "LAB017",
+        "LAB018"
+      ],
+      "objective": 0.10042522158334032,
+      "nfev": 8,
+      "optimality": 7.937442748897321e-08,
+      "active_bounds": [],
+      "initial_parameters": {
+        "kLa": 1.0,
+        "gain": 0.7
+      },
+      "parameter_bounds": {
+        "kLa": [
+          0.01,
+          20.0
+        ],
+        "gain": [
+          0.05,
+          3.0
+        ]
+      },
+      "target": "hourly_median_raw_g_l_h",
+      "weighting": "equal_lab_mean_squared_error",
+      "chemical_parameters": "unchanged chemical fit.json",
+      "historical_equations_unchanged": false,
+      "solubility_status": "provisional_inherited_correlation",
+      "Cd0_unmeasured": "0 assumed for LAB016-018"
+    },
+    "train_016_018": {
+      "kLa": 0.4314552099213312,
+      "gain": 0.6645746567425345,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "training": "train_016_018",
+      "training_labs": [
+        "LAB016",
+        "LAB017",
+        "LAB018"
+      ],
+      "holdout_labs": [
+        "LAB019",
+        "LAB020",
+        "LAB021"
+      ],
+      "objective": 0.06031452561789465,
+      "nfev": 16,
+      "optimality": 7.697897695306571e-06,
+      "active_bounds": [],
+      "initial_parameters": {
+        "kLa": 1.0,
+        "gain": 0.7
+      },
+      "parameter_bounds": {
+        "kLa": [
+          0.01,
+          20.0
+        ],
+        "gain": [
+          0.05,
+          3.0
+        ]
+      },
+      "target": "hourly_median_raw_g_l_h",
+      "weighting": "equal_lab_mean_squared_error",
+      "chemical_parameters": "unchanged chemical fit.json",
+      "historical_equations_unchanged": false,
+      "solubility_status": "provisional_inherited_correlation",
+      "Cd0_unmeasured": "0 assumed for LAB016-018"
+    }
+  },
+  "primary_training": "train_019_021",
+  "comparison_target": "hourly_median_raw_g_l_h"
+}

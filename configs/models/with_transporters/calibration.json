@@ -1,0 +1,102 @@
+{
+  "model": "with_transporters",
+  "initial_theta": "theta_full",
+  "extra_initial": {
+    "eta0": 0.01,
+    "KTr": 0.03,
+    "aTr": 1.0,
+    "alpha": 0.7,
+    "YTrN": 6.25
+  },
+  "bounds": {
+    "mu0": [
+      0.05,
+      1.0
+    ],
+    "betaG0": [
+      0.1,
+      10.0
+    ],
+    "betaF0": [
+      0.1,
+      10.0
+    ],
+    "Kn0": [
+      0.0001,
+      0.5
+    ],
+    "Kig0": [
+      5.0,
+      1000.0
+    ],
+    "Kie0": [
+      5.0,
+      1000.0
+    ],
+    "Kd0": [
+      1e-05,
+      0.05
+    ],
+    "Yxn": [
+      1.0,
+      100.0
+    ],
+    "Yeg": [
+      0.1,
+      0.5114
+    ],
+    "Yef": [
+      0.1,
+      0.5114
+    ],
+    "eta0": [
+      1e-05,
+      0.3
+    ],
+    "KTr": [
+      0.0001,
+      1.0
+    ],
+    "aTr": [
+      0.01,
+      30.0
+    ],
+    "alpha": [
+      0.02,
+      0.98
+    ]
+  },
+  "max_nfev": 100,
+  "solubility_status": "provisional_inherited_correlation",
+  "chemical_training": "LAB004-009",
+  "gas_training": "LAB019-021",
+  "gas_validation": "LAB016-018",
+  "chemical_validation": "LAB019-021",
+  "primary_gas_partition": "train_019_021",
+  "gas_partitions": {
+    "train_019_021": {
+      "training": [
+        "LAB019",
+        "LAB020",
+        "LAB021"
+      ],
+      "holdout": [
+        "LAB016",
+        "LAB017",
+        "LAB018"
+      ]
+    },
+    "train_016_018": {
+      "training": [
+        "LAB016",
+        "LAB017",
+        "LAB018"
+      ],
+      "holdout": [
+        "LAB019",
+        "LAB020",
+        "LAB021"
+      ]
+    }
+  }
+}

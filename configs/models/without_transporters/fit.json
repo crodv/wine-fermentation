@@ -1,0 +1,57 @@
+{
+  "model": "without_transporters",
+  "parameters": {
+    "mu0": 0.29104623676514607,
+    "betaG0": 0.29497518896987546,
+    "betaF0": 0.433898676780264,
+    "Kn0": 0.49994079718303397,
+    "Kg0": 4.400775419123265,
+    "Kf0": 19.296083508118652,
+    "Kig0": 45.48018537047064,
+    "Kie0": 326.60177767041216,
+    "Kd0": 0.000506194777807191,
+    "Yxn": 5.438422025964297,
+    "Yxg": 0.9660935553477866,
+    "Yxf": 1.1098958529485594,
+    "Yeg": 0.5053412615530323,
+    "Yef": 0.4616756631683697,
+    "m0": 0.0183385793928771,
+    "aN": 0.8425157998195002,
+    "KNa": 0.04388360224354996
+  },
+  "success": true,
+  "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+  "initial_objective": 12.293812248563182,
+  "final_objective": 4.697006189235993,
+  "calls": 269,
+  "seconds": 56.79700000000048,
+  "initialization_changes": {
+    "Yef": {
+      "theta_full": 0.6849268767912714,
+      "feasible_start": 0.5113999999
+    }
+  },
+  "free": [
+    "mu0",
+    "betaG0",
+    "betaF0",
+    "Kn0",
+    "Kig0",
+    "Kie0",
+    "Kd0",
+    "Yxn",
+    "Yeg",
+    "Yef",
+    "aN",
+    "KNa"
+  ],
+  "training_labs": [
+    "LAB004",
+    "LAB005",
+    "LAB006",
+    "LAB007",
+    "LAB008",
+    "LAB009"
+  ],
+  "solubility_status": "provisional_inherited_correlation"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "historical",
+  "chemical_theta": "configs/theta/theta_nv2.json",
+  "gas_parameters": "results/co2_fit_parameters.csv",
+  "selection": {
+    "theta": "theta_nv2",
+    "stage": "Z2",
+    "training": "train_016_018"
+  },
+  "frozen": true,
+  "sha256": {
+    "src\\wine_fermentation\\model.py": "98f10708ffe678f7864a76a228b18f11e27302ca6819b9d76e382e2da76eaa4b",
+    "src\\wine_fermentation\\co2.py": "431180fe38b2b6c4188fe53ae0aad26fa825793c362728676b740e792863aaa6",
+    "configs\\theta\\theta_nv2.json": "f7e6a17e7697d765d38391de5544f0c836ec500fc3a4c08e1d4cabc3243b0a6b"
+  },
+  "role": "original_frozen_reference_preserved_not_active_cross_validation",
+  "active_co2_comparison": "configs/models/historical/gas_fit.json",
+  "primary_co2_training": "train_019_021"
+}

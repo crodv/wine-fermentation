@@ -1,0 +1,104 @@
+{
+  "experiments": {
+    "train_019_021": {
+      "kCO2_release_h": 1.2296345171102827,
+      "CO2sat_scale": 2.499999998859011,
+      "matrix_gain": 0.836671042148472,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "training": "train_019_021",
+      "training_labs": [
+        "LAB019",
+        "LAB020",
+        "LAB021"
+      ],
+      "holdout_labs": [
+        "LAB016",
+        "LAB017",
+        "LAB018"
+      ],
+      "objective": 0.05869682700975126,
+      "nfev": 7,
+      "optimality": 5.188205211022594e-07,
+      "active_bounds": [
+        "CO2sat_scale"
+      ],
+      "initial_parameters": {
+        "kCO2_release_h": 0.4,
+        "CO2sat_scale": 1.0,
+        "matrix_gain": 0.7
+      },
+      "parameter_bounds": {
+        "kCO2_release_h": [
+          0.03,
+          25.0
+        ],
+        "CO2sat_scale": [
+          0.35,
+          2.5
+        ],
+        "matrix_gain": [
+          0.1,
+          20.0
+        ]
+      },
+      "target": "hourly_median_raw_g_l_h",
+      "weighting": "equal_lab_mean_squared_error",
+      "chemical_parameters": "theta_nv2",
+      "historical_equations_unchanged": true,
+      "solubility_status": "historical_unchanged",
+      "Cd0_unmeasured": "0 assumed for LAB016-018"
+    },
+    "train_016_018": {
+      "kCO2_release_h": 0.1756850852093636,
+      "CO2sat_scale": 2.4999999999708047,
+      "matrix_gain": 0.8020527265512605,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "training": "train_016_018",
+      "training_labs": [
+        "LAB016",
+        "LAB017",
+        "LAB018"
+      ],
+      "holdout_labs": [
+        "LAB019",
+        "LAB020",
+        "LAB021"
+      ],
+      "objective": 0.01987500083999913,
+      "nfev": 6,
+      "optimality": 6.102694255941721e-07,
+      "active_bounds": [
+        "CO2sat_scale"
+      ],
+      "initial_parameters": {
+        "kCO2_release_h": 0.4,
+        "CO2sat_scale": 1.0,
+        "matrix_gain": 0.7
+      },
+      "parameter_bounds": {
+        "kCO2_release_h": [
+          0.03,
+          25.0
+        ],
+        "CO2sat_scale": [
+          0.35,
+          2.5
+        ],
+        "matrix_gain": [
+          0.1,
+          20.0
+        ]
+      },
+      "target": "hourly_median_raw_g_l_h",
+      "weighting": "equal_lab_mean_squared_error",
+      "chemical_parameters": "theta_nv2",
+      "historical_equations_unchanged": true,
+      "solubility_status": "historical_unchanged",
+      "Cd0_unmeasured": "0 assumed for LAB016-018"
+    }
+  },
+  "primary_training": "train_019_021",
+  "comparison_target": "hourly_median_raw_g_l_h"
+}

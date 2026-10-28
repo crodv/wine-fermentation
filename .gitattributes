@@ -5,3 +5,4 @@ data/original/** -text
 data/cleaned/** -text
 data/original/natural/lab019_021/backup_global_co2_completo.csv filter=lfs diff=lfs merge=lfs -text
 data/original/natural/lab019_021/backup_global_temperatura_completo.csv filter=lfs diff=lfs merge=lfs -text
+data/processed/co2_mass_balance_lab016_021_g_l_h.csv filter=lfs diff=lfs merge=lfs -text
