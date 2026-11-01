@@ -70,5 +70,26 @@ class GasPartitions(unittest.TestCase):
         self.assertEqual(set(called),set(train))
         self.assertFalse(set(called)&set(holdout))
 
+
+class ChemicalObservations(unittest.TestCase):
+    def test_combined_sugar_assay_is_independent_of_components(self):
+        from wine_fermentation.comparison import chemical_observations
+        source=pd.DataFrame(dict(lab=['LAB019']*3,sample=['1','5','12'],t_h=[0.,40.,166.],
+            is_NUT=[False]*3,GF_g_l=[158.,136.87,0.],G_g_l=[79.,np.nan,np.nan],F_g_l=[79.,np.nan,np.nan]))
+        before=source.copy(deep=True)
+        values=chemical_observations(source,'LAB019','GF',after_initial=True)
+        self.assertEqual(values['sample'].tolist(),['5','12'])
+        self.assertEqual(values.GF_g_l.tolist(),[136.87,0.])
+        pd.testing.assert_frame_equal(source,before)
+    def test_measured_nut_yan_is_retained(self):
+        from wine_fermentation.comparison import chemical_observations
+        source=pd.DataFrame(dict(lab=['LAB019']*4,sample=['1','8','NUT','9'],t_h=[0.,64.,64.5,67.5],
+            is_NUT=[False,False,True,False],N_kg_m3=[.23,0.,.069734,.035513]))
+        plotted=chemical_observations(source,'LAB019','N')
+        scored=chemical_observations(source,'LAB019','N',after_initial=True)
+        self.assertEqual(len(plotted),4)
+        self.assertEqual(scored['sample'].tolist(),['8','NUT','9'])
+        self.assertAlmostEqual(float(scored.loc[scored['sample']=='NUT','N_kg_m3'].iloc[0]),.069734)
+
 if __name__=='__main__':unittest.main()
 

@@ -21,6 +21,21 @@ def partition(training):
     holdout=tuple(lab for lab in LABS if lab not in train)
     return train,holdout
 
+CHEMICAL_COLUMNS=dict(X='X_viable_g_l',N='N_kg_m3',G='G_g_l',F='F_g_l',E='E_g_l',GF='GF_g_l')
+
+def chemical_observations(chem,lab,state,after_initial=False,horizon=None):
+    """Keep each variable's measured values, including numeric NUT observations.
+
+    GF is the measured combined assay, independent of individual G/F validity.
+    Initials remain available for plots and are excluded only when scoring forecasts.
+    """
+    col=CHEMICAL_COLUMNS[state]
+    samples=chem.loc[chem.lab.eq(lab)].copy()
+    samples=samples.dropna(subset=['t_h',col])
+    if after_initial:samples=samples.loc[samples.t_h.gt(0)]
+    if horizon is not None:samples=samples.loc[samples.t_h.le(horizon)]
+    return samples.sort_values('t_h',kind='stable')
+
 def observations(data):
     result={}
     for lab in LABS:
@@ -137,10 +152,8 @@ def run(root,fit_gas=False,training=PRIMARY_TRAINING,prepared=None):
     chemical_metrics=[]
     for (name,lab),f in prepared['chemical'].items():
         if lab not in LABS[3:]:continue
-        samples=prepared['V'].chem.query('lab==@lab and is_NUT==False and t_h>0').copy()
-        samples['GF_g_l']=samples.G_g_l+samples.F_g_l
-        for state,col in dict(X='X_viable_g_l',N='N_kg_m3',G='G_g_l',F='F_g_l',E='E_g_l',GF='GF_g_l').items():
-            obs=samples[['t_h',col]].dropna();obs=obs[obs.t_h<=f.index.max()]
+        for state,col in CHEMICAL_COLUMNS.items():
+            obs=chemical_observations(prepared['V'].chem,lab,state,after_initial=True,horizon=f.index.max())
             prediction=f.G+f.F if state=='GF' else f[state]
             error=np.interp(obs.t_h,f.index,prediction)-obs[col].to_numpy()
             if len(error):chemical_metrics.append(dict(model=name,lab=lab,state=state,n=len(error),
