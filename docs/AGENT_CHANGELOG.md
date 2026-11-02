@@ -249,3 +249,15 @@
 - Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
 - Cambio: rehecho el mismo notebook fijando Kn de Zenteno a0.01g/L a23C, equivalente Kn0=0.00825786022432g/L a20C mediante la ley térmica existente. Nueve parámetros químicos libres y reajuste propio de kLa/ganancia; mismos datos depurados, tratamientos YAN, ponderación biomasa, nutrición3h y holdout016–018, sin escenarios adicionales.
 - Verificación: dos arranques convergentes, Kn excluido del optimizador y referencia térmica comprobada; kLa=0.1159583841h^-1, ganancia=0.6200676664. RMSE medio gas calibración0.1439781 y holdout0.1368005g/(L.h); MSE químico ponderado3.9745241. Trece figuras revisadas, validación nbformat, SOURCE limpio, paridad y cero errores; balances y hashes de archivos previos intactos. Sin nuevos notebooks, modificaciones de datos/configuraciones/modelos ni exportaciones de resultados.
+
+### 2026-11-01 21:41 -0300
+
+- Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
+- Cambio: mismo notebook recalibrado con Kd0=0.00044h^-1 de Zenteno y Kn previamente fijo; ocho parámetros químicos libres, kLa/ganancia reajustados. Mismos datos, iniciales, tratamientos YAN, sigmaX, nutrición3h y holdout016–018; mortalidad por umbral conservada.
+- Verificación: dos arranques convergentes y cero rechazos; ambos parámetros excluidos del optimizador y comprobados al terminar. MSE químico4.0022431, Yxn7.0772948, kLa0.1163346671h^-1, ganancia0.6196888692; RMSE gas medio calibración0.1450434 y holdout0.1362914g/(L.h). Trece figuras, revisión visual, validación nbformat, SOURCE limpio, paridad y cero errores; balances y hashes previos intactos. La caída tardía se atenúa, persiste sobreestimación de biomasa. Sin nuevos notebooks ni cambios de datos/configuraciones/modelos.
+
+### 2026-11-01 21:56 -0300
+
+- Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
+- Cambio: eliminado aporte suavizado3h; nutrición aplicada como salto instantáneo de YAN, dosis y horarios intactos, muestra previa al salto en coincidencias. Recalibrados ocho parámetros químicos y kLa/ganancia, manteniendo Kn/Kd0 de Zenteno, datos depurados, tratamientos YAN, ponderación biomasa y holdout016–018. Saltos pre/post visibles y usados al interpolar la fuente de gas.
+- Verificación: ambos arranques convergen sin rechazos; comprobación de cada dosis y ausencia de cambios instantáneos de X/G/F/E; tabla de saltos incluida. MSE químico4.0453035, Yxn7.0802129, kLa0.1155842472h^-1, ganancia0.6204348696; RMSE medio gas calibración0.1442769 y holdout0.1359746g/(L.h). Trece figuras revisadas, nbformat válido, SOURCE limpio, paridad y cero errores; balances y hashes previos intactos. Sin nuevos notebooks ni cambios de datos/configuraciones/modelos.
