@@ -261,3 +261,15 @@
 - Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
 - Cambio: eliminado aporte suavizado3h; nutrición aplicada como salto instantáneo de YAN, dosis y horarios intactos, muestra previa al salto en coincidencias. Recalibrados ocho parámetros químicos y kLa/ganancia, manteniendo Kn/Kd0 de Zenteno, datos depurados, tratamientos YAN, ponderación biomasa y holdout016–018. Saltos pre/post visibles y usados al interpolar la fuente de gas.
 - Verificación: ambos arranques convergen sin rechazos; comprobación de cada dosis y ausencia de cambios instantáneos de X/G/F/E; tabla de saltos incluida. MSE químico4.0453035, Yxn7.0802129, kLa0.1155842472h^-1, ganancia0.6204348696; RMSE medio gas calibración0.1442769 y holdout0.1359746g/(L.h). Trece figuras revisadas, nbformat válido, SOURCE limpio, paridad y cero errores; balances y hashes previos intactos. Sin nuevos notebooks ni cambios de datos/configuraciones/modelos.
+
+### 2026-11-01 22:29 -0300
+
+- Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
+- Cambio: correcciones iniciales del usuario LAB00410.75 y LAB00511.25 millones viables/mL, equivalentes0.3225 y0.3375g/L con30pg/célula. Overrides explícitos del estado y observación inicial en memoria con auditoría antes/después, sin modificar archivos de datos; demás entradas conservadas. Recalibración con Kn/Kd0 de Zenteno, pulsos instantáneos, tratamientos YAN, sigmaX=.50 y holdout016–018 intactos.
+- Verificación: ambos arranques convergentes sin rechazos,13 figuras revisadas, validación nbformat, paridad, SOURCE limpio y cero errores; balances, dosis y hashes previos intactos. MSE químico3.2007191, Yxn6.4562258, kLa0.0925399811h^-1, ganancia0.6184972215; RMSE medio gas calibración0.1440054 y holdout0.1425397g/(L.h). Yef0.5113279 próximo al límite0.5114; disminuyen mesetas, persisten discrepancias de biomasa. Sin nuevos notebooks ni cambios de datos/configuraciones/modelos.
+
+### 2026-11-01 22:35 -0300
+
+- Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
+- Cambio: añadidas densidades de019–021 al gráfico G+F,12 porLAB incluida inicial, convertidas2.5*(rho-1000), rombos naranjas diferenciados de analítica. Valores negativos finales visibles sin truncar y tabla de recuentos. Conservada comparación016–018.
+- Verificación: gráficos/comprobaciones regenerados sin optimización usando theta,kLa,ganancia previos exactos;13 figuras, revisión visual G+F, nbformat, paridad y cero errores; balances y hashes previos intactos. Sin cambios de datos o parámetros; densidad añadida sólo como comparación.
