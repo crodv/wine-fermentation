@@ -237,3 +237,15 @@
 - Archivos: notebooks/diagnostics/15_single_core_reconstructed_dose_volume.source.ipynb, notebooks/diagnostics/15_single_core_reconstructed_dose_volume.executed.ipynb.
 - Cambio: rehecho el mismo15 con X0=0.20g/L (6.67 millones viables/mL redondeados) sólo016–018, en ambos casos nominal/reconstruido. Recalculadas química, O2, Cd y composición retornada; mantenidos019–021, theta_nv2, reconstrucción hidráulica, parámetros y datos. Reemplazadas conclusiones anteriores con nuevos resultados y contexto numérico de X0=0.39.
 - Verificación: sólo inicialX cambia en016–018,019–021 reproducen resultados previos; balances y hashes restantes intactos, sin optimización ni core0.12 figuras con muestras revisadas, SOURCE limpio, paridad y cero errores. Documentado resultado mixto: mejor ventana de pico/cola reconstruida, peor registro completo frente aX0=0.39. Sin nuevos notebooks ni CSV/PNG de resultados, sin cambios en datos/modelos/ajustes o pyomo-doe, commit ni push.
+
+### 2026-11-01 20:38 -0300
+
+- Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
+- Cambio: recalibración química histórica de cinco estados con LAB004–009 depurados, YAN<=20mg/L a0, cortes agotamiento+12h y LAB006122h=0; biomasa sin cortes adicionales y sigmaX=.50g/L estimada desde réplicas. Nutrición causal suavizada3h, sin pulso inicial ni aN/KNa. Ajuste propio kLa/ganancia con019–021 y holdout016–018, muestras usadas/transformadas/excluidas y química reservada con biomasa/G+F por densidad. Frontera de crecimiento al agotarse G/F, igual que los modelos actuales, documentada explícitamente; tolerancias por estado y mínimos registrados.
+- Verificación: dos arranques químicos convergentes, dosis y balances del depósito/retiradas, prueba de frontera y equivalencia de dinámica histórica en dominio positivo;13 figuras con revisión visual, SOURCE limpio, paridad con EXECUTED y cero errores. Datos, módulos, configuraciones y notebooks anteriores intactos por hashes; sin exportaciones de resultados, commit ni push.
+
+### 2026-11-01 21:08 -0300
+
+- Archivos: `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb`, `notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb`.
+- Cambio: rehecho el mismo notebook fijando Kn de Zenteno a0.01g/L a23C, equivalente Kn0=0.00825786022432g/L a20C mediante la ley térmica existente. Nueve parámetros químicos libres y reajuste propio de kLa/ganancia; mismos datos depurados, tratamientos YAN, ponderación biomasa, nutrición3h y holdout016–018, sin escenarios adicionales.
+- Verificación: dos arranques convergentes, Kn excluido del optimizador y referencia térmica comprobada; kLa=0.1159583841h^-1, ganancia=0.6200676664. RMSE medio gas calibración0.1439781 y holdout0.1368005g/(L.h); MSE químico ponderado3.9745241. Trece figuras revisadas, validación nbformat, SOURCE limpio, paridad y cero errores; balances y hashes de archivos previos intactos. Sin nuevos notebooks, modificaciones de datos/configuraciones/modelos ni exportaciones de resultados.
