@@ -273,3 +273,60 @@
 - Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
 - Cambio: añadidas densidades de019–021 al gráfico G+F,12 porLAB incluida inicial, convertidas2.5*(rho-1000), rombos naranjas diferenciados de analítica. Valores negativos finales visibles sin truncar y tabla de recuentos. Conservada comparación016–018.
 - Verificación: gráficos/comprobaciones regenerados sin optimización usando theta,kLa,ganancia previos exactos;13 figuras, revisión visual G+F, nbformat, paridad y cero errores; balances y hashes previos intactos. Sin cambios de datos o parámetros; densidad añadida sólo como comparación.
+
+### 2026-11-02 08:58 -0300
+
+- Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
+- Cambio: X0 LAB021=9 millones viables/mL (0.270g/L) por indicación del usuario, override explícito en notebook. Química de004–009 conservada exacta, incluyendo Kn/Kd0 fijos; recalculadas trayectorias y reajustados kLa/ganancia con019–021. Demás entradas, tratamientos y holdout016–018 intactos.
+- Verificación:13 figuras, revisión visual G+F/CO2, nbformat, paridad, SOURCE limpio y cero errores; balances/dosis/hashes previos intactos. kLa0.0746788764h^-1, ganancia0.6352389118; RMSE medio gas calibración0.1292295 y holdout0.1419161g/(L.h). Mejor concordancia G+F021, persisten diferencias. Sin nuevos notebooks ni cambios de archivos de datos/modelos/configuraciones.
+
+### 2026-11-02 09:07 -0300
+
+- Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
+- Cambio: prueba activación5–10g/L de azúcar consumido predicho, smoothstep aplicado a fuente antes del depósito; química,kLa0.07467887635557982 y ganancia0.635238911849421 congelados en SOURCE sin optimización. Referencia sin activación superpuesta, métricas pareadas y tiempos de activación; entradas/correcciones previas y holdout conservados. Documentada interpretación efectiva y balance con fuente atenuada.
+- Verificación: referencia reproduce RMSE anteriores exactos; RMSE menor en seis LAB, medios calibración0.1292295→0.1242655 y holdout0.1419161→0.1330345g/(L.h). Activación0/1 en umbrales comprobada, balance depósito y hashes previos intactos;13 figuras, revisión visual, nbformat, SOURCE limpio, paridad y cero errores. Sin nuevos notebooks ni cambios de datos/modelos/configuraciones.
+
+### 2026-11-02 09:12 -0300
+
+- Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
+- Cambio: reajuste exclusivo kLa/ganancia con activación5–10g/L y química congelada; sólo019–021 seleccionan ajuste,016–018 holdout. Referencia con igual activación y parámetros previos, curvas y métricas pareadas. Mismo objetivo MSE igual peso porLAB y límites históricos; perfil kLa y ganancia óptima analítica con refinamiento.
+- Verificación: objetivo0.0529860107→0.0524160215, kLa0.1437836432h^-1 y ganancia0.6452372978, dentro de límites. RMSE medio calibración0.1242655→0.1240808 y holdout0.1330345→0.1310389g/(L.h); mejora021/017/018, leves empeoramientos019/020/016. Química/activación/iniciales intactas; balances y hashes previos comprobados;13 figuras revisadas, nbformat, paridad, SOURCE limpio y cero errores. Sin nuevos notebooks ni cambios de datos/modelos/configuraciones.
+
+### 2026-11-02 09:26 -0300
+
+- Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
+- Cambio: restaurado sólo kLa0.07467887635557982h^-1 por solicitud del usuario; conservada ganancia actual0.6452372978406827, química fija y activación5–10g/L, sin optimización. Referencia previa diferenciada por ganancia0.6352389.
+- Verificación:13 figuras y revisión visual CO2, nbformat, paridad, SOURCE limpio y cero errores; balances y hashes intactos. RMSE medio calibración0.1244535 y holdout0.1325111g/(L.h). Sin cambios de datos/modelos/configuraciones ni nuevos notebooks.
+
+### 2026-11-02 09:32 -0300
+
+- Archivos: notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb y .executed.ipynb.
+- Cambio: eliminada combinación de parámetros y curva comparativa; pareja original completa kLa0.07467887635557982h^-1 y ganancia0.635238911849421, con activación5–10g/L y química fija. Una sola predicción frente a RAW, sin recalibración.
+- Verificación: regeneración completa,13 figuras y revisión visual CO2, paridad nbformat y cero errores; balances y hashes intactos. Reproducidos RMSE0.1242655 calibración y0.1330345 holdout. Sin nuevos notebooks ni cambios de datos/modelos/configuraciones.
+
+### 2026-11-02 10:41 -0300
+
+- Archivos: notebooks/EKF/02_zenteno_co2_only.source.ipynb y .executed.ipynb.
+- Cambio: nueva prueba seisLAB de EKF sóloCO2 con química y gas del16 congelados, activación5–10g/L, iniciales Y15 de019–021 y total/reparto incierto de016–018; escenario sin E0 medido inicializado10.010194g/L sigma2. Temperatura causal por último minuto completado y CO2 RAW medio30min, conversión volumen remanente. Siete componentes numéricos: seis físicos y acumulador de medición; propagación5min, RK4 a1min, Jacobiano de transición, Q por flujos con incertidumbre conjunta del acumulador. Joseph y recorte como Lima sin reducción global de ganancia; P tras recorte aproximada.
+- Verificación: ocho figuras con muestras offline y densidad reservadas, métricas por estado, innovaciones/NIS y recortes, sin asimilar química ni ajustar matrices; excluidos NUT/GF final sustituido del RMSE. RHS contra módulo oficial y refinamiento de integración, positividad/cotaCd y PSD en cada paso, hashes protegidos intactos, nbformat y paridad sin errores. RMSE CO2 mejora seisLAB (019 .11454→.07005;020 .06653→.06649;021 .17886→.08568;016 .13008→.07776;017 .14440→.09596;018 .13142→.08100). Mejora química mixta; biomasa empeora y recortes frecuentes016–018, incertidumbres no validadas. Notebooks anteriores/datos/configs/modelos intactos; resultados sólo en EXECUTED.
+
+### 2026-11-02 · diagnóstico 17, Zenteno reducido a S
+
+- Archivos: notebooks/diagnostics/17_zenteno_single_sugar.source.ipynb y .executed.ipynb. Copia autónoma del 16 con referencia congelada, cuatro estados X,N,S,E, sin transportadores ni aN/KNa. Mismos datos depurados, tratamientos YAN, sigmaX, iniciales corregidas y pulsos instantáneos. Ajuste sólo004–009, dos inicios logarítmicos, seis parámetros efectivos; Kn/Kd0 y capa gas fijos. Yxs=0.516507 por suma exacta de consumos de crecimiento. Comparación pareada con muestras y densidades en019–021/016–018; nueve figuras.
+- Verificación: ambos inicios convergen MSE3.243684/3.243679, cero rechazos, balances del integrador gas y hashes previos intactos, paridad SOURCE/EXECUTED y nbformat sin errores; revisión visual de S y CO2. Kie0=999.989 cerca de cota1000, advertido. CO2 RMSE16→S:019 .11251→.12778;020 .07334→.05686;021 .18695→.19833;016 .13556→.12365;017 .13801→.12974;018 .12554→.12092. No modificación del16/datos/configs/modelos ni ejecución EKF nueva.
+
+### 2026-11-02 · diagnóstico17, Kie0 fijo
+
+- Recalibrados cinco parámetros con Kie0=96.26516563 del16, mismos datos/tratamientos/Kn/Kd0/pulsos/gas y reservados. Referencia S/Kie libre preservada congelada; nueve figuras con tres trayectorias y métricas comunes. No nuevos notebooks.
+- Ambos inicios convergen MSE3.351947/3.351874 frente3.243679 anterior, cero rechazos. Ks0=23.04656, betaS0=.818966, mu0=.0908506, Yxn6.49733, Yes.489318; sin cotas activas. CO2 mejora019/021 frente libre, empeora020/016–018. RMSE medio S reservado10.0112→9.3236g/L. Hashes previos, balances gas, paridad/nbformat/sintaxis sin errores; revisión visual comparación CO2. Diagnóstico16 y datos/configs/modelos intactos.
+
+### 2026-11-02 · EKF03 con S y Kie0 fijo del17
+
+- Nuevos notebooks/EKF/03_zenteno_single_sugar_co2_only.source.ipynb y .executed.ipynb. Compara reproducción02 G/F y EKF con S, parámetros químicos17/Kie0 fijo congelados, seisLAB, sóloCO2 causal30min. R, política Joseph/recorte y fuentes Q anteriores; P0 proyectado a S con var25 y flujos de azúcar independientes sumados al reducir. E0 desconocido10.010194 sigma2 igual que02. Sin asimilar química ni ajustar matrices, química o gas. Seis figuras offline y densidades, RMSE común, NIS/recortes, comparación con libre.
+- Verificación: RHS contra escalar17 y refinamiento temporal, PSD cada paso, ventanas y actualizaciones idénticas, RMSE02 reproducido1e-7, hashes previos intactos; nbformat/paridad sin errores y revisión visual CO2/S. RMSECO2 G/F→S:019 .07005→.06308;020 .06649→.06500;021 .08568→.10202;016 .07776→.10098;017 .09596→.11708;018 .08100→.09641. Biomasa empeora seisLAB, S analítico parecido pero levemente peor; recortes persistentes e incertidumbres exploratorias. No modificación de notebooks previos, datos/modelos/configs.
+
+### 2026-11-02 · UKF/EKF04, modelos S y G/F
+
+- Nuevos notebooks/EKF/04_ukf_ekf_both_models.source.ipynb y .executed.ipynb; tres CSV con sufijos sigma_clips,posterior_clips,projection_changes. Cuatro filtros/seisLAB, sóloCO2 causal30min, parámetros de16/17 fijos, mismas matrices/entradas que02/03. UKF13/15puntos alpha1 beta2 kappa0, raíz semidefinida sin jitter, Q local aditivo heredado, proyección de puntos antes/durante RK4 y reconstrucción de momentos. Medición lineal del acumulador/Joseph; P posterior al recorte aproximada.
+- Auditoría por estado y tiempo:33,032 filas de recortes sigma y1,180 posteriores (EKF GF802,EKF S371,UKF GF0,UKF S7), reconciliadas con contadores. Nueve figuras, muestras offline/densidad sin asimilación, NIS y métricas comunes. Añadir auditoría EKF no alteró resultados.
+- Verificación: UT afín/singular, PSD por paso y dominio tras proyección, mismas ventanas/actualizaciones, EKFprevios reproducidos1e-7, hashes previos intactos, nbformat/paridad y cero errores; revisión visual CO2/S. UKF mejora CO2 016–018 ambos modelos, resultados mixtos019–021; media RMSE S/E empeora y N mejora. Promedio CO2 G/F .07949→.07800 y S .09076→.08636; no superioridad global ni solución exacta a restricciones. Datos/modelos/configs/notebooks anteriores intactos.
