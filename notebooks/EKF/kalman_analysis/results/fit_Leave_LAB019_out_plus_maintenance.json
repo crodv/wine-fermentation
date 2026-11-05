@@ -1,0 +1,70 @@
+{
+  "fingerprint": "2c4798bc769a8a042316d2f2304961824595492f0ffc9b8ccc461f7f79a2b263",
+  "fold": "Leave LAB019 out",
+  "training": [
+    "LAB020",
+    "LAB021"
+  ],
+  "fit": {
+    "structure": "+ maintenance",
+    "names": [
+      "growth",
+      "fermentation",
+      "gas",
+      "maintenance",
+      "R"
+    ],
+    "x": [
+      1.0,
+      -2.0,
+      -0.10554635929894414,
+      0.0,
+      -1.3481029977010808
+    ],
+    "sigma": [
+      0.03,
+      0.0008,
+      0.0008,
+      0.007842483988531558,
+      0.0,
+      1.0
+    ],
+    "Rsd": 0.04486389776595873,
+    "score": -1.2895461371108614,
+    "runs": [
+      {
+        "start": 0,
+        "score": -0.96894682426937,
+        "success": true,
+        "nfev": 213,
+        "message": "Optimization terminated successfully.",
+        "x": [
+          1.0,
+          -0.7082970093098978,
+          0.0526376277431682,
+          -1.8421692043476852,
+          -1.160201482842281
+        ]
+      },
+      {
+        "start": 1,
+        "score": -1.2895461371108614,
+        "success": true,
+        "nfev": 161,
+        "message": "Optimization terminated successfully.",
+        "x": [
+          1.0,
+          -2.0,
+          -0.10554635929894414,
+          0.0,
+          -1.3481029977010808
+        ]
+      }
+    ],
+    "at_bound": [
+      "growth",
+      "fermentation",
+      "maintenance"
+    ]
+  }
+}

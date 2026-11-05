@@ -1,0 +1,6046 @@
+{
+  "fingerprint": "2c4798bc769a8a042316d2f2304961824595492f0ffc9b8ccc461f7f79a2b263",
+  "allowed_labs": [
+    "LAB019",
+    "LAB020",
+    "LAB021"
+  ],
+  "gas": [
+    {
+      "fold": "All development",
+      "training": "LAB019, LAB020, LAB021",
+      "kLa": 0.13636161214708548,
+      "gain": 0.65547435814111,
+      "MSE": 0.016082431817605703
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "training": "LAB020, LAB021",
+      "kLa": 0.17474806407521315,
+      "gain": 0.6486125542142906,
+      "MSE": 0.017720661449564017
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "training": "LAB019, LAB021",
+      "kLa": 0.13678294141586098,
+      "gain": 0.6807632961180804,
+      "MSE": 0.021520853912195752
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "training": "LAB019, LAB020",
+      "kLa": 0.09369274541195176,
+      "gain": 0.634595732583018,
+      "MSE": 0.008629748193312664
+    }
+  ],
+  "metrics": [
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.05356861994843814,
+      "MAE": 0.03914942288448983,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6374457339861879,
+      "MAE": 0.5134774720351208,
+      "coverage95": 0.4,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 26.398276203566226,
+      "MAE": 18.338447631645217,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.688368206127004,
+      "MAE": 4.640073145408195,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.758231447661676,
+      "MAE": 4.6514964628445625,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.590092624618716,
+      "MAE": 7.611284684115529,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.549075023268623,
+      "MAE": 3.553574580841597,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.06581096254222694,
+      "MAE": 0.05203601935867337,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5653745886470372,
+      "MAE": 0.4094938726053951,
+      "coverage95": 0.5,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 46.27501319826081,
+      "MAE": 30.41739055380819,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 6.5129084573931015,
+      "MAE": 5.696578638041132,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.78953088463844,
+      "MAE": 5.2322489205720055,
+      "coverage95": 0.8333333333333334,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 8.753840000824296,
+      "MAE": 8.035218299590065,
+      "coverage95": 0.18181818181818182,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.650805874597134,
+      "MAE": 2.3156781158630717,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.07602372747819015,
+      "MAE": 0.04492134707761629,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9268370223630357,
+      "MAE": 0.6777173978742319,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 17.540771345837516,
+      "MAE": 11.410304977578695,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.804841964482017,
+      "MAE": 5.102046006750969,
+      "coverage95": 0.2857142857142857,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.846982297827787,
+      "MAE": 4.390820061136621,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.481043728546561,
+      "MAE": 7.504341751741318,
+      "coverage95": 0.2222222222222222,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.2951410301194195,
+      "MAE": 3.0202457985826574,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.03728618830307645,
+      "MAE": 0.022810067629311967,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6170784011228081,
+      "MAE": 0.49160952168766503,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 11.240399785784678,
+      "MAE": 9.227047133468131,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.59402732932624,
+      "MAE": 5.427616681452656,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.307004149082074,
+      "MAE": 4.202255938065895,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.748295486060629,
+      "MAE": 7.75772821419074,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 6.34577835868909,
+      "MAE": 5.082031360922415,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.03590727556358873,
+      "MAE": 0.028154394139573047,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5257892325190513,
+      "MAE": 0.407543934819978,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 14.334030845998589,
+      "MAE": 11.660190065746006,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.087981010379063,
+      "MAE": 6.165094650597737,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.701707502322756,
+      "MAE": 5.058736149064047,
+      "coverage95": 0.8333333333333334,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 10.171303281700723,
+      "MAE": 9.16132630430219,
+      "coverage95": 0.36363636363636365,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.943125359675112,
+      "MAE": 3.5302847153986363,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.045916303974782885,
+      "MAE": 0.03417983273728123,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6330661195247632,
+      "MAE": 0.5484546389409996,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 19.412918248884026,
+      "MAE": 13.933009955794768,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 3.7728530642483067,
+      "MAE": 2.6964778330846007,
+      "coverage95": 0.7142857142857143,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.713881957928407,
+      "MAE": 4.286547735675172,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.591081088250112,
+      "MAE": 8.110603369898733,
+      "coverage95": 0.1111111111111111,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 5.149659553959121,
+      "MAE": 4.065433785761378,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.05037918056629597,
+      "MAE": 0.03212198168141434,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.633110852685579,
+      "MAE": 0.505890417039961,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 24.624895547631265,
+      "MAE": 16.56232018092169,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.58991577587798,
+      "MAE": 3.999297475837897,
+      "coverage95": 0.8571428571428571,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.3301203991174155,
+      "MAE": 5.229276635859656,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.323402633646124,
+      "MAE": 7.542572559056296,
+      "coverage95": 0.9,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.390107177579388,
+      "MAE": 3.2591296132736405,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.039073806811374526,
+      "MAE": 0.028186073392360983,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.564890558544336,
+      "MAE": 0.4166252316604269,
+      "coverage95": 0.4,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 27.139957025869023,
+      "MAE": 20.367180297094382,
+      "coverage95": 0.4166666666666667,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.475870213418473,
+      "MAE": 4.8300191009483235,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.9935091858667535,
+      "MAE": 5.286368386004746,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 7.834732284596647,
+      "MAE": 6.959771223585537,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.5965606508496166,
+      "MAE": 3.059824988925336,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.055054047005343575,
+      "MAE": 0.029248642084893167,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9238964244308294,
+      "MAE": 0.6970066016445673,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 18.998084321908987,
+      "MAE": 12.38346003604532,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.262746985783121,
+      "MAE": 5.4329702757469365,
+      "coverage95": 0.2857142857142857,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 5.188257247695897,
+      "MAE": 4.936997982327964,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 6.906575846928917,
+      "MAE": 5.931791819841127,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.966291262700738,
+      "MAE": 4.205993123051089,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.037244632393147986,
+      "MAE": 0.022651064733766654,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.616847653142136,
+      "MAE": 0.4915436365433433,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 11.271808758912313,
+      "MAE": 9.221675554746769,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.599077051101844,
+      "MAE": 5.431254109512245,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.305492856928203,
+      "MAE": 4.200455594429809,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.75099101851233,
+      "MAE": 7.759634123599113,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 6.316885089650269,
+      "MAE": 5.041581625454451,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.03589551802504579,
+      "MAE": 0.02814475347150612,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5260902193556055,
+      "MAE": 0.4078129174668176,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 14.290886849826125,
+      "MAE": 11.62000951197489,
+      "coverage95": 0.5833333333333334,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.064620637405386,
+      "MAE": 6.144771071952334,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.695806871879043,
+      "MAE": 5.064335780857564,
+      "coverage95": 0.8333333333333334,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 10.170179795118027,
+      "MAE": 9.16156273039352,
+      "coverage95": 0.36363636363636365,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.9650053881810736,
+      "MAE": 3.5448819456037257,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.04583204333305787,
+      "MAE": 0.03416959574800773,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6340584933677074,
+      "MAE": 0.5496116311687971,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 15.562867722459321,
+      "MAE": 11.427344463722973,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 3.7756161509082076,
+      "MAE": 2.7068224155729115,
+      "coverage95": 0.7142857142857143,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.711610837898972,
+      "MAE": 4.283805097318892,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.582527702672394,
+      "MAE": 8.096010578600536,
+      "coverage95": 0.1111111111111111,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 5.3187089308895255,
+      "MAE": 4.315739421428691,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.05354060505879159,
+      "MAE": 0.03913817684431095,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6373623592658578,
+      "MAE": 0.5134103895229077,
+      "coverage95": 0.4,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 26.334255956723585,
+      "MAE": 18.27619168536419,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.665382126673801,
+      "MAE": 4.6246490944474115,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.767745031805928,
+      "MAE": 4.660986485197202,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.58444725842135,
+      "MAE": 7.609064041208738,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.545255681664624,
+      "MAE": 3.5470106480991603,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.06399003803197656,
+      "MAE": 0.05013037895331785,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5654191341580841,
+      "MAE": 0.4099156637706488,
+      "coverage95": 0.5,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 52.481076657869664,
+      "MAE": 32.54845059468078,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 6.51635771181837,
+      "MAE": 5.699281868432004,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.7934312529444085,
+      "MAE": 5.23393754181203,
+      "coverage95": 0.8333333333333334,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 8.892335411583234,
+      "MAE": 8.176807233768107,
+      "coverage95": 0.18181818181818182,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.597736154382085,
+      "MAE": 2.205412113797471,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.07573678081289488,
+      "MAE": 0.04468135196956268,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9285147310896016,
+      "MAE": 0.6798570350643457,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 17.605789715411046,
+      "MAE": 11.456942883031685,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.83749466685206,
+      "MAE": 5.12834528086431,
+      "coverage95": 0.2857142857142857,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.837838628672375,
+      "MAE": 4.378013771157298,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.46506515254684,
+      "MAE": 7.497473612761894,
+      "coverage95": 0.2222222222222222,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.294895169383624,
+      "MAE": 3.031002959520744,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.053668589783310044,
+      "MAE": 0.039227379888275786,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6374119787418181,
+      "MAE": 0.5134119063209222,
+      "coverage95": 0.4,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 26.313695825355524,
+      "MAE": 18.255151015584094,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.669554216811243,
+      "MAE": 4.624941514877897,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.76912773258234,
+      "MAE": 4.662194271498281,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.585824981976916,
+      "MAE": 7.606398776440119,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.549161269283826,
+      "MAE": 3.555833957842141,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.0668018419233618,
+      "MAE": 0.05291351329817528,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5654199488121815,
+      "MAE": 0.4100400522398332,
+      "coverage95": 0.5,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 40.825585800395615,
+      "MAE": 28.49205147373266,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 6.519554572697979,
+      "MAE": 5.70210421774586,
+      "coverage95": 0.3333333333333333,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.794414682636422,
+      "MAE": 5.233974577290797,
+      "coverage95": 0.8333333333333334,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 8.662847895529236,
+      "MAE": 7.9251662992449186,
+      "coverage95": 0.18181818181818182,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.6832858980136516,
+      "MAE": 2.3721330694079032,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.07518909794031103,
+      "MAE": 0.04429497620040485,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9294580964854336,
+      "MAE": 0.6805689052159497,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 17.614770785099445,
+      "MAE": 11.462961274199378,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.841090077679503,
+      "MAE": 5.134492851405475,
+      "coverage95": 0.2857142857142857,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.852930279182688,
+      "MAE": 4.4017586163800475,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.480870459698698,
+      "MAE": 7.5041750392197475,
+      "coverage95": 0.2222222222222222,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.2943738631879373,
+      "MAE": 3.0362918212721577,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.054872509971311496,
+      "MAE": 0.040032045925583015,
+      "coverage95": NaN,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6475736793822713,
+      "MAE": 0.5243877234898539,
+      "coverage95": 0.3,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 26.813123707945905,
+      "MAE": 18.63244355404954,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.414192043476837,
+      "MAE": 4.372316306458716,
+      "coverage95": 0.5714285714285714,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.509186736839691,
+      "MAE": 4.390103599956255,
+      "coverage95": 1.0,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.042132126662894,
+      "MAE": 7.145389707810585,
+      "coverage95": 0.2,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.550639784748881,
+      "MAE": 3.5395566216156054,
+      "coverage95": 0.6,
+      "fold": "Leave LAB019 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.03710560408060969,
+      "MAE": 0.022596752925078956,
+      "coverage95": NaN,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.635333237908771,
+      "MAE": 0.5102365389139544,
+      "coverage95": 0.3,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 11.982402898901357,
+      "MAE": 9.84273733764888,
+      "coverage95": 0.75,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.458652953235474,
+      "MAE": 5.237746578700372,
+      "coverage95": 0.5714285714285714,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 3.991307083577143,
+      "MAE": 3.8190154822137896,
+      "coverage95": 1.0,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.268226957590597,
+      "MAE": 7.357256807417881,
+      "coverage95": 0.2,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 6.425257269595067,
+      "MAE": 5.15849293298655,
+      "coverage95": 0.6,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.05007710704598077,
+      "MAE": 0.03168797085973441,
+      "coverage95": NaN,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6427688072110003,
+      "MAE": 0.5171817466179247,
+      "coverage95": 0.3,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 25.123809640034867,
+      "MAE": 17.03004622777432,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.434882731139916,
+      "MAE": 3.8374391334161055,
+      "coverage95": 0.8571428571428571,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.071581862619669,
+      "MAE": 4.977479934867516,
+      "coverage95": 1.0,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 7.886092438849022,
+      "MAE": 7.183453478699306,
+      "coverage95": 0.9,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.309952959274335,
+      "MAE": 3.2431034806721426,
+      "coverage95": 0.6,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.036978766029563605,
+      "MAE": 0.022352244447409405,
+      "coverage95": NaN,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.63522128093602,
+      "MAE": 0.5102619760718495,
+      "coverage95": 0.3,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 12.244343579344688,
+      "MAE": 10.163890378088915,
+      "coverage95": 0.8333333333333334,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.469165353028343,
+      "MAE": 5.238921672563332,
+      "coverage95": 0.5714285714285714,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.0332490533515495,
+      "MAE": 3.8632517414550795,
+      "coverage95": 1.0,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.354215289724666,
+      "MAE": 7.413839231028115,
+      "coverage95": 0.5,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 6.397233428083522,
+      "MAE": 5.147770818639283,
+      "coverage95": 0.6,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.05470373357235425,
+      "MAE": 0.040001827740801944,
+      "coverage95": NaN,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6477196508219483,
+      "MAE": 0.52447188492718,
+      "coverage95": 0.3,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 27.004023385904986,
+      "MAE": 18.81135176538709,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.467606209522151,
+      "MAE": 4.416016694138906,
+      "coverage95": 0.5714285714285714,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.50194114557358,
+      "MAE": 4.382891142610931,
+      "coverage95": 1.0,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.076121961140824,
+      "MAE": 7.1719969319788675,
+      "coverage95": 0.2,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.560869265243264,
+      "MAE": 3.5476810941339956,
+      "coverage95": 0.6,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.05467955985031907,
+      "MAE": 0.0400210510664769,
+      "coverage95": NaN,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6478105138272244,
+      "MAE": 0.5245474788920006,
+      "coverage95": 0.3,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 27.086735954921373,
+      "MAE": 18.898247541359876,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.488011210257834,
+      "MAE": 4.4328911623603995,
+      "coverage95": 0.5714285714285714,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.505551734663015,
+      "MAE": 4.3869663610940615,
+      "coverage95": 1.0,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.096111577711108,
+      "MAE": 7.187655800628579,
+      "coverage95": 0.2,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.566670627072559,
+      "MAE": 3.553940827176974,
+      "coverage95": 0.6,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.0736466608231816,
+      "MAE": 0.05696515180099037,
+      "coverage95": NaN,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.559353540459293,
+      "MAE": 0.3990372088041575,
+      "coverage95": 0.6,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 24.669941465950895,
+      "MAE": 18.589773005940973,
+      "coverage95": 0.5833333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.329634348592749,
+      "MAE": 6.373633550667759,
+      "coverage95": 0.3333333333333333,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.6718316509995255,
+      "MAE": 5.197605096899911,
+      "coverage95": 0.8333333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 8.90569077074738,
+      "MAE": 8.066118037498669,
+      "coverage95": 0.18181818181818182,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.856522920679017,
+      "MAE": 2.641949351095069,
+      "coverage95": 1.0,
+      "fold": "Leave LAB020 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.036371172110117894,
+      "MAE": 0.028610607065238877,
+      "coverage95": NaN,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5118097268290733,
+      "MAE": 0.3943234094076008,
+      "coverage95": 0.4,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 14.754617403009924,
+      "MAE": 11.908597273095154,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.889565683524653,
+      "MAE": 6.832373557672717,
+      "coverage95": 0.3333333333333333,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.614318899070395,
+      "MAE": 5.081960000964372,
+      "coverage95": 1.0,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 11.322476530761893,
+      "MAE": 10.13178773273729,
+      "coverage95": 0.2727272727272727,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.9701380880004487,
+      "MAE": 3.592201652283255,
+      "coverage95": 0.6,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.07143330091315821,
+      "MAE": 0.05466341418157581,
+      "coverage95": NaN,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5610297277830393,
+      "MAE": 0.40233431619313464,
+      "coverage95": 0.5,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 51.976150582827664,
+      "MAE": 31.95978489044884,
+      "coverage95": 0.5833333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.336953977653054,
+      "MAE": 6.377716464931306,
+      "coverage95": 0.3333333333333333,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.692746621816659,
+      "MAE": 5.223372027403767,
+      "coverage95": 0.8333333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 9.905907884315912,
+      "MAE": 9.199901258617096,
+      "coverage95": 0.18181818181818182,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.4523587250644336,
+      "MAE": 2.033090304687548,
+      "coverage95": 1.0,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.03637156090801236,
+      "MAE": 0.028610725055007582,
+      "coverage95": NaN,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5118050955847996,
+      "MAE": 0.39432318967839464,
+      "coverage95": 0.4,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 14.754409084698038,
+      "MAE": 11.908485835496704,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.889705822135581,
+      "MAE": 6.832488736423071,
+      "coverage95": 0.3333333333333333,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.614362946123726,
+      "MAE": 5.081969331283182,
+      "coverage95": 1.0,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 11.322472410364698,
+      "MAE": 10.131790403475774,
+      "coverage95": 0.2727272727272727,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.970090272802523,
+      "MAE": 3.592212702255688,
+      "coverage95": 0.6,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.0712665706482418,
+      "MAE": 0.05396077945308143,
+      "coverage95": NaN,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5604167410694273,
+      "MAE": 0.40199645923668587,
+      "coverage95": 0.5,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 54.459309653768216,
+      "MAE": 32.82894786622517,
+      "coverage95": 0.5833333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 7.4017316969121705,
+      "MAE": 6.4313409208796815,
+      "coverage95": 0.3333333333333333,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.683079104304093,
+      "MAE": 5.197202924833519,
+      "coverage95": 0.8333333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 10.031788161186967,
+      "MAE": 9.289277362150322,
+      "coverage95": 0.18181818181818182,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.440360279484802,
+      "MAE": 2.0282864625014465,
+      "coverage95": 1.0,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.08353589096637415,
+      "MAE": 0.0665538264866655,
+      "coverage95": NaN,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5532490163550262,
+      "MAE": 0.3725998303206651,
+      "coverage95": 0.5,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 15.620799542847438,
+      "MAE": 12.41047224389924,
+      "coverage95": 0.5833333333333334,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 6.425585985714911,
+      "MAE": 5.623758137306443,
+      "coverage95": 0.3333333333333333,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 5.835725271886253,
+      "MAE": 5.5740734465655,
+      "coverage95": 1.0,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 8.936383521386366,
+      "MAE": 8.209950387329537,
+      "coverage95": 0.18181818181818182,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.237776482458507,
+      "MAE": 3.0118270754056486,
+      "coverage95": 0.8,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.07056805561401984,
+      "MAE": 0.0397542754372138,
+      "coverage95": NaN,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9956006233821341,
+      "MAE": 0.7478758611394115,
+      "coverage95": 0.2,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 17.61778579757007,
+      "MAE": 11.515863302482167,
+      "coverage95": 0.75,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.971975431839312,
+      "MAE": 5.245606700525932,
+      "coverage95": 0.2857142857142857,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.618980917992621,
+      "MAE": 3.899636530005221,
+      "coverage95": 1.0,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.521166797989025,
+      "MAE": 7.857020642387373,
+      "coverage95": 0.1111111111111111,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.4724940089899317,
+      "MAE": 3.1939232951382843,
+      "coverage95": 0.8,
+      "fold": "Leave LAB021 out",
+      "structure": "Current"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.04434381359367445,
+      "MAE": 0.032109640950306176,
+      "coverage95": NaN,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.757690371737271,
+      "MAE": 0.6656749868126619,
+      "coverage95": 0.2,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 35.983987495657765,
+      "MAE": 21.798659042772897,
+      "coverage95": 0.5833333333333334,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.221963168299848,
+      "MAE": 3.5341077364792644,
+      "coverage95": 0.5714285714285714,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 5.406288611601791,
+      "MAE": 5.152076674811011,
+      "coverage95": 0.8,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.658912595171616,
+      "MAE": 8.27412659435586,
+      "coverage95": 0.1111111111111111,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 6.450053236668673,
+      "MAE": 5.286242493686916,
+      "coverage95": 0.6,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.054472609514655074,
+      "MAE": 0.028728805849782005,
+      "coverage95": NaN,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9832189013325923,
+      "MAE": 0.7572186130622752,
+      "coverage95": 0.2,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 19.022667355155544,
+      "MAE": 12.440248157683614,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.3341899865168285,
+      "MAE": 5.524897707164905,
+      "coverage95": 0.2857142857142857,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 5.833804295673413,
+      "MAE": 5.647601194728632,
+      "coverage95": 1.0,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 6.789702857681732,
+      "MAE": 5.44499745020595,
+      "coverage95": 0.6666666666666666,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.603290295908291,
+      "MAE": 3.9070562282419985,
+      "coverage95": 0.6,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.04573866305551948,
+      "MAE": 0.03349751608799566,
+      "coverage95": NaN,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.7571852777801003,
+      "MAE": 0.6643645789029098,
+      "coverage95": 0.2,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 68.38486297486726,
+      "MAE": 35.64127358484941,
+      "coverage95": 0.5833333333333334,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.445800325641937,
+      "MAE": 3.7893264568670824,
+      "coverage95": 0.42857142857142855,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 5.190367401314599,
+      "MAE": 4.886674057894345,
+      "coverage95": 0.8,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.668236624761516,
+      "MAE": 8.354498685766186,
+      "coverage95": 0.1111111111111111,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 6.056440989944975,
+      "MAE": 4.902060696618841,
+      "coverage95": 0.6,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.07064392049654682,
+      "MAE": 0.0397777000407239,
+      "coverage95": NaN,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9952658864955798,
+      "MAE": 0.747583743118286,
+      "coverage95": 0.2,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 17.65380525518412,
+      "MAE": 11.542406424718436,
+      "coverage95": 0.75,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.968889167949985,
+      "MAE": 5.244010063862646,
+      "coverage95": 0.2857142857142857,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.599551391711824,
+      "MAE": 3.8808315238934257,
+      "coverage95": 1.0,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.507331595273241,
+      "MAE": 7.846024546456783,
+      "coverage95": 0.1111111111111111,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.468795299032046,
+      "MAE": 3.1930430344874074,
+      "coverage95": 0.8,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.07048186894186194,
+      "MAE": 0.03969821768809179,
+      "coverage95": NaN,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9957889258395435,
+      "MAE": 0.7480191864523451,
+      "coverage95": 0.2,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 17.61634871223948,
+      "MAE": 11.51465729657651,
+      "coverage95": 0.75,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.973120110536657,
+      "MAE": 5.246707311328516,
+      "coverage95": 0.2857142857142857,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.62061048377663,
+      "MAE": 3.901211721353851,
+      "coverage95": 1.0,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.523237753290472,
+      "MAE": 7.857809009467526,
+      "coverage95": 0.1111111111111111,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.472159813998495,
+      "MAE": 3.1950885081467537,
+      "coverage95": 0.8,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.06260513256931807,
+      "MAE": 0.04748218841099742,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.6485965524588165,
+      "MAE": 0.5291988551318564,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 20.293931087312245,
+      "MAE": 16.050212284910568,
+      "coverage95": 0.5,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 4.530247696792358,
+      "MAE": 3.7052534013198146,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 5.527785015706321,
+      "MAE": 5.377002530674242,
+      "coverage95": 0.5714285714285714,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 8.482302592841338,
+      "MAE": 7.577236640221111,
+      "coverage95": 0.2,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB019",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.05524252509458,
+      "MAE": 3.197983056138937,
+      "coverage95": 0.6,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 344,
+      "RMSE": 0.06014290941212455,
+      "MAE": 0.046689228916831804,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.5688942908026443,
+      "MAE": 0.3981350151853126,
+      "coverage95": 0.4,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 66.46117693137428,
+      "MAE": 32.607873964535806,
+      "coverage95": 0.5,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 4.784917657575589,
+      "MAE": 4.250548711539647,
+      "coverage95": 0.6666666666666666,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 6,
+      "RMSE": 6.175389584597523,
+      "MAE": 6.021665746882332,
+      "coverage95": 1.0,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 11,
+      "RMSE": 9.826341103982143,
+      "MAE": 8.823228265651334,
+      "coverage95": 0.18181818181818182,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB020",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 3.142304621920158,
+      "MAE": 2.7264511002962446,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "CO2",
+      "unit": "g/(L h)",
+      "n": 332,
+      "RMSE": 0.09107828740606734,
+      "MAE": 0.05465415825057604,
+      "coverage95": NaN,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "X",
+      "unit": "g/L",
+      "n": 10,
+      "RMSE": 0.9096307664049856,
+      "MAE": 0.6520796541859272,
+      "coverage95": 0.3,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "N",
+      "unit": "mg/L",
+      "n": 12,
+      "RMSE": 13.22844946553794,
+      "MAE": 7.916362733699842,
+      "coverage95": 0.75,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "G",
+      "unit": "g/L",
+      "n": 7,
+      "RMSE": 6.36415466668599,
+      "MAE": 5.50583134956679,
+      "coverage95": 0.2857142857142857,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "F",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 4.852584611897548,
+      "MAE": 4.345340271708419,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "GF",
+      "unit": "g/L",
+      "n": 9,
+      "RMSE": 8.377373615317156,
+      "MAE": 7.458769917094033,
+      "coverage95": 0.1111111111111111,
+      "fold": "All development",
+      "structure": "Original noise"
+    },
+    {
+      "LAB": "LAB021",
+      "variable": "E",
+      "unit": "g/L",
+      "n": 5,
+      "RMSE": 2.91435654737565,
+      "MAE": 2.6904192670900082,
+      "coverage95": 0.8,
+      "fold": "All development",
+      "structure": "Original noise"
+    }
+  ],
+  "checks": [
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.0734170761942131,
+      "mean_NIS": 0.6968959160251876,
+      "innovation_coverage95": 0.9723502304147466,
+      "lag1": 0.7271270933473604,
+      "clips": 56,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Current",
+      "acf": [
+        0.7271270933473604,
+        0.5963889492123549,
+        0.5475387057444784,
+        0.4887175269050793,
+        0.4940111861084623,
+        0.43173378723189393,
+        0.35734448825667403,
+        0.34072374254242177,
+        0.3085487605617527,
+        0.2744885514892521
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.4137097136982934,
+      "mean_NIS": 0.9276121125886765,
+      "innovation_coverage95": 0.9417040358744395,
+      "lag1": 0.7056769587753441,
+      "clips": 20,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Current",
+      "acf": [
+        0.7056769587753441,
+        0.7377913274477669,
+        0.7337128172967788,
+        0.6992944070609367,
+        0.7156671099026328,
+        0.6557747075433782,
+        0.6728660130103277,
+        0.6504230128983934,
+        0.620711638824749,
+        0.604314355388264
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.00564793344960265,
+      "mean_NIS": 1.9889543626665107,
+      "innovation_coverage95": 0.8072289156626506,
+      "lag1": 0.8882821790829987,
+      "clips": 34,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Current",
+      "acf": [
+        0.8882821790829987,
+        0.8406102732643878,
+        0.8255610597247115,
+        0.7668762701840792,
+        0.7324865515256643,
+        0.6923185130155669,
+        0.6486152126921289,
+        0.5991618620565201,
+        0.5587244249437967,
+        0.5297587150512457
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": -0.008717414041673253,
+      "mean_NIS": 1.045554191431223,
+      "innovation_coverage95": 0.9493087557603687,
+      "lag1": 0.209682653315509,
+      "clips": 44,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ mortality",
+      "acf": [
+        0.209682653315509,
+        -0.02335315216225275,
+        -0.005255618406789317,
+        -0.05033618358373845,
+        0.0995604671292993,
+        0.027087675541107057,
+        -0.05943830871282803,
+        0.0013844119593279447,
+        -0.010389557512020227,
+        -0.026660852633744108
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.10853528856049147,
+      "mean_NIS": 0.8341899030217352,
+      "innovation_coverage95": 0.9730941704035875,
+      "lag1": -0.22883040839197932,
+      "clips": 33,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ mortality",
+      "acf": [
+        -0.22883040839197932,
+        -0.008325686797334576,
+        0.03803445913551666,
+        -0.05107109704500054,
+        0.07200620523352984,
+        -0.10065036428379123,
+        0.05887251055644022,
+        0.041902986635500586,
+        -0.005088279571237171,
+        0.02830364685101424
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.15745323423552965,
+      "mean_NIS": 1.4416264600028548,
+      "innovation_coverage95": 0.9457831325301205,
+      "lag1": 0.3562020903977017,
+      "clips": 25,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ mortality",
+      "acf": [
+        0.3562020903977017,
+        0.20082151158306497,
+        0.2651279241100263,
+        0.07958301617111103,
+        0.103861084194243,
+        0.09492636633278367,
+        0.052128495466411476,
+        0.007170852617986663,
+        -0.02115063306337581,
+        0.014775823052606536
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.2507323195561712,
+      "mean_NIS": 1.4061061691541512,
+      "innovation_coverage95": 0.9170506912442397,
+      "lag1": 0.6671722640887111,
+      "clips": 63,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ maintenance",
+      "acf": [
+        0.6671722640887111,
+        0.5124588250661143,
+        0.46214484572496833,
+        0.3995937869226744,
+        0.4177719837868446,
+        0.3522579769586867,
+        0.27650297248010564,
+        0.26470871233145843,
+        0.23213349978439382,
+        0.19693777002375099
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": 0.03273575141450243,
+      "mean_NIS": 0.7975881137878383,
+      "innovation_coverage95": 0.968609865470852,
+      "lag1": 0.336612992600125,
+      "clips": 52,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ maintenance",
+      "acf": [
+        0.336612992600125,
+        0.41381489129380417,
+        0.40794477023872444,
+        0.3361501575460132,
+        0.3811301286099392,
+        0.2737942098020059,
+        0.34265132229895645,
+        0.32480986353787394,
+        0.2873155929511429,
+        0.28905422765232813
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": 0.39094365047513663,
+      "mean_NIS": 2.1809164207153247,
+      "innovation_coverage95": 0.8614457831325302,
+      "lag1": 0.7428135649577666,
+      "clips": 59,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ maintenance",
+      "acf": [
+        0.7428135649577666,
+        0.6293044653129461,
+        0.5896732202955386,
+        0.4573830459664185,
+        0.393930625146577,
+        0.3262533430943678,
+        0.26056542876409716,
+        0.18774776274229993,
+        0.135751598267998,
+        0.1121846705401834
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": -0.00524232107948177,
+      "mean_NIS": 1.0443591026669976,
+      "innovation_coverage95": 0.9493087557603687,
+      "lag1": 0.20813658906463542,
+      "clips": 39,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ both",
+      "acf": [
+        0.20813658906463542,
+        -0.026031498955648734,
+        -0.008222405501219308,
+        -0.053571092204885706,
+        0.09659209281827151,
+        0.023958512803679895,
+        -0.0628737701090424,
+        -0.0021196166605230893,
+        -0.01387535156156796,
+        -0.030103730815328415
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.10862263237390425,
+      "mean_NIS": 0.8346365385897598,
+      "innovation_coverage95": 0.9730941704035875,
+      "lag1": -0.22787605419059,
+      "clips": 26,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ both",
+      "acf": [
+        -0.22787605419059,
+        -0.008037822772313541,
+        0.03807461299079105,
+        -0.05107601786271435,
+        0.07197609700388569,
+        -0.10052501125642194,
+        0.05885356918357644,
+        0.042104775217737846,
+        -0.004930897148718551,
+        0.028399788886614066
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.16754717186483056,
+      "mean_NIS": 1.4503993905733945,
+      "innovation_coverage95": 0.9457831325301205,
+      "lag1": 0.35640608649957434,
+      "clips": 21,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "+ both",
+      "acf": [
+        0.35640608649957434,
+        0.20217800551869738,
+        0.26509222315943487,
+        0.08326727404551149,
+        0.11354531105563509,
+        0.11211356598487185,
+        0.08496303832566154,
+        0.027550753915169902,
+        -0.006116060727608308,
+        0.030722310320640014
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.07312479597707723,
+      "mean_NIS": 0.7182507573875888,
+      "innovation_coverage95": 0.9723502304147466,
+      "lag1": 0.7271743981571354,
+      "clips": 56,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Separate G/F",
+      "acf": [
+        0.7271743981571354,
+        0.5966055193509572,
+        0.5477353633277461,
+        0.48885145477600883,
+        0.49396525188251866,
+        0.43141855060000556,
+        0.3570565824927537,
+        0.34020446872923576,
+        0.30771662606358746,
+        0.27355335466224595
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.40382371637406106,
+      "mean_NIS": 0.9367095871445321,
+      "innovation_coverage95": 0.9327354260089686,
+      "lag1": 0.7029254695337297,
+      "clips": 22,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Separate G/F",
+      "acf": [
+        0.7029254695337297,
+        0.7355717741684589,
+        0.7308335718062725,
+        0.6968344916132173,
+        0.7124913806350943,
+        0.6515603458117711,
+        0.668010852574894,
+        0.6453993424459218,
+        0.6165620899612668,
+        0.6012520328928209
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.010496978739889081,
+      "mean_NIS": 2.039041408152591,
+      "innovation_coverage95": 0.8072289156626506,
+      "lag1": 0.8874937521273988,
+      "clips": 34,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Separate G/F",
+      "acf": [
+        0.8874937521273988,
+        0.8394581329771665,
+        0.8242178702586502,
+        0.7650486133134874,
+        0.7303843555892551,
+        0.6898788815394498,
+        0.6458058356790302,
+        0.5959274546154003,
+        0.5550688425879237,
+        0.5258895604695313
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.07586259772600747,
+      "mean_NIS": 0.7289776328754161,
+      "innovation_coverage95": 0.9723502304147466,
+      "lag1": 0.7284445439338121,
+      "clips": 56,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "No extra CO2",
+      "acf": [
+        0.7284445439338121,
+        0.5985260958692691,
+        0.5496832520136965,
+        0.4907147792769704,
+        0.4953157870406681,
+        0.4324691546382892,
+        0.3581762399696466,
+        0.3406528370643226,
+        0.30756576888778314,
+        0.2730738924586752
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.4304850684667131,
+      "mean_NIS": 0.977176200451105,
+      "innovation_coverage95": 0.9372197309417041,
+      "lag1": 0.7059034407405549,
+      "clips": 19,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "No extra CO2",
+      "acf": [
+        0.7059034407405549,
+        0.7378394916939212,
+        0.7340046790549669,
+        0.6994733513389849,
+        0.7167522735434934,
+        0.6578283338779473,
+        0.6751047241839024,
+        0.6528355495850345,
+        0.6223191161758931,
+        0.6050960574938369
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.003891745806316132,
+      "mean_NIS": 2.0272633637159063,
+      "innovation_coverage95": 0.8072289156626506,
+      "lag1": 0.8855621022800715,
+      "clips": 34,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "No extra CO2",
+      "acf": [
+        0.8855621022800715,
+        0.8367354209829743,
+        0.8213077442815799,
+        0.7612468562659686,
+        0.726183074435703,
+        0.6851907016564265,
+        0.6405989293503612,
+        0.5901494441605284,
+        0.5489134583498622,
+        0.5195952022114141
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.13704906915793463,
+      "mean_NIS": 0.830609184924134,
+      "innovation_coverage95": 0.9631336405529954,
+      "lag1": 0.7406329050686019,
+      "clips": 59,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB019 out",
+      "structure": "Current",
+      "acf": [
+        0.7406329050686019,
+        0.6168727539501974,
+        0.5699632986545387,
+        0.5126305640929485,
+        0.5155710484977807,
+        0.4525570940363268,
+        0.37962386362727013,
+        0.35714258690814443,
+        0.32299369051774607,
+        0.28626842985558587
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.03765418120177375,
+      "mean_NIS": 1.0184364265580346,
+      "innovation_coverage95": 0.9493087557603687,
+      "lag1": 0.211871722260171,
+      "clips": 52,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality",
+      "acf": [
+        0.211871722260171,
+        -0.02325338639943815,
+        -0.009438249559842628,
+        -0.055462749374953914,
+        0.09210572913576619,
+        0.01785336549929131,
+        -0.06863263571686125,
+        -0.01374189187679847,
+        -0.021903252857378527,
+        -0.037136506235804764
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.2773529704274081,
+      "mean_NIS": 1.4775887658880997,
+      "innovation_coverage95": 0.9170506912442397,
+      "lag1": 0.6640174785162976,
+      "clips": 63,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance",
+      "acf": [
+        0.6640174785162976,
+        0.5089281097864137,
+        0.4585661170121974,
+        0.39621855490547236,
+        0.4150711633784264,
+        0.3487712837299769,
+        0.2735755399086911,
+        0.2600138169008287,
+        0.22918002049645475,
+        0.1947850879433756
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.04664680751117099,
+      "mean_NIS": 1.2547384909061807,
+      "innovation_coverage95": 0.9493087557603687,
+      "lag1": 0.18705371206872706,
+      "clips": 54,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB019 out",
+      "structure": "+ both",
+      "acf": [
+        0.18705371206872706,
+        -0.05372655878829953,
+        -0.03690222533994519,
+        -0.0815350623346744,
+        0.07308759257179616,
+        -0.0010738784524759438,
+        -0.07993381497629012,
+        -0.027874795314429962,
+        -0.03354665009311224,
+        -0.04626921979502314
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.1304822746663461,
+      "mean_NIS": 0.7498071754045059,
+      "innovation_coverage95": 0.9723502304147466,
+      "lag1": 0.7382814830087153,
+      "clips": 58,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F",
+      "acf": [
+        0.7382814830087153,
+        0.6129233300207827,
+        0.5654905555581722,
+        0.5079211149005038,
+        0.511563136863408,
+        0.44921254186689014,
+        0.3763795217481646,
+        0.3550170215469212,
+        0.3222862778695668,
+        0.2864317841430083
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.1271232764870601,
+      "mean_NIS": 0.7153804182467234,
+      "innovation_coverage95": 0.9723502304147466,
+      "lag1": 0.7376921512563032,
+      "clips": 58,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2",
+      "acf": [
+        0.7376921512563032,
+        0.6118078267488122,
+        0.5642538498846383,
+        0.506702288811804,
+        0.5106853456294846,
+        0.44875509740804576,
+        0.3768019739076852,
+        0.35578772285601945,
+        0.32307595958866014,
+        0.2875580031639305
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.39525763353362475,
+      "mean_NIS": 0.591406843569782,
+      "innovation_coverage95": 0.9955156950672646,
+      "lag1": 0.7649834998719919,
+      "clips": 5,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB020 out",
+      "structure": "Current",
+      "acf": [
+        0.7649834998719919,
+        0.7897485465830216,
+        0.7868966413331232,
+        0.7566469211594538,
+        0.7685539776726603,
+        0.7248271421076458,
+        0.743161261881103,
+        0.7299072265851134,
+        0.7101610450678617,
+        0.7018735205716156
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.11285040899762279,
+      "mean_NIS": 0.8222695516090718,
+      "innovation_coverage95": 0.9730941704035875,
+      "lag1": -0.2486965322338881,
+      "clips": 32,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality",
+      "acf": [
+        -0.2486965322338881,
+        -0.014305858937004902,
+        0.035537557860587383,
+        -0.052845379896762835,
+        0.07390791484604418,
+        -0.10311684401483442,
+        0.05888026432506864,
+        0.040055083828038233,
+        -0.005043830962645959,
+        0.029511363108260687
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.44455652366962967,
+      "mean_NIS": 0.7744933739398979,
+      "innovation_coverage95": 0.968609865470852,
+      "lag1": 0.7640867896981147,
+      "clips": 6,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance",
+      "acf": [
+        0.7640867896981147,
+        0.7916728822554997,
+        0.7913355353742387,
+        0.7644065211580975,
+        0.779326535817913,
+        0.73942143557259,
+        0.762329399363624,
+        0.752527141291265,
+        0.7364048207125145,
+        0.7314726550385438
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.11285591065867843,
+      "mean_NIS": 0.8227147112422643,
+      "innovation_coverage95": 0.9730941704035875,
+      "lag1": -0.24876971240051285,
+      "clips": 32,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB020 out",
+      "structure": "+ both",
+      "acf": [
+        -0.24876971240051285,
+        -0.014330725106717153,
+        0.03552549975890131,
+        -0.05285848934628642,
+        0.07390690648555764,
+        -0.10313041879241029,
+        0.05887832484621744,
+        0.040048496800792456,
+        -0.0050549533260691275,
+        0.029503706776507283
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.4355761242319021,
+      "mean_NIS": 0.7435822364967362,
+      "innovation_coverage95": 0.9730941704035875,
+      "lag1": 0.767245964150503,
+      "clips": 6,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F",
+      "acf": [
+        0.767245964150503,
+        0.7943809498186752,
+        0.7939732502993351,
+        0.7676154914153618,
+        0.7825622321142519,
+        0.7437338095767267,
+        0.7670812852066758,
+        0.7583721388574514,
+        0.7433507455558929,
+        0.7397810571530533
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.46439896021212185,
+      "mean_NIS": 0.745191415722273,
+      "innovation_coverage95": 0.9910313901345291,
+      "lag1": 0.7891540351167248,
+      "clips": 0,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2",
+      "acf": [
+        0.7891540351167248,
+        0.811107226331208,
+        0.8083624262695929,
+        0.7802032780437259,
+        0.7905732674386219,
+        0.7492575003828904,
+        0.7637923608337399,
+        0.7507452011357861,
+        0.7308354191103101,
+        0.7204656517864323
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": 0.19709840461305833,
+      "mean_NIS": 2.0283877880765813,
+      "innovation_coverage95": 0.8373493975903614,
+      "lag1": 0.8643114091416803,
+      "clips": 47,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB021 out",
+      "structure": "Current",
+      "acf": [
+        0.8643114091416803,
+        0.8053845929842914,
+        0.7866482309636054,
+        0.7152311351846385,
+        0.673572907834305,
+        0.6256130198843751,
+        0.5740775165775912,
+        0.5161736219309986,
+        0.46955758756023075,
+        0.43669388433555906
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.14977501943941096,
+      "mean_NIS": 1.559725345782261,
+      "innovation_coverage95": 0.9397590361445783,
+      "lag1": 0.3537926791845202,
+      "clips": 23,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality",
+      "acf": [
+        0.3537926791845202,
+        0.18410927510038927,
+        0.25618238773576607,
+        0.09980190888936268,
+        0.13626617862329646,
+        0.11844465205434626,
+        0.08395331680904464,
+        0.015198952141147103,
+        -0.017345418078275214,
+        0.02320056745631812
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": 0.44207829371015567,
+      "mean_NIS": 2.5199781804799373,
+      "innovation_coverage95": 0.8192771084337349,
+      "lag1": 0.732899911896288,
+      "clips": 63,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance",
+      "acf": [
+        0.732899911896288,
+        0.6131614141873003,
+        0.5703783229825321,
+        0.4331384394995904,
+        0.36954364694741715,
+        0.3031534391775432,
+        0.2383636713511634,
+        0.16527308721349016,
+        0.11419372819183647,
+        0.09165822860441024
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.15307775620403263,
+      "mean_NIS": 1.72823478637965,
+      "innovation_coverage95": 0.9096385542168675,
+      "lag1": 0.4177661440136988,
+      "clips": 24,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB021 out",
+      "structure": "+ both",
+      "acf": [
+        0.4177661440136988,
+        0.24894167655646163,
+        0.31092589398233017,
+        0.16595563549919584,
+        0.18160574002849683,
+        0.15354478891921514,
+        0.10876404540937866,
+        0.03506155418166601,
+        0.0007202181205361534,
+        0.03333576975854366
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": 0.19849064825008503,
+      "mean_NIS": 2.0186583137522622,
+      "innovation_coverage95": 0.8373493975903614,
+      "lag1": 0.864534499693719,
+      "clips": 47,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F",
+      "acf": [
+        0.864534499693719,
+        0.8057467490082243,
+        0.7870560637059324,
+        0.715741456296777,
+        0.6741358133183821,
+        0.626253360449007,
+        0.5748680129922441,
+        0.5171086837256245,
+        0.4705294656611798,
+        0.43768658092281626
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": 0.1978828650091808,
+      "mean_NIS": 2.0304682037138893,
+      "innovation_coverage95": 0.8373493975903614,
+      "lag1": 0.8639126983267632,
+      "clips": 47,
+      "min_eigenvalue": 0.0,
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2",
+      "acf": [
+        0.8639126983267632,
+        0.8048103940741163,
+        0.7860235267705807,
+        0.7144127620786812,
+        0.6726630286430995,
+        0.6245936547617965,
+        0.572932808099025,
+        0.5148944101832434,
+        0.4681940222722346,
+        0.4352915544201462
+      ]
+    },
+    {
+      "LAB": "LAB019",
+      "updates": 217,
+      "standardized_bias": 0.16378931345680883,
+      "mean_NIS": 1.2536622323785511,
+      "innovation_coverage95": 0.9354838709677419,
+      "lag1": 0.8000601728372102,
+      "clips": 48,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Original noise",
+      "acf": [
+        0.8000601728372102,
+        0.701232428057962,
+        0.6623206621967267,
+        0.6145117087366377,
+        0.612366913375512,
+        0.5605731745820571,
+        0.49260983736270403,
+        0.4735590188240004,
+        0.44294443782824794,
+        0.4057830575075101
+      ]
+    },
+    {
+      "LAB": "LAB020",
+      "updates": 223,
+      "standardized_bias": -0.3746480696815093,
+      "mean_NIS": 1.085815878445069,
+      "innovation_coverage95": 0.9327354260089686,
+      "lag1": 0.7009066280879208,
+      "clips": 13,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Original noise",
+      "acf": [
+        0.7009066280879208,
+        0.734549484554008,
+        0.7312903079727592,
+        0.6939895286299915,
+        0.7091389250203505,
+        0.6544556221019256,
+        0.6780776845162411,
+        0.6615467526650972,
+        0.6367837070875387,
+        0.6253041540576529
+      ]
+    },
+    {
+      "LAB": "LAB021",
+      "updates": 166,
+      "standardized_bias": -0.11022295171723064,
+      "mean_NIS": 3.745547045689819,
+      "innovation_coverage95": 0.6987951807228916,
+      "lag1": 0.9233870754860537,
+      "clips": 20,
+      "min_eigenvalue": 0.0,
+      "fold": "All development",
+      "structure": "Original noise",
+      "acf": [
+        0.9233870754860537,
+        0.8872567113103388,
+        0.8705716837919166,
+        0.8217438129713803,
+        0.786973921072101,
+        0.7470803239158749,
+        0.7035956256693594,
+        0.6550434993002677,
+        0.6112159829997257,
+        0.5739505464261686
+      ]
+    }
+  ],
+  "scores": [
+    {
+      "fold": "All development",
+      "structure": "Current",
+      "score": -1.066703118438867,
+      "training_score": -1.066703118438867,
+      "parameters": 4,
+      "Rsd": 0.0673064004425315,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "All development",
+      "structure": "+ mortality",
+      "score": -1.6922380799480943,
+      "training_score": -1.6922380799480943,
+      "parameters": 5,
+      "Rsd": 0.03263154791783797,
+      "at_bound": "mortality",
+      "converged": true
+    },
+    {
+      "fold": "All development",
+      "structure": "+ maintenance",
+      "score": -1.316240089035403,
+      "training_score": -1.316240089035403,
+      "parameters": 5,
+      "Rsd": 0.046840265997102865,
+      "at_bound": "growth, fermentation, gas, maintenance",
+      "converged": true
+    },
+    {
+      "fold": "All development",
+      "structure": "+ both",
+      "score": -1.6918875722515245,
+      "training_score": -1.6918875722515245,
+      "parameters": 6,
+      "Rsd": 0.03229901196671414,
+      "at_bound": "mortality",
+      "converged": true
+    },
+    {
+      "fold": "All development",
+      "structure": "Separate G/F",
+      "score": -1.0685436550018157,
+      "training_score": -1.0685436550018157,
+      "parameters": 5,
+      "Rsd": 0.06805918226977652,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "All development",
+      "structure": "No extra CO2",
+      "score": -1.0680039380207471,
+      "training_score": -1.0680039380207471,
+      "parameters": 3,
+      "Rsd": 0.0702992750865302,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "Current",
+      "score": -1.318130297058233,
+      "training_score": -0.96882359330301,
+      "parameters": 4,
+      "Rsd": 0.06719754537100575,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality",
+      "score": -1.7448342106190646,
+      "training_score": -1.6743572337272576,
+      "parameters": 5,
+      "Rsd": 0.0306245883567759,
+      "at_bound": "mortality",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance",
+      "score": -1.3481532985946005,
+      "training_score": -1.2895461371108614,
+      "parameters": 5,
+      "Rsd": 0.04486389776595873,
+      "at_bound": "growth, fermentation, maintenance",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "+ both",
+      "score": -1.6054536271403446,
+      "training_score": -1.6977366512692973,
+      "parameters": 6,
+      "Rsd": 0.01229909542444095,
+      "at_bound": "mortality",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F",
+      "score": -1.312127443761463,
+      "training_score": -0.967384496304019,
+      "parameters": 5,
+      "Rsd": 0.06684213384231712,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2",
+      "score": -1.307665909976479,
+      "training_score": -0.9641124508520613,
+      "parameters": 3,
+      "Rsd": 0.07230103436753835,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "Current",
+      "score": -0.9952899090355788,
+      "training_score": -0.925144662914356,
+      "parameters": 4,
+      "Rsd": 0.10612539003070152,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality",
+      "score": -1.8145841905252824,
+      "training_score": -1.6317413785996178,
+      "parameters": 5,
+      "Rsd": 0.032598547053705164,
+      "at_bound": "growth, fermentation, gas, mortality",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance",
+      "score": -1.0458772133814855,
+      "training_score": -0.9974686414679176,
+      "parameters": 5,
+      "Rsd": 0.07412385838968837,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "+ both",
+      "score": -1.8146067661458543,
+      "training_score": -1.631740997392758,
+      "parameters": 6,
+      "Rsd": 0.032587433872377065,
+      "at_bound": "growth, fermentation, mortality",
+      "converged": false
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F",
+      "score": -1.0331498583464078,
+      "training_score": -1.0055197844869879,
+      "parameters": 5,
+      "Rsd": 0.07466955699061088,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2",
+      "score": -0.969934993884814,
+      "training_score": -0.850484090149189,
+      "parameters": 3,
+      "Rsd": 0.08008062215301633,
+      "at_bound": "",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "Current",
+      "score": -0.7435210036323845,
+      "training_score": -1.2866056466838351,
+      "parameters": 4,
+      "Rsd": 0.06429864561798371,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality",
+      "score": -1.4856309508688443,
+      "training_score": -1.781725708751091,
+      "parameters": 5,
+      "Rsd": 0.031743354030295774,
+      "at_bound": "mortality",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance",
+      "score": -0.8417803942444282,
+      "training_score": -1.5167108368167224,
+      "parameters": 5,
+      "Rsd": 0.04305382525486072,
+      "at_bound": "growth, fermentation, gas, maintenance",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "+ both",
+      "score": -1.4311847405042362,
+      "training_score": -1.7814999242991585,
+      "parameters": 6,
+      "Rsd": 0.00791203981737214,
+      "at_bound": "",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F",
+      "score": -0.7449808739727526,
+      "training_score": -1.2889381670604831,
+      "parameters": 5,
+      "Rsd": 0.057548481173522875,
+      "at_bound": "growth",
+      "converged": true
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2",
+      "score": -0.7442567180930536,
+      "training_score": -1.2874063393008623,
+      "parameters": 3,
+      "Rsd": 0.06542719068880355,
+      "at_bound": "growth",
+      "converged": true
+    }
+  ],
+  "fits": [
+    {
+      "fold": "All development",
+      "structure": "Current",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -0.5431554937295433,
+        0.3532969264855561,
+        -1.1719436349631922
+      ],
+      "sigma": [
+        0.03,
+        0.022905221361762866,
+        0.022905221361762866,
+        0.022557809591039507,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.0673064004425315,
+      "score": -1.066703118438867,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.066703118438867,
+          "success": true,
+          "nfev": 179,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.5431554937295433,
+            0.3532969264855561,
+            -1.1719436349631922
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.0658101298872644,
+          "success": true,
+          "nfev": 220,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.5148655554777074,
+            -0.39800055449616356,
+            -1.1610755348719093
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "All development",
+      "structure": "+ mortality",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "R"
+      ],
+      "x": [
+        0.4854084562647256,
+        -1.1651217784734638,
+        -0.79146319702042,
+        -1.0,
+        -1.4863623244275508
+      ],
+      "sigma": [
+        0.009173386902816232,
+        0.0054697592137352225,
+        0.0054697592137352225,
+        0.0016163551934622175,
+        0.1,
+        0.0
+      ],
+      "Rsd": 0.03263154791783797,
+      "score": -1.6922380799480943,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.6914756872949412,
+          "success": true,
+          "nfev": 307,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9791512823385833,
+            -2.0,
+            -2.0,
+            -1.0,
+            -1.484096014264654
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.6922380799480943,
+          "success": true,
+          "nfev": 193,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.4854084562647256,
+            -1.1651217784734638,
+            -0.79146319702042,
+            -1.0,
+            -1.4863623244275508
+          ]
+        }
+      ],
+      "at_bound": [
+        "mortality"
+      ]
+    },
+    {
+      "fold": "All development",
+      "structure": "+ maintenance",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -1.9997386434597844,
+        -2.0,
+        0.0,
+        -1.3293806473156018
+      ],
+      "sigma": [
+        0.03,
+        0.0008004815814310424,
+        0.0008004815814310424,
+        0.0001,
+        0.0,
+        1.0
+      ],
+      "Rsd": 0.046840265997102865,
+      "score": -1.316240089035403,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.0738105322902582,
+          "success": true,
+          "nfev": 346,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.6600384416446531,
+            0.533088870745812,
+            -1.4183947826382073,
+            -1.207080392089307
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.316240089035403,
+          "success": true,
+          "nfev": 238,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.9997386434597844,
+            -2.0,
+            0.0,
+            -1.3293806473156018
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth",
+        "fermentation",
+        "gas",
+        "maintenance"
+      ]
+    },
+    {
+      "fold": "All development",
+      "structure": "+ both",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        -0.9946387053288177,
+        -0.912750605255107,
+        -1.2313228403278456,
+        -1.0004767848426472,
+        -1.1316697690496578,
+        -1.490810762621436
+      ],
+      "sigma": [
+        0.0003037264047630849,
+        0.009780011866525736,
+        0.009780011866525736,
+        0.0005870527944221684,
+        0.0998902764732064,
+        0.07384655347131161
+      ],
+      "Rsd": 0.03229901196671414,
+      "score": -1.6918875722515245,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.691280001772973,
+          "success": true,
+          "nfev": 351,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9999999999999998,
+            -1.11159260314441,
+            -0.374744353075084,
+            -1.0,
+            -3.5600133605671926,
+            -1.4951512049515583
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.6918875722515245,
+          "success": true,
+          "nfev": 428,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            -0.9946387053288177,
+            -0.912750605255107,
+            -1.2313228403278456,
+            -1.0004767848426472,
+            -1.1316697690496578,
+            -1.490810762621436
+          ]
+        }
+      ],
+      "at_bound": [
+        "mortality"
+      ]
+    },
+    {
+      "fold": "All development",
+      "structure": "Separate G/F",
+      "names": [
+        "growth",
+        "ferm_G",
+        "ferm_F",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -0.30871646781376805,
+        -0.8579202359423881,
+        -0.020447652896731075,
+        -1.167113273251629
+      ],
+      "sigma": [
+        0.03,
+        0.039298277874354935,
+        0.011096084389866758,
+        0.009540087260748212,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.06805918226977652,
+      "score": -1.0685436550018157,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.0685436550018157,
+          "success": true,
+          "nfev": 344,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.30871646781376805,
+            -0.8579202359423881,
+            -0.020447652896731075,
+            -1.167113273251629
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.067982177557526,
+          "success": true,
+          "nfev": 297,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9998730427178224,
+            -0.30978888367345575,
+            -0.6628896816852893,
+            -0.09748478655781834,
+            -1.1660294126910635
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "All development",
+      "structure": "No extra CO2",
+      "names": [
+        "growth",
+        "fermentation",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -1.5059738318627083,
+        -1.1530491533236042
+      ],
+      "sigma": [
+        0.03,
+        0.002495262013168327,
+        0.002495262013168327,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.0702992750865302,
+      "score": -1.0680039380207471,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.0680039380207471,
+          "success": true,
+          "nfev": 95,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.5059738318627083,
+            -1.1530491533236042
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.952182988591122,
+          "success": true,
+          "nfev": 163,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.15017116314637405,
+            -0.2710156752401541,
+            -1.1216079875143523
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "Current",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -1.1363081760133886,
+        -0.1227318127223667,
+        -1.1726465908047667
+      ],
+      "sigma": [
+        0.03,
+        0.005844963601043141,
+        0.005844963601043141,
+        0.00753820922565998,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.06719754537100575,
+      "score": -0.96882359330301,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.96882359330301,
+          "success": true,
+          "nfev": 218,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.1363081760133886,
+            -0.1227318127223667,
+            -1.1726465908047667
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.9657943363937185,
+          "success": true,
+          "nfev": 241,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9849822585246092,
+            -1.2761355198240054,
+            -0.5029259323998405,
+            -1.1387491949785178
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "+ mortality",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "R"
+      ],
+      "x": [
+        0.45103394652815687,
+        -0.586272500659253,
+        -0.313362232942449,
+        -1.0000547826428625,
+        -1.5139297401974434
+      ],
+      "sigma": [
+        0.00847530236891463,
+        0.02074041711509003,
+        0.02074041711509003,
+        0.004860016761201921,
+        0.09998738662587192,
+        0.0
+      ],
+      "Rsd": 0.0306245883567759,
+      "score": -1.6743572337272576,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.6714415739203083,
+          "success": true,
+          "nfev": 179,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.9770811700478856,
+            0.19236909782842238,
+            -1.0,
+            -1.52428160798619
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.6743572337272576,
+          "success": true,
+          "nfev": 189,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.45103394652815687,
+            -0.586272500659253,
+            -0.313362232942449,
+            -1.0000547826428625,
+            -1.5139297401974434
+          ]
+        }
+      ],
+      "at_bound": [
+        "mortality"
+      ]
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "+ maintenance",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -2.0,
+        -0.10554635929894414,
+        0.0,
+        -1.3481029977010808
+      ],
+      "sigma": [
+        0.03,
+        0.0008,
+        0.0008,
+        0.007842483988531558,
+        0.0,
+        1.0
+      ],
+      "Rsd": 0.04486389776595873,
+      "score": -1.2895461371108614,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.96894682426937,
+          "success": true,
+          "nfev": 213,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.7082970093098978,
+            0.0526376277431682,
+            -1.8421692043476852,
+            -1.160201482842281
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.2895461371108614,
+          "success": true,
+          "nfev": 161,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -2.0,
+            -0.10554635929894414,
+            0.0,
+            -1.3481029977010808
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth",
+        "fermentation",
+        "maintenance"
+      ]
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "+ both",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        0.6713823452593601,
+        -0.19625005049457261,
+        -0.29750704358981117,
+        -1.0004952248981225,
+        -0.20464793863306113,
+        -1.9101268289362263
+      ],
+      "sigma": [
+        0.014076788969275056,
+        0.05091431867439287,
+        0.05091431867439287,
+        0.005040724437551375,
+        0.09988603524240146,
+        0.6242406719105643
+      ],
+      "Rsd": 0.01229909542444095,
+      "score": -1.6977366512692973,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.693263018700861,
+          "success": false,
+          "nfev": 354,
+          "message": "Maximum number of iterations has been exceeded.",
+          "x": [
+            0.9999999999999432,
+            -0.554288141206758,
+            -0.12866530019035108,
+            -1.0017823202581628,
+            -0.1553380740526539,
+            -1.5192195026022124
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.6798541241497085,
+          "success": true,
+          "nfev": 267,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.03691454947259329,
+            -0.18610981588903192,
+            0.04751679978303696,
+            -1.0002516813263014,
+            -1.9557655449774405,
+            -2.957024446169593
+          ]
+        },
+        {
+          "start": "refinement",
+          "score": -1.6977366512692973,
+          "success": true,
+          "nfev": 228,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.6713823452593601,
+            -0.19625005049457261,
+            -0.29750704358981117,
+            -1.0004952248981225,
+            -0.20464793863306113,
+            -1.9101268289362263
+          ]
+        }
+      ],
+      "at_bound": [
+        "mortality"
+      ]
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "Separate G/F",
+      "names": [
+        "growth",
+        "ferm_G",
+        "ferm_F",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -0.9212251531802135,
+        -0.9653964900875308,
+        0.40390732645555344,
+        -1.174949694308997
+      ],
+      "sigma": [
+        0.03,
+        0.00959102082135614,
+        0.0086635023374195,
+        0.02534587720353562,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.06684213384231712,
+      "score": -0.967384496304019,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.967384496304019,
+          "success": true,
+          "nfev": 344,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.9212251531802135,
+            -0.9653964900875308,
+            0.40390732645555344,
+            -1.174949694308997
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.9637192490741051,
+          "success": true,
+          "nfev": 316,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9986188169208798,
+            -1.5817930365127255,
+            -1.342574517092479,
+            0.8562544442047878,
+            -1.4173108588017982
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB019 out",
+      "structure": "No extra CO2",
+      "names": [
+        "growth",
+        "fermentation",
+        "R"
+      ],
+      "x": [
+        0.997875405310752,
+        -0.8866551348792399,
+        -1.1408554894703269
+      ],
+      "sigma": [
+        0.029853596597296153,
+        0.010385677966832723,
+        0.010385677966832723,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.07230103436753835,
+      "score": -0.9641124508520613,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.9641124508520613,
+          "success": true,
+          "nfev": 103,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.997875405310752,
+            -0.8866551348792399,
+            -1.1408554894703269
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.9606224599454996,
+          "success": true,
+          "nfev": 106,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9990505157083932,
+            -1.6547265702947875,
+            -1.1196499272788323
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "Current",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -0.7765809326483283,
+        -0.7842595034692416,
+        -0.9741807006314286
+      ],
+      "sigma": [
+        0.03,
+        0.01338163113418553,
+        0.01338163113418553,
+        0.0016433894572151022,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.10612539003070152,
+      "score": -0.925144662914356,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.8703803708447599,
+          "success": true,
+          "nfev": 215,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            -0.11310271925315411,
+            0.13040145588731084,
+            0.04793876595308287,
+            -1.1135231886779462
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.925144662914356,
+          "success": true,
+          "nfev": 229,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.7765809326483283,
+            -0.7842595034692416,
+            -0.9741807006314286
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "+ mortality",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -2.0,
+        -2.0,
+        -1.0,
+        -1.4868017563928095
+      ],
+      "sigma": [
+        0.03,
+        0.0008,
+        0.0008,
+        0.0001,
+        0.1,
+        0.0
+      ],
+      "Rsd": 0.032598547053705164,
+      "score": -1.6317413785996178,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.8658845494452985,
+          "success": true,
+          "nfev": 279,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            -0.1204595602878038,
+            0.19950939428725817,
+            0.3135851845960546,
+            -3.2893287412691254,
+            -1.2078968958039265
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.6317413785996178,
+          "success": true,
+          "nfev": 328,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -2.0,
+            -2.0,
+            -1.0,
+            -1.4868017563928095
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality"
+      ]
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "+ maintenance",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        0.9710951107564891,
+        0.02845453402738079,
+        -1.2430792111438462,
+        -1.2921644967705352,
+        -1.1300419823140455
+      ],
+      "sigma": [
+        0.028068316529823494,
+        0.08541704068733014,
+        0.08541704068733014,
+        0.0005713744139601933,
+        0.0,
+        0.05103116737289048
+      ],
+      "Rsd": 0.07412385838968837,
+      "score": -0.9974686414679176,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.860192744208262,
+          "success": true,
+          "nfev": 226,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            -0.04206429637279637,
+            0.10000111559844463,
+            0.31531990999687326,
+            -2.330018460210436,
+            -1.1130069853784352
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.9927218520304644,
+          "success": false,
+          "nfev": 590,
+          "message": "Maximum number of iterations has been exceeded.",
+          "x": [
+            0.9707440854753583,
+            0.028468071255760004,
+            -1.2429856489136586,
+            -1.2912776641978976,
+            -1.130458233451774
+          ]
+        },
+        {
+          "start": "refinement",
+          "score": -0.9974686414679176,
+          "success": true,
+          "nfev": 261,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9710951107564891,
+            0.02845453402738079,
+            -1.2430792111438462,
+            -1.2921644967705352,
+            -1.1300419823140455
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "+ both",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        0.9999984368417807,
+        -1.9867399066268003,
+        -1.7374497473862967,
+        -1.0,
+        -2.16424811761752,
+        -1.486949837109104
+      ],
+      "sigma": [
+        0.02999989202104991,
+        0.0008248027121926627,
+        0.0008248027121926627,
+        0.00018304178933947407,
+        0.1,
+        0.006850967107022478
+      ],
+      "Rsd": 0.032587433872377065,
+      "score": -1.631740997392758,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.859555439890149,
+          "success": true,
+          "nfev": 275,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.08498031706971637,
+            0.17312332279919124,
+            0.08831685753173943,
+            -3.0553867154987833,
+            -2.150896593081038,
+            -1.1527291884852622
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.631702346360896,
+          "success": false,
+          "nfev": 356,
+          "message": "Maximum number of iterations has been exceeded.",
+          "x": [
+            0.9960845364912925,
+            -1.5520607964855073,
+            -1.0212300823239437,
+            -1.0,
+            -1.8343036772187378,
+            -1.4874168126339495
+          ]
+        },
+        {
+          "start": "refinement",
+          "score": -1.631740997392758,
+          "success": false,
+          "nfev": 311,
+          "message": "Maximum number of iterations has been exceeded.",
+          "x": [
+            0.9999984368417807,
+            -1.9867399066268003,
+            -1.7374497473862967,
+            -1.0,
+            -2.16424811761752,
+            -1.486949837109104
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth",
+        "fermentation",
+        "mortality"
+      ]
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "Separate G/F",
+      "names": [
+        "growth",
+        "ferm_G",
+        "ferm_F",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        0.0973304016104963,
+        0.010179371435879802,
+        -0.34804404546594214,
+        -1.1268564253036428
+      ],
+      "sigma": [
+        0.03,
+        0.1000968449173596,
+        0.08189725743925821,
+        0.004486998811864899,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.07466955699061088,
+      "score": -1.0055197844869879,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.8732378099052861,
+          "success": true,
+          "nfev": 395,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            -0.04187059200997079,
+            0.09712888240934123,
+            0.14785694945335603,
+            -0.07955680621174699,
+            -1.1194734517933482
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.0055197844869879,
+          "success": true,
+          "nfev": 585,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            0.0973304016104963,
+            0.010179371435879802,
+            -0.34804404546594214,
+            -1.1268564253036428
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB020 out",
+      "structure": "No extra CO2",
+      "names": [
+        "growth",
+        "fermentation",
+        "R"
+      ],
+      "x": [
+        -0.2785957781524974,
+        0.09587324559509797,
+        -1.0964725614456672
+      ],
+      "sigma": [
+        0.001579521262839967,
+        0.099761560201371,
+        0.099761560201371,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.08008062215301633,
+      "score": -0.850484090149189,
+      "runs": [
+        {
+          "start": 0,
+          "score": -0.8485801341794851,
+          "success": true,
+          "nfev": 78,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.03879992275513812,
+            0.08671340653387632,
+            -1.0500626751647593
+          ]
+        },
+        {
+          "start": 1,
+          "score": -0.850484090149189,
+          "success": true,
+          "nfev": 118,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            -0.2785957781524974,
+            0.09587324559509797,
+            -1.0964725614456672
+          ]
+        }
+      ],
+      "at_bound": []
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "Current",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -0.7967706585470503,
+        0.06513881576141507,
+        -1.1917981749269588
+      ],
+      "sigma": [
+        0.03,
+        0.012773776950394194,
+        0.012773776950394194,
+        0.011618199129244982,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.06429864561798371,
+      "score": -1.2866056466838351,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.2864943230987558,
+          "success": true,
+          "nfev": 197,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9869264580237258,
+            -1.9908188146227797,
+            0.5660233012479221,
+            -1.2276979262728067
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.2866056466838351,
+          "success": true,
+          "nfev": 207,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -0.7967706585470503,
+            0.06513881576141507,
+            -1.1917981749269588
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "+ mortality",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "R"
+      ],
+      "x": [
+        0.33706574104498055,
+        -1.0037835299161924,
+        -1.0337799758147685,
+        -1.0050919874738813,
+        -1.498347187225401
+      ],
+      "sigma": [
+        0.006519090284960738,
+        0.007930607512411208,
+        0.007930607512411208,
+        0.0009251667672945019,
+        0.09883437324014385,
+        0.0
+      ],
+      "Rsd": 0.031743354030295774,
+      "score": -1.781725708751091,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.7807212081210402,
+          "success": true,
+          "nfev": 324,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.999997128600428,
+            0.4050968036489803,
+            -1.0020140390909682,
+            -1.6529337863043556
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.781725708751091,
+          "success": true,
+          "nfev": 271,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.33706574104498055,
+            -1.0037835299161924,
+            -1.0337799758147685,
+            -1.0050919874738813,
+            -1.498347187225401
+          ]
+        }
+      ],
+      "at_bound": [
+        "mortality"
+      ]
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "+ maintenance",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -1.9996726434169019,
+        -2.0,
+        0.0,
+        -1.3659882562132413
+      ],
+      "sigma": [
+        0.03,
+        0.0008006032404332879,
+        0.0008006032404332879,
+        0.0001,
+        0.0,
+        1.0
+      ],
+      "Rsd": 0.04305382525486072,
+      "score": -1.5167108368167224,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.5166710090090634,
+          "success": false,
+          "nfev": 371,
+          "message": "Maximum number of iterations has been exceeded.",
+          "x": [
+            1.0,
+            -1.2736208368588284,
+            -0.009629114922554215,
+            0.0,
+            -1.3760157799004276
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.5167108368167224,
+          "success": true,
+          "nfev": 143,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.9996726434169019,
+            -2.0,
+            0.0,
+            -1.3659882562132413
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth",
+        "fermentation",
+        "gas",
+        "maintenance"
+      ]
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "+ both",
+      "names": [
+        "growth",
+        "fermentation",
+        "gas",
+        "mortality",
+        "maintenance",
+        "R"
+      ],
+      "x": [
+        0.42944385156141185,
+        -0.18714694323066744,
+        -0.08391794277944112,
+        -1.079409726313532,
+        -0.9555465788192485,
+        -2.101711535816654
+      ],
+      "sigma": [
+        0.00806427085997387,
+        0.051992780530533404,
+        0.051992780530533404,
+        0.008242938454565038,
+        0.08328950359246015,
+        0.11077797477472393
+      ],
+      "Rsd": 0.00791203981737214,
+      "score": -1.7814999242991585,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.2888412878565272,
+          "success": true,
+          "nfev": 417,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9980487390118075,
+            -0.7997948839593609,
+            0.7246317768665689,
+            -3.0878640683186953,
+            -2.7068737160195817,
+            -1.322279570877571
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.7814999242991585,
+          "success": true,
+          "nfev": 531,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.42944385156141185,
+            -0.18714694323066744,
+            -0.08391794277944112,
+            -1.079409726313532,
+            -0.9555465788192485,
+            -2.101711535816654
+          ]
+        }
+      ],
+      "at_bound": []
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "Separate G/F",
+      "names": [
+        "growth",
+        "ferm_G",
+        "ferm_F",
+        "gas",
+        "R"
+      ],
+      "x": [
+        0.9997436835249879,
+        -1.2903698823833747,
+        -1.3936079940741062,
+        0.5504603492269624,
+        -1.239966133835445
+      ],
+      "sigma": [
+        0.029982299509011007,
+        0.004099398186063259,
+        0.003232079189438883,
+        0.03551896884394872,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.057548481173522875,
+      "score": -1.2889381670604831,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.2889381670604831,
+          "success": true,
+          "nfev": 327,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            0.9997436835249879,
+            -1.2903698823833747,
+            -1.3936079940741062,
+            0.5504603492269624,
+            -1.239966133835445
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.2851437080193615,
+          "success": true,
+          "nfev": 323,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.4681857332141988,
+            -0.39153535748813634,
+            -0.3122419657868866,
+            -1.2049479729623493
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    },
+    {
+      "fold": "Leave LAB021 out",
+      "structure": "No extra CO2",
+      "names": [
+        "growth",
+        "fermentation",
+        "R"
+      ],
+      "x": [
+        1.0,
+        -1.4429737979237707,
+        -1.184241727027693
+      ],
+      "sigma": [
+        0.03,
+        0.0028848031863403525,
+        0.0028848031863403525,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Rsd": 0.06542719068880355,
+      "score": -1.2874063393008623,
+      "runs": [
+        {
+          "start": 0,
+          "score": -1.2874063393008623,
+          "success": true,
+          "nfev": 137,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.4429737979237707,
+            -1.184241727027693
+          ]
+        },
+        {
+          "start": 1,
+          "score": -1.2871509264661403,
+          "success": true,
+          "nfev": 139,
+          "message": "Optimization terminated successfully.",
+          "x": [
+            1.0,
+            -1.4059928773795747,
+            -1.1908686778787791
+          ]
+        }
+      ],
+      "at_bound": [
+        "growth"
+      ]
+    }
+  ],
+  "leader": "+ mortality",
+  "conditional_profiles": [
+    {
+      "parameter": "growth",
+      "log10_value": -2.0,
+      "value": 0.01,
+      "score": -1.6915514414933555,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": -1.5,
+      "value": 0.03162277660168379,
+      "score": -1.691550045293931,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": -1.0,
+      "value": 0.1,
+      "score": -1.691217463422747,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": -0.5,
+      "value": 0.31622776601683794,
+      "score": -1.6911401933914185,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": 0.0,
+      "value": 1.0,
+      "score": -1.6908661643399368,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": 0.4854084562647256,
+      "value": 3.057795634272077,
+      "score": -1.6922380799480943,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": 0.5,
+      "value": 3.1622776601683795,
+      "score": -1.6922283323955825,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "growth",
+      "log10_value": 1.0,
+      "value": 10.0,
+      "score": -1.691347647937677,
+      "fit_value": 3.057795634272077
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": -2.0,
+      "value": 0.01,
+      "score": -1.6922399642835364,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": -1.5,
+      "value": 0.03162277660168379,
+      "score": -1.692242359765513,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": -1.1651217784734638,
+      "value": 0.06837199017169028,
+      "score": -1.6922380799480943,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": -1.0,
+      "value": 0.1,
+      "score": -1.6921907670248553,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": -0.5,
+      "value": 0.31622776601683794,
+      "score": -1.6860638519247033,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": 0.0,
+      "value": 1.0,
+      "score": -1.5136209649616885,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": 0.5,
+      "value": 3.1622776601683795,
+      "score": -0.7813994180031062,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "fermentation",
+      "log10_value": 1.0,
+      "value": 10.0,
+      "score": 0.2541736402817525,
+      "fit_value": 0.06837199017169028
+    },
+    {
+      "parameter": "gas",
+      "log10_value": -2.0,
+      "value": 0.01,
+      "score": -1.69224995316388,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": -1.5,
+      "value": 0.03162277660168379,
+      "score": -1.6922495653107765,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": -1.0,
+      "value": 0.1,
+      "score": -1.6922455973166326,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": -0.79146319702042,
+      "value": 0.16163551934622175,
+      "score": -1.6922380799480943,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": -0.5,
+      "value": 0.31622776601683794,
+      "score": -1.6921941541192587,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": 0.0,
+      "value": 1.0,
+      "score": -1.6909044317196003,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": 0.5,
+      "value": 3.1622776601683795,
+      "score": -1.6399881972149835,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "gas",
+      "log10_value": 1.0,
+      "value": 10.0,
+      "score": -1.1718009177318658,
+      "fit_value": 0.16163551934622175
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -5.0,
+      "value": 1e-05,
+      "score": 0.4483616969874105,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -4.333333333333333,
+      "value": 4.641588833612782e-05,
+      "score": 0.4487136714930757,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -3.666666666666667,
+      "value": 0.00021544346900318823,
+      "score": 0.4488841755968968,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -3.0,
+      "value": 0.001,
+      "score": 0.4274281928871268,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -2.3333333333333335,
+      "value": 0.004641588833612777,
+      "score": 0.1721257832269397,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -1.666666666666667,
+      "value": 0.021544346900318822,
+      "score": -0.9918016257638625,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "mortality",
+      "log10_value": -1.0,
+      "value": 0.1,
+      "score": -1.6922380799480943,
+      "fit_value": 0.1
+    },
+    {
+      "parameter": "R",
+      "log10_value": -3.0,
+      "value": 0.001,
+      "score": 12.359225910385973,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -2.6166666666666667,
+      "value": 0.0024173154808041037,
+      "score": 4.536089851396603,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -2.2333333333333334,
+      "value": 0.005843414133735175,
+      "score": 1.150349070421405,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -1.85,
+      "value": 0.01412537544622754,
+      "score": -1.1120178040355466,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -1.4863623244275508,
+      "value": 0.03263154791783797,
+      "score": -1.6922380799480943,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -1.4666666666666668,
+      "value": 0.034145488738336005,
+      "score": -1.6910167495180215,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -1.0833333333333335,
+      "value": 0.08254041852680181,
+      "score": -1.3039791174656437,
+      "fit_value": 0.03263154791783797
+    },
+    {
+      "parameter": "R",
+      "log10_value": -0.7,
+      "value": 0.19952623149688797,
+      "score": -0.5887133967336419,
+      "fit_value": 0.03263154791783797
+    }
+  ],
+  "sensitivity": {
+    "names": [
+      "growth",
+      "fermentation",
+      "gas",
+      "mortality",
+      "R"
+    ],
+    "singular_values": [
+      96.1124446036355,
+      52.74810137820366,
+      0.8320545150246758,
+      0.13891289081249333,
+      0.007879836786237474
+    ],
+    "column_norms": [
+      0.9285961088436265,
+      0.9762252041411879,
+      0.19700930422675217,
+      56.3138330796476,
+      94.06154349743717
+    ],
+    "normalized_gram": [
+      [
+        0.9999999999999997,
+        0.1862871198263569,
+        0.1768362966642441,
+        0.43017549323719284,
+        0.2416476291253926
+      ],
+      [
+        0.1862871198263569,
+        1.0,
+        0.9989731840559987,
+        0.2643362550927386,
+        0.9886096133898229
+      ],
+      [
+        0.1768362966642441,
+        0.9989731840559987,
+        1.0000000000000002,
+        0.26039981489160796,
+        0.9894964507464481
+      ],
+      [
+        0.43017549323719284,
+        0.2643362550927386,
+        0.26039981489160796,
+        1.0000000000000002,
+        0.2899884693233488
+      ],
+      [
+        0.2416476291253926,
+        0.9886096133898229,
+        0.9894964507464481,
+        0.2899884693233488,
+        0.9999999999999996
+      ]
+    ]
+  }
+}

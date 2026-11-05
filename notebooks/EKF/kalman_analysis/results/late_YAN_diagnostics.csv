@@ -1,0 +1,10 @@
+case,LAB,max_YAN_after_100h_mg_L,positive_YAN_increments_after_100h
+Archived gas + original noise,LAB019,0.001284803033396727,27
+Archived gas + original noise,LAB020,0.004012285570006576,74
+Archived gas + original noise,LAB021,1.990834735155521e-05,0
+Refitted gas + original noise,LAB019,0.0005166457503144441,29
+Refitted gas + original noise,LAB020,223.68740348933247,82
+Refitted gas + original noise,LAB021,3.2049511204889825e-05,0
+Refitted gas + fitted candidate,LAB019,0.010281026251841994,40
+Refitted gas + fitted candidate,LAB020,0.04278351772782841,57
+Refitted gas + fitted candidate,LAB021,34.58922848447627,0

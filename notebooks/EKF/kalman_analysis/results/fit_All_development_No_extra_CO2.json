@@ -1,0 +1,61 @@
+{
+  "fingerprint": "2c4798bc769a8a042316d2f2304961824595492f0ffc9b8ccc461f7f79a2b263",
+  "fold": "All development",
+  "training": [
+    "LAB019",
+    "LAB020",
+    "LAB021"
+  ],
+  "fit": {
+    "structure": "No extra CO2",
+    "names": [
+      "growth",
+      "fermentation",
+      "R"
+    ],
+    "x": [
+      1.0,
+      -1.5059738318627083,
+      -1.1530491533236042
+    ],
+    "sigma": [
+      0.03,
+      0.002495262013168327,
+      0.002495262013168327,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Rsd": 0.0702992750865302,
+    "score": -1.0680039380207471,
+    "runs": [
+      {
+        "start": 0,
+        "score": -1.0680039380207471,
+        "success": true,
+        "nfev": 95,
+        "message": "Optimization terminated successfully.",
+        "x": [
+          1.0,
+          -1.5059738318627083,
+          -1.1530491533236042
+        ]
+      },
+      {
+        "start": 1,
+        "score": -0.952182988591122,
+        "success": true,
+        "nfev": 163,
+        "message": "Optimization terminated successfully.",
+        "x": [
+          0.15017116314637405,
+          -0.2710156752401541,
+          -1.1216079875143523
+        ]
+      }
+    ],
+    "at_bound": [
+      "growth"
+    ]
+  }
+}

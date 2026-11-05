@@ -1,0 +1,6 @@
+{
+  "old_fingerprint": "abe30a5fb00d1112bd9cc3160dd49b0c32e4dde42aac7accfc723b0aed7a86e3",
+  "new_fingerprint": "2c4798bc769a8a042316d2f2304961824595492f0ffc9b8ccc461f7f79a2b263",
+  "reason": "Output-dictionary packaging fix and accurate selected-solution convergence flag; exact source comparison confirms numerical model, data preparation, objectives and searches unchanged.",
+  "fits_preserved": 24
+}

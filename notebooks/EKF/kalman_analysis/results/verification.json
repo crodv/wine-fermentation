@@ -1,0 +1,14 @@
+{
+  "source_executed_match": true,
+  "figures": 14,
+  "noise_fits": 24,
+  "gas_fits": 4,
+  "allowed_labs": [
+    "LAB019",
+    "LAB020",
+    "LAB021"
+  ],
+  "protected_files": 131,
+  "existing_files_unchanged": true,
+  "error_outputs": 0
+}
