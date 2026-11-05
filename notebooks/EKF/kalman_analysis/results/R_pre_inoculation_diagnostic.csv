@@ -1,0 +1,4 @@
+LAB,label,n,median_current_mA,median_flow_sccm,below_4mA_fraction
+LAB019,"Pre-inoculation, not a certified zero",1583,4.0912,0.2851,0.003158559696778269
+LAB020,"Pre-inoculation, not a certified zero",1583,4.0152,0.0473,0.24699936828806066
+LAB021,"Pre-inoculation, not a certified zero",1583,4.0653,0.2039,0.0012634238787113076

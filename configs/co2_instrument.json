@@ -1,0 +1,12 @@
+{
+  "family": "OMEGA FMA-A2000",
+  "flow_range_sccm": [0.0, 50.0],
+  "calibration_gas": "air",
+  "co2_correction_factor": 0.74,
+  "confirmation": {
+    "source": "Explicit user confirmation in this repository's Codex conversation",
+    "date": "2026-11-05",
+    "facts": "Range 0-50 SCCM, calibrated with air, CO2 gas correction factor 0.74 confirmed correct.",
+    "instruction": "Keep documented and do not ask the user to confirm these facts again."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_executed_match": true,
+  "figures": 17,
+  "allowed_labs": [
+    "LAB019",
+    "LAB020",
+    "LAB021"
+  ],
+  "valid_windows": 1008,
+  "assimilated_windows": 606,
+  "protected_files_unchanged": 180,
+  "Q_searches_unchanged": true,
+  "RAW_window_means_preserved": true
+}

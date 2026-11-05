@@ -1,0 +1,47 @@
+{
+  "labs": [
+    "LAB019",
+    "LAB020",
+    "LAB021"
+  ],
+  "software_full_scale_sccm": 50.0,
+  "gas_correction": 0.74,
+  "molar_volume_L_mol": 24.16,
+  "physical_full_scale_confirmed": true,
+  "factory_calibration_gas_confirmed": true,
+  "calibration_gas": "air",
+  "configuration_source": "configs/co2_instrument.json",
+  "confirmation": {
+    "source": "Explicit user confirmation in this repository's Codex conversation",
+    "date": "2026-11-05",
+    "facts": "Range 0-50 SCCM, calibrated with air, CO2 gas correction factor 0.74 confirmed correct.",
+    "instruction": "Keep documented and do not ask the user to confirm these facts again."
+  },
+  "original_R": 0.0016,
+  "original_SD": 0.04,
+  "conclusion": "Original 0.04 is not a manufacturer-specified standard deviation. Neither sensor-only R nor its unique decomposition from process variability is identified from these data. Range 0-50 SCCM, air calibration and factor 0.74 are user-confirmed. Remaining uncertainty concerns the measurement-error statistics and interpretation of the K-method accuracy.",
+  "datasheet": {
+    "accuracy_FS_fraction": 0.01,
+    "repeatability_FS_fraction": 0.0015,
+    "gas_K_method_accuracy": 0.04,
+    "K_method_percentage_basis": "not stated explicitly in section 5.0",
+    "response_datasheet_seconds": 5,
+    "response_manual_seconds": "1-2"
+  },
+  "sources": [
+    {
+      "path": "references\\Sensor_omega\\FMAA2100_2200_2300_2400.pdf",
+      "sha256": "fea5e1b340d16ba729c660330fc812b3583985e88896238e1fff71a077192dd3",
+      "locations": "PDF page 2: accuracy, repeatability, response"
+    },
+    {
+      "path": "references\\Sensor_omega\\M2842.pdf",
+      "sha256": "d6b443a411c2d76b595b10002f1120a8f700cf9e0a45bed09368bc81b3c38200",
+      "locations": "PDF pages 5, 8, 9, 10: accuracy, zero, gas conversion, K table"
+    }
+  ],
+  "uniform_distribution_assumed": true,
+  "averaging_systematic_errors": "no sqrt(n) reduction",
+  "no_double_counting": "max(empirical mean variance, type-B accuracy scenario); repeatability not added to inclusive accuracy",
+  "all_estimates_are_conditional": true
+}
