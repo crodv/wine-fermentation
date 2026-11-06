@@ -1,5 +1,15 @@
 # EKF G/F: analysis of noise sources and amplitudes
 
+## Notebook 02: isolated R comparison
+
+`02_gf_variable_solubility_R_comparison` evaluates two fixed R values with the
+archived G/F variable-solubility EKF. LAB019--021 are development cases;
+LAB016--018 are holdout cases. It performs no fitting or source selection.
+All tables, figures and checks remain inside the executed notebook. Running
+notebook 02 does not create a results directory or export auxiliary files.
+
+## Notebook 01: training-only noise analysis
+
 Open `01_gf_variable_solubility_noise_analysis.executed.ipynb` to inspect the
 completed study, or execute the matching `.source.ipynb` to reproduce it.
 
@@ -19,7 +29,7 @@ numba is available; it is not installed in the existing `fermentation`
 environment. Select a kernel with these dependencies. No environment or kernel
 installation is performed by this notebook.
 
-`results/` contains gas fits, multistart noise searches, numerical diagnostics,
+The existing notebook 01 uses `results/` for gas fits, multistart noise searches, numerical diagnostics,
 parameter sweeps, decision tables and compressed development trajectories.
 Caches are checked against the analysis code and the *filtered training arrays*
 before reuse. Delete the local `results/` directory or change inputs to recompute.
