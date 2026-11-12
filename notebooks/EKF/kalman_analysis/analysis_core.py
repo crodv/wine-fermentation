@@ -230,12 +230,13 @@ def replay(grid,doses,y,valid,update,initial,P0,available,temps,S0,kla,gain,sigm
             else:z=transition(z,start,t,available,temps,S0,kla,gain,step)
         z[1]+=doses[i]/SCALE[1]
         if t>0 and abs(t/.5-round(t/.5))<1e-8:
-            prediction=z[6]/.5;innovation=y[i]-prediction;S=4*P[6,6]+Rsd*Rsd
+            R=Rsd[i]*Rsd[i]
+            prediction=z[6]/.5;innovation=y[i]-prediction;S=4*P[6,6]+R
             clips=0
             if update[i] and correct:
                 K=2*P[:,6]/S;updated=z+K*innovation;clips=np.sum(updated[:6]<0)
                 B=np.eye(7);B[:,6]-=2*K
-                P=B@P@B.T+np.outer(K,K)*(Rsd*Rsd);P=(P+P.T)/2;z=np.maximum(updated,0.)
+                P=B@P@B.T+np.outer(K,K)*R;P=(P+P.T)/2;z=np.maximum(updated,0.)
             diag[i]=np.array([prediction,innovation,S,innovation*innovation/S,float(clips),1. if update[i] else 0.,1. if valid[i] else 0.])
             z[6]=0.;P[6,:]=0.;P[:,6]=0.
         if not np.all(np.isfinite(z)) or not np.all(np.isfinite(P)):raise ValueError('Nonfinite filter')
@@ -243,8 +244,15 @@ def replay(grid,doses,y,valid,update,initial,P0,available,temps,S0,kla,gain,sigm
     return frames,covs,diag
 
 def run(d,gas=ARCHIVED_GAS,sigma=BASE_SIGMA,Rsd=.04,correct=True,step=1/60):
+    """Run with a scalar observation SD or an SD vector aligned to the grid."""
+    observation_sd=np.asarray(Rsd,dtype=float)
+    if observation_sd.ndim==0:
+        observation_sd=np.full(d['grid'].shape,observation_sd.item())
+    if (observation_sd.shape!=d['grid'].shape or not np.all(np.isfinite(observation_sd))
+            or np.any(observation_sd<=0)):
+        raise ValueError('Rsd must be positive, finite, and scalar or aligned to the grid')
     return replay(d['grid'],d['doses'],d['y'],d['valid'],d['update'],d['initial'],d['P0'],
-                  d['available'],d['temperature'],d['S0'],float(gas[0]),float(gas[1]),np.asarray(sigma,float),float(Rsd),correct,step)
+                  d['available'],d['temperature'],d['S0'],float(gas[0]),float(gas[1]),np.asarray(sigma,float),observation_sd,correct,step)
 
 def gas_fit(data,labs):
     """Training-only refit using the causal 30-min operator and EKF initials.
