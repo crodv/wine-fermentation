@@ -1,0 +1,4 @@
+lab,fermentador,window_end_local,window_end_h,flow_mean_sccm,source,left_window_end_h,left_mean_sccm,right_window_end_h,right_mean_sccm
+LAB022,F1,2026-11-05 15:15:00,22.00000000,0.87449012,linear_interpolation_for_plot,21.50000000,0.00012057,22.50000000,1.74885966
+LAB023,F2,2026-11-05 15:15:00,22.00000000,1.81664532,linear_interpolation_for_plot,21.50000000,0.42555257,22.50000000,3.20773807
+LAB024,F3,2026-11-05 15:15:00,22.00000000,2.04672998,linear_interpolation_for_plot,21.50000000,0.42575429,22.50000000,3.66770568
