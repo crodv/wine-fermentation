@@ -177,6 +177,23 @@ def fill_short_gaps(series, max_samples):
             result.iloc[a:b] = candidate.iloc[a:b]
     return result
 
+def temperature_signals(raw, t0):
+    """Prepare shared one-minute temperature inputs from timestamped logs."""
+    minute = raw.set_index("timestamp")[["T", "SP"]].resample("1min").median()
+    minute["T"] = fill_short_gaps(minute["T"], 2)
+    result = pd.DataFrame(index=minute.index)
+    result["raw_1min"] = minute["T"]
+    for name, med, mean in (("reference_20_45", "20min", "45min"), ("strong_30_60", "30min", "60min")):
+        result[name] = np.nan
+        for a,b in runs(minute["T"].notna()):
+            segment = minute["T"].iloc[a:b]
+            filtered = segment.rolling(med,center=True,min_periods=1).median().rolling(mean,center=True,min_periods=1).mean()
+            result.iloc[a:b,result.columns.get_loc(name)] = filtered.to_numpy()
+    result["SP"] = minute.SP
+    result["time_h"] = (result.index-t0).total_seconds()/3600.
+    return result
+
+
 def butter_sos(tau_s, dt_s, order=3):
     cutoff = 1. / (2. * np.pi * tau_s)
     return signal.butter(order, cutoff, fs=1. / dt_s, output="sos")
@@ -349,23 +366,12 @@ class RecalibrationV3(Search):
         self.configure_temperature("reference_20_45")
 
     def _process_temperature(self, lab):
-        raw = self.raw_temperature[lab]
-        minute = raw.set_index("timestamp")[["T", "SP"]].resample("1min").median()
-        minute["T"] = fill_short_gaps(minute["T"], 2)
-        result = pd.DataFrame(index=minute.index)
-        result["raw_1min"] = minute["T"]
-        for name, med, mean in (("reference_20_45", "20min", "45min"), ("strong_30_60", "30min", "60min")):
-            result[name] = np.nan
-            for a,b in runs(minute["T"].notna()):
-                segment = minute["T"].iloc[a:b]
-                filtered = segment.rolling(med,center=True,min_periods=1).median().rolling(mean,center=True,min_periods=1).mean()
-                result.iloc[a:b,result.columns.get_loc(name)] = filtered.to_numpy()
+        result = temperature_signals(self.raw_temperature[lab], self.t0[lab])
+        for name in ("reference_20_45", "strong_30_60"):
             valid = result[name].notna() & result.raw_1min.notna()
             self.temp_audit.append(dict(lab=lab,variant=name,raw_std_C=float(result.loc[valid,"raw_1min"].std()),
                 filtered_std_C=float(result.loc[valid,name].std()),mean_change_C=float((result.loc[valid,name]-result.loc[valid,"raw_1min"]).mean()),
                 max_change_C=float(abs(result.loc[valid,name]-result.loc[valid,"raw_1min"]).max())))
-        result["SP"] = minute.SP
-        result["time_h"] = (result.index-self.t0[lab]).total_seconds()/3600.
         self.temperature[lab] = result
 
     def _process_co2(self, lab):

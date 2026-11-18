@@ -6,6 +6,8 @@ La capa de CO₂ conserva su formulación histórica v3 completa.
 
 ## Notebooks y referencias
 
+Para ubicar un ensayo y rastrear sus parámetros, consulta la [guía de calibraciones](docs/mapa_repo.md) o abre el [mapa interactivo](docs/mapa_repo.html) en el navegador.
+
 | Ensayo | SOURCE (sin resultados) | EXECUTED (resultados y figuras) |
 |---|---|---|
 | Calibración de las tres formulaciones (experimental) | [Código](notebooks/03_calibrate_models.source.ipynb) | [Resultados](notebooks/03_calibrate_models.executed.ipynb) |

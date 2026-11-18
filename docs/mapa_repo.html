@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa · Wine fermentation</title>
+<style>
+:root{color-scheme:light;--ink:#251f22;--sub:#635961;--rule:#ded7d6;--paper:#faf8f5;--white:#fffefa;--wine:#732846;--winewash:#f4e8ed;--sage:#315c54;--sagewash:#e8f0eb}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 Inter,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:inherit}a{color:var(--wine);text-underline-offset:.2em}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+header,main{max-width:1340px;margin:auto;padding-inline:clamp(18px,4vw,56px)}header{padding-block:29px 19px;display:flex;justify-content:space-between;align-items:end;gap:16px}h1,h2,h3,p{margin:0}h1{font-size:clamp(2rem,4vw,3.55rem);letter-spacing:-.062em;line-height:1.02;font-weight:700}h2{font-size:1.23rem;letter-spacing:-.035em}h3{font-size:1.25rem;letter-spacing:-.025em}.project,.meta,.filter label,.column-head{font-size:.77rem;font-weight:650;color:var(--sub)}.project{margin-bottom:.45em}.doc-link{white-space:nowrap;font-weight:650;font-size:.86rem}
+.roadmap{display:grid;gap:10px;padding:17px 18px;background:var(--white);border:1px solid var(--rule);border-radius:13px;margin-bottom:24px}.roadmap h2{margin-bottom:3px}.lane{display:grid;grid-template-columns:45px minmax(0,1fr);align-items:center;gap:10px}.lane-label{font-weight:700;color:var(--sage)}.lane:last-child .lane-label{color:var(--wine)}.steps{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.step,.tag,.minor-link,.areas button{border:1px solid var(--rule);background:var(--white);border-radius:7px;padding:5px 9px;font-size:.8rem}.step{font-weight:650}.step:hover,.tag:hover,.minor-link:hover,.areas button:hover{border-color:var(--wine)}.step[aria-current="true"],.areas button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:white}.bullet{color:var(--sub);font-size:.78rem}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(255px,325px);gap:22px;align-items:start;padding-bottom:40px}.catalog{min-width:0}.filters{display:grid;grid-template-columns:1.35fr 1fr .75fr;gap:10px;margin:12px 0}.filter{display:grid;gap:4px;min-width:0}.filter input,.filter select{min-width:0;width:100%;color:var(--ink);border:1px solid var(--rule);border-radius:7px;background:var(--white);padding:8px}.areas{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.areas button{border-radius:100px}.list-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.reset{padding:2px 0;border:0;background:none;color:var(--wine);text-decoration:underline;text-underline-offset:.2em;font-size:.82rem}
+.list{border:1px solid var(--rule);background:var(--white);border-radius:9px;overflow:hidden}.column-head,.entry{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(82px,1fr) minmax(70px,.8fr);gap:8px;align-items:start;padding:9px 11px}.column-head{background:#f4efee}.entry{width:100%;text-align:left;background:var(--white);border:0;border-top:1px solid var(--rule)}.entry strong{display:block;font-size:.875rem;line-height:1.3}.entry small{display:block;color:var(--sub);font-size:.74rem;margin-top:3px}.entry:hover,.entry[aria-current="true"]{background:var(--winewash)}.entry .chem,.entry .gas{font-size:.76rem;overflow-wrap:anywhere}.entry .gas{color:var(--sage)}.empty{padding:15px;color:var(--sub)}
+.detail{background:var(--white);border:1px solid var(--rule);border-radius:11px;padding:17px;position:sticky;top:12px}.detail h3{margin-bottom:6px}.detail p{font-size:.88rem}.detail .path{margin:10px 0;font:12px/1.4 Consolas,monospace;color:var(--sub);overflow-wrap:anywhere}.links,.tags{display:flex;flex-wrap:wrap;gap:6px}.links a{font-size:.82rem;font-weight:650}.detail section{border-top:1px solid var(--rule);padding-top:11px;margin-top:13px}.detail h4{font-size:.79rem;margin:0 0 6px}.detail ul{margin:0;padding-left:16px}.detail li{font-size:.81rem;margin-bottom:7px}.detail li a{font-weight:650;display:inline-block;margin-right:5px}.links .primary{background:var(--wine);color:white;border-color:var(--wine);text-decoration:none}.minor-link{text-decoration:none;display:inline-block}.note{margin-top:9px;color:var(--sub);font-size:.79rem!important}
+@media(max-width:900px){.workspace{grid-template-columns:minmax(0,1fr) minmax(235px,285px);gap:13px}}
+@media(max-width:690px){header{align-items:start;flex-direction:column;padding-top:20px}.workspace{grid-template-columns:minmax(0,1fr)}.detail{position:static;grid-row:1}.filters{grid-template-columns:1fr 1fr}.filters .filter:first-child{grid-column:1/-1}.roadmap{padding:12px}.column-head,.entry{padding-inline:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div><p class="project">Wine fermentation</p><h1>Mapa de notebooks</h1></div>
+  <a class="doc-link" href="./mapa_repo.md">Guía breve del repositorio</a>
+</header>
+<main>
+  <nav class="roadmap" aria-label="Ruta de los ensayos de Zenteno">
+    <h2>Ruta principal</h2>
+    <div class="lane"><span class="lane-label">G/F</span><div class="steps" id="steps-gf"></div></div>
+    <div class="lane"><span class="lane-label">S</span><div class="steps" id="steps-s"></div></div>
+  </nav>
+  <div class="workspace">
+    <section class="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Catálogo</h2>
+      <div class="filters">
+        <div class="filter"><label for="search">Buscar notebook o tema</label><input id="search" type="search" placeholder="Ej. YAN, 17_2, temperatura"></div>
+        <div class="filter"><label for="calibration">Calibración</label><select id="calibration"><option value="">Todas</option></select></div>
+        <div class="filter"><label for="kind">Tipo de prueba</label><select id="kind"><option value="">Todos</option></select></div>
+      </div>
+      <nav class="areas" id="areas" aria-label="Carpeta del repositorio"></nav>
+      <div class="list-toolbar"><p class="meta" id="count" role="status"></p><button class="reset" id="reset" type="button">Limpiar filtros</button></div>
+      <div class="list"><div class="column-head" aria-hidden="true"><span>Notebook</span><span>Química</span><span>Capa de CO₂</span></div><div id="entries"></div></div>
+    </section>
+    <aside class="detail" id="detail" aria-label="Detalle del notebook"></aside>
+  </div>
+</main>
+<script id="catalog-data" type="application/json">
+{"notebooks": [{"id": "h01", "title": "Migración de parámetros", "code": "Histórico 01", "area": "Histórico", "kind": "Diagnóstico", "source": "notebooks/historical/01_current_model_theta_comparison.source.ipynb", "executed": "notebooks/historical/01_current_model_theta_comparison.executed.ipynb", "chem": ["Theta archivados"], "gas": [], "summary": "Reproduce siete estados con theta_full, theta_new y theta_defaults.", "parents": []}, {"id": "hn", "title": "Recalibración theta_nv2", "code": "Histórico 01", "area": "Histórico", "kind": "Calibración", "source": "notebooks/historical/01_recalibration_theta_nv2.source.ipynb", "executed": "notebooks/historical/01_recalibration_theta_nv2.executed.ipynb", "chem": ["theta_nv2"], "gas": [], "summary": "Ajuste químico de cinco estados en LAB004–009.", "parents": ["h01"]}, {"id": "h02", "title": "Migración de CO₂ v3", "code": "Histórico 02", "area": "Histórico", "kind": "Calibración", "source": "notebooks/historical/02_current_co2_v3_comparison.source.ipynb", "executed": "notebooks/historical/02_current_co2_v3_comparison.executed.ipynb", "chem": ["Theta archivados"], "gas": ["Histórico v3"], "summary": "Reproduce la capa v3 y sus ajustes con tres vectores de química.", "parents": ["h01"]}, {"id": "hz", "title": "CO₂ con theta_nv2", "code": "Histórico 02", "area": "Histórico", "kind": "Calibración", "source": "notebooks/historical/02_co2_theta_nv2.source.ipynb", "executed": "notebooks/historical/02_co2_theta_nv2.executed.ipynb", "chem": ["theta_nv2", "Theta archivados"], "gas": ["Histórico v3"], "summary": "Compara tres theta con gas común y reajusta Z1/Z2.", "parents": ["hn", "h02"]}, {"id": "m03", "title": "Tres formulaciones", "code": "Modelos 03", "area": "Modelos", "kind": "Calibración", "source": "notebooks/03_calibrate_models.source.ipynb", "executed": "notebooks/03_calibrate_models.executed.ipynb", "chem": ["theta_nv2", "Transportadores"], "gas": ["Gas comparativo"], "summary": "Ajusta gas en ambas particiones LAB019–021 / LAB016–018. Por defecto carga química guardada.", "parents": ["hn"]}, {"id": "m04", "title": "Comparación de formulaciones", "code": "Modelos 04", "area": "Modelos", "kind": "Evaluación", "source": "notebooks/04_compare_models.source.ipynb", "executed": "notebooks/04_compare_models.executed.ipynb", "chem": ["theta_nv2", "Transportadores"], "gas": ["Gas comparativo"], "summary": "Carga los ajustes del 03 y compara ambas particiones.", "parents": ["m03"]}, {"id": "m04v", "title": "Comparación con kLa fijo", "code": "Modelos 04", "area": "Modelos", "kind": "Calibración", "source": "notebooks/04_compare_models_v2.source.ipynb", "executed": "notebooks/04_compare_models_v2.executed.ipynb", "chem": ["theta_nv2", "Transportadores"], "gas": ["Gas comparativo"], "summary": "Fija kLa en las variantes con/sin transportadores y reajusta su ganancia.", "parents": ["m04"]}, {"id": "m05", "title": "Modelo David 2012", "code": "Modelos 05", "area": "Modelos", "kind": "Calibración", "source": "notebooks/05_david_2012.source.ipynb", "executed": "notebooks/05_david_2012.executed.ipynb", "chem": ["David 2012"], "gas": [], "summary": "Calibra la formulación de David y guarda su ajuste químico propio.", "parents": []}, {"id": "m06", "title": "David con CO₂ disuelto", "code": "Modelos 06", "area": "Modelos", "kind": "Evaluación", "source": "notebooks/06_david_2012_dissolved_co2.source.ipynb", "executed": "notebooks/06_david_2012_dissolved_co2.executed.ipynb", "chem": ["David 2012"], "gas": ["Gas David"], "summary": "Compara David con una extensión de solubilidad térmica en LAB019–021.", "parents": ["m05"]}, {"id": "m16", "title": "Zenteno G/F con solubilidad variable", "code": "Modelos 16", "area": "Modelos", "kind": "Calibración", "source": "notebooks/16_zenteno_recalibration_legacy_treatment_variable_solubility.source.ipynb", "executed": "notebooks/16_zenteno_recalibration_legacy_treatment_variable_solubility.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Carga la química congelada del diagnóstico 16 y ajusta kLa y ganancia.", "parents": ["d16"]}, {"id": "m162", "title": "G/F con peso histórico de biomasa", "code": "Modelos 16_2", "area": "Modelos", "kind": "Calibración", "source": "notebooks/16_2_zenteno_recalibration_legacy_biomass_weight.source.ipynb", "executed": "notebooks/16_2_zenteno_recalibration_legacy_biomass_weight.executed.ipynb", "chem": ["G/F 16_2", "G/F 16"], "gas": ["Gas G/F"], "summary": "Reajusta la química G/F con la ponderación de pyomo-doe y compara con el 16.", "parents": ["m16"]}, {"id": "m17", "title": "Zenteno S con solubilidad variable", "code": "Modelos 17", "area": "Modelos", "kind": "Calibración", "source": "notebooks/17_zenteno_single_sugar_variable_solubility.source.ipynb", "executed": "notebooks/17_zenteno_single_sugar_variable_solubility.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas S", "Gas G/F"], "summary": "Usa la química S congelada con Kie₀ fijo y ajusta gas por modelo.", "parents": ["d17", "m16"]}, {"id": "m172", "title": "S con peso histórico de biomasa", "code": "Modelos 17_2", "area": "Modelos", "kind": "Calibración", "source": "notebooks/17_2_zenteno_single_sugar_legacy_biomass_weight.source.ipynb", "executed": "notebooks/17_2_zenteno_single_sugar_legacy_biomass_weight.executed.ipynb", "chem": ["S 17_2", "S 17"], "gas": ["Gas S"], "summary": "Reajusta la química S con la ponderación de pyomo-doe y compara ambos S.", "parents": ["m17"]}, {"id": "m18", "title": "Figuras G/F con solubilidad variable", "code": "Modelos 18", "area": "Modelos", "kind": "Calibración", "source": "notebooks/18_zenteno_legacy_clean_figures_variable_solubility.source.ipynb", "executed": "notebooks/18_zenteno_legacy_clean_figures_variable_solubility.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Figuras simplificadas y ajuste de gas con la química G/F archivada.", "parents": ["m16", "d18"]}, {"id": "m19", "title": "Figuras S con solubilidad variable", "code": "Modelos 19", "area": "Modelos", "kind": "Calibración", "source": "notebooks/19_zenteno_single_sugar_clean_figures_variable_solubility.source.ipynb", "executed": "notebooks/19_zenteno_single_sugar_clean_figures_variable_solubility.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas S", "Gas G/F"], "summary": "Figuras simplificadas para S y G/F; reajusta la capa de gas.", "parents": ["m17", "d19"]}, {"id": "p01", "title": "Datos de mosto natural y sintético", "code": "Preparación inicial", "area": "Datos", "kind": "Datos", "source": "notebooks/preparing_data/preparing_data.source.ipynb", "executed": "notebooks/preparing_data/preparing_data.executed.ipynb", "chem": [], "gas": [], "summary": "Revisa matrices, conversiones y horarios de los datos preparados.", "parents": []}, {"id": "p22", "title": "Datos LAB022–024", "code": "Datos LAB022–024", "area": "Datos", "kind": "Datos", "source": "notebooks/preparing_data/lab022_024_data.source.ipynb", "executed": "notebooks/preparing_data/lab022_024_data.executed.ipynb", "chem": [], "gas": [], "summary": "Ordena química Y15, biomasa Oculyze, densidad y horarios de muestreo.", "parents": []}, {"id": "p13", "title": "Señales LAB013–015", "code": "Datos 03", "area": "Datos", "kind": "Datos", "source": "notebooks/data_graphics/03_co2_temp_lab013_015.source.ipynb", "executed": "notebooks/data_graphics/03_co2_temp_lab013_015.executed.ipynb", "chem": [], "gas": [], "summary": "Grafica CO₂ crudo y filtrado, temperatura y química Y15.", "parents": []}, {"id": "d01", "title": "Balance de CO₂", "code": "Diagnósticos 01", "area": "Diagnósticos", "kind": "Diagnóstico", "source": "notebooks/diagnostics/01_co2_mass_balance.source.ipynb", "executed": "notebooks/diagnostics/01_co2_mass_balance.executed.ipynb", "chem": ["Theta archivados", "theta_nv2"], "gas": [], "summary": "Contrasta producción por etanol y por crecimiento más etanol, por tramos.", "parents": ["hn"]}, {"id": "d05", "title": "Una trayectoria de CO₂", "code": "Diagnósticos 05", "area": "Diagnósticos", "kind": "Diagnóstico", "source": "notebooks/diagnostics/05_historical_single_trajectory.source.ipynb", "executed": null, "chem": ["theta_nv2"], "gas": ["Gas comparativo"], "summary": "Compara combinar dos trayectorias frente a usar solo una.", "parents": ["m03"]}, {"id": "d05v", "title": "Una trayectoria con gas reajustado", "code": "Diagnósticos 05", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/05_historical_single_trajectory_v2.source.ipynb", "executed": "notebooks/diagnostics/05_historical_single_trajectory_v2.executed.ipynb", "chem": ["theta_nv2"], "gas": ["Gas diagnóstico"], "summary": "Reajusta los tres coeficientes de gas por fuente en LAB019–021.", "parents": ["d05"]}, {"id": "d06", "title": "Una trayectoria con actividad", "code": "Diagnósticos 06", "area": "Diagnósticos", "kind": "Diagnóstico", "source": "notebooks/diagnostics/06_historical_single_trajectory_fixed_activity.source.ipynb", "executed": "notebooks/diagnostics/06_historical_single_trajectory_fixed_activity.executed.ipynb", "chem": ["theta_nv2"], "gas": ["Gas comparativo"], "summary": "Conserva el factor de actividad al usar una trayectoria química.", "parents": ["d05"]}, {"id": "d06v", "title": "Actividad con gas reajustado", "code": "Diagnósticos 06", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/06_historical_single_trajectory_fixed_activity_v2.source.ipynb", "executed": "notebooks/diagnostics/06_historical_single_trajectory_fixed_activity_v2.executed.ipynb", "chem": ["theta_nv2"], "gas": ["Gas diagnóstico"], "summary": "Reajusta gas por fuente manteniendo la actividad en ambos casos.", "parents": ["d06"]}, {"id": "d07", "title": "Capacidad y pérdida de transportadores", "code": "Diagnósticos 07", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/07_transporter_capacity_functional_loss.source.ipynb", "executed": "notebooks/diagnostics/07_transporter_capacity_functional_loss.executed.ipynb", "chem": ["Transportadores"], "gas": ["Gas diagnóstico"], "summary": "Aísla capacidad inicial y pérdida funcional; ajusta variantes y gas.", "parents": ["m04"]}, {"id": "d08", "title": "Transportadores con datos originales", "code": "Diagnósticos 08", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/08_transporter_legacy_data_treatment.source.ipynb", "executed": "notebooks/diagnostics/08_transporter_legacy_data_treatment.executed.ipynb", "chem": ["Transportadores", "Theta archivados"], "gas": ["Gas diagnóstico"], "summary": "Prueba YAN tratado, biomasas originales e inicio theta_full.", "parents": ["m03"]}, {"id": "d15", "title": "Dosis y volumen reconstruidos", "code": "Diagnósticos 15", "area": "Diagnósticos", "kind": "Diagnóstico", "source": "notebooks/diagnostics/15_single_core_reconstructed_dose_volume.source.ipynb", "executed": "notebooks/diagnostics/15_single_core_reconstructed_dose_volume.executed.ipynb", "chem": ["theta_nv2"], "gas": ["Histórico v3"], "summary": "Compara dosis y volumen con una sola química nutrida.", "parents": ["hn"]}, {"id": "d16", "title": "Base química G/F", "code": "Diagnósticos 16", "area": "Diagnósticos", "kind": "Evaluación", "source": "notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.source.ipynb", "executed": "notebooks/diagnostics/16_zenteno_recalibration_legacy_treatment.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas constante"], "summary": "Documenta y reproduce la química archivada del ajuste LAB004–009.", "parents": []}, {"id": "d17", "title": "Primer ajuste de azúcar total", "code": "Diagnósticos 17", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/17_zenteno_single_sugar.source.ipynb", "executed": "notebooks/diagnostics/17_zenteno_single_sugar.executed.ipynb", "chem": ["G/F 16", "S 17"], "gas": ["Gas constante"], "summary": "Ajusta S con Kie₀ fijo y conserva la variante previa con Kie₀ libre.", "parents": ["d16"]}, {"id": "d18", "title": "Figuras G/F históricas", "code": "Diagnósticos 18", "area": "Diagnósticos", "kind": "Figuras", "source": "notebooks/diagnostics/18_zenteno_legacy_clean_figures.source.ipynb", "executed": "notebooks/diagnostics/18_zenteno_legacy_clean_figures.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas constante"], "summary": "Reordena figuras de la base química G/F y su gas constante.", "parents": ["d16"]}, {"id": "d19", "title": "Figuras y ajuste S histórico", "code": "Diagnósticos 19", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/19_zenteno_single_sugar_clean_figures.source.ipynb", "executed": "notebooks/diagnostics/19_zenteno_single_sugar_clean_figures.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas constante"], "summary": "Vuelve a ajustar la versión S de Kie₀ fijo y muestra la referencia G/F.", "parents": ["d17"]}, {"id": "d20", "title": "Solubilidad constante y variable", "code": "Diagnósticos 20", "area": "Diagnósticos", "kind": "Diagnóstico", "source": "notebooks/diagnostics/20_ekf_constant_variable_solubility.source.ipynb", "executed": "notebooks/diagnostics/20_ekf_constant_variable_solubility.executed.ipynb", "chem": ["G/F 16", "S 17"], "gas": ["Gas constante", "Gas G/F", "Gas S"], "summary": "Compara el efecto de la capa de gas en los dos modelos dentro del EKF.", "parents": ["e02", "e06"]}, {"id": "d21", "title": "Datos LAB013–015 por ventanas", "code": "Diagnósticos 21", "area": "Diagnósticos", "kind": "Datos", "source": "notebooks/diagnostics/21_raw_temp_chemistry_lab013_015.source.ipynb", "executed": "notebooks/diagnostics/21_raw_temp_chemistry_lab013_015.executed.ipynb", "chem": [], "gas": [], "summary": "Grafica CO₂ crudo, temperatura y química con reloj común.", "parents": ["p13"]}, {"id": "d25", "title": "Ajustes S con temperatura offline y causal", "code": "Diagnósticos 25", "area": "Diagnósticos", "kind": "Calibración", "source": "notebooks/diagnostics/25_zenteno_azucar_total_temperatura_causal.source.ipynb", "executed": "notebooks/diagnostics/25_zenteno_azucar_total_temperatura_causal.executed.ipynb", "chem": ["S 25", "S 17"], "gas": ["Gas S"], "summary": "Ajusta dos vectores S en LAB004–009 y compara su evaluación con temperatura causal.", "parents": ["m17", "p22"]}, {"id": "du", "title": "Incertidumbre cinética G/F", "code": "Diagnóstico · Dθ", "area": "Diagnósticos", "kind": "Diagnóstico", "source": "notebooks/diagnostics/zenteno_lab004_009_incertidumbre_exploratoria.ipynb", "executed": "notebooks/diagnostics/zenteno_lab004_009_incertidumbre_exploratoria.ipynb", "chem": ["G/F 16"], "gas": [], "summary": "Reproduce el ajuste y estima covarianza exploratoria de tasas; fuente de Dθ.", "parents": ["m16"]}, {"id": "dv", "title": "Figuras de varianzas", "code": "Diagnóstico · varianzas", "area": "Diagnósticos", "kind": "Figuras", "source": "notebooks/diagnostics/zenteno_lab004_009_varianzas_graficos.ipynb", "executed": "notebooks/diagnostics/zenteno_lab004_009_varianzas_graficos.ipynb", "chem": ["G/F 16"], "gas": [], "summary": "Grafica el resultado archivado de incertidumbre cinética.", "parents": ["du"]}, {"id": "e01", "title": "Primer EKF de LAB019", "code": "EKF LAB019", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/lab019_first_ekf_full_batch.source.ipynb", "executed": "notebooks/EKF/lab019_first_ekf_full_batch.executed.ipynb", "chem": ["Theta archivados"], "gas": ["Histórico v3"], "summary": "Compara lazo abierto, CO₂ y el ensayo con correcciones químicas puntuales.", "parents": ["h02"]}, {"id": "e02", "title": "EKF G/F solo CO₂", "code": "EKF 02", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/02_zenteno_co2_only.source.ipynb", "executed": "notebooks/EKF/02_zenteno_co2_only.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas constante"], "summary": "Primer EKF Zenteno G/F con ventanas causales de LAB016–021.", "parents": ["d16"]}, {"id": "e03", "title": "EKF con azúcar total", "code": "EKF 03", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/03_zenteno_single_sugar_co2_only.source.ipynb", "executed": "notebooks/EKF/03_zenteno_single_sugar_co2_only.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas constante"], "summary": "Compara S y G/F con solo CO₂ y el protocolo del EKF 02.", "parents": ["d17", "e02"]}, {"id": "e04", "title": "EKF frente a UKF", "code": "EKF 04", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/04_ukf_ekf_both_models.source.ipynb", "executed": "notebooks/EKF/04_ukf_ekf_both_models.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas constante"], "summary": "Compara los dos filtros en S y G/F con gas constante.", "parents": ["e02", "e03"]}, {"id": "e05", "title": "EKF G/F con solubilidad variable", "code": "EKF 05", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/05_zenteno_co2_variable_solubility.source.ipynb", "executed": "notebooks/EKF/05_zenteno_co2_variable_solubility.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Incorpora la capa de saturación variable al EKF G/F.", "parents": ["e02", "m16"]}, {"id": "e06", "title": "EKF S con solubilidad variable", "code": "EKF 06", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/06_zenteno_single_sugar_variable_solubility.source.ipynb", "executed": "notebooks/EKF/06_zenteno_single_sugar_variable_solubility.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas S", "Gas G/F"], "summary": "Compara S y G/F con saturación variable; fuente de ecuaciones del EKF S posterior.", "parents": ["e03", "m17"]}, {"id": "e07", "title": "EKF y UKF con solubilidad variable", "code": "EKF 07", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/07_ukf_ekf_variable_solubility.source.ipynb", "executed": "notebooks/EKF/07_ukf_ekf_variable_solubility.executed.ipynb", "chem": ["S 17", "G/F 16"], "gas": ["Gas S", "Gas G/F"], "summary": "Repite la comparación de filtros con capa de gas variable.", "parents": ["e04", "e06"]}, {"id": "k01", "title": "Fuentes y amplitudes de ruido", "code": "Ruido del EKF 01", "area": "Ruido del EKF", "kind": "Calibración", "source": "notebooks/EKF/kalman_analysis/01_gf_variable_solubility_noise_analysis.source.ipynb", "executed": "notebooks/EKF/kalman_analysis/01_gf_variable_solubility_noise_analysis.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F", "Gas diagnóstico"], "summary": "Explora fuentes de Q, ajusta R y prueba reajustes de gas en LAB019–021.", "parents": ["e05"]}, {"id": "k02", "title": "Comparación aislada de R", "code": "Ruido del EKF 02", "area": "Ruido del EKF", "kind": "Diagnóstico", "source": "notebooks/EKF/kalman_analysis/02_gf_variable_solubility_R_comparison.source.ipynb", "executed": "notebooks/EKF/kalman_analysis/02_gf_variable_solubility_R_comparison.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Compara dos valores fijos de R con el mismo modelo G/F.", "parents": ["e05"]}, {"id": "k03", "title": "R dependiente del volumen", "code": "Ruido del EKF 03", "area": "Ruido del EKF", "kind": "Diagnóstico", "source": "notebooks/EKF/kalman_analysis/03_gf_variable_solubility_R_by_volume.source.ipynb", "executed": "notebooks/EKF/kalman_analysis/03_gf_variable_solubility_R_by_volume.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Compara R fijo con R calculado por volumen, usando el protocolo anterior.", "parents": ["k02"]}, {"id": "k04", "title": "Cuarta fuente de Q", "code": "Ruido del EKF 04", "area": "Ruido del EKF", "kind": "Diagnóstico", "source": "notebooks/EKF/kalman_analysis/04_gf_variable_solubility_fourth_noise_source.source.ipynb", "executed": "notebooks/EKF/kalman_analysis/04_gf_variable_solubility_fourth_noise_source.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Prueba la fuente adicional de ruido de CO₂ y la sensibilidad a las fuentes de Q.", "parents": ["e05", "k02"]}, {"id": "e08", "title": "Covarianza cinética G/F", "code": "EKF 08", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/08_ekf_gf_lima_covarianza_cinetica.source.ipynb", "executed": "notebooks/EKF/08_ekf_gf_lima_covarianza_cinetica.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Compara ruido por fuentes con perturbaciones en μ₀, βG₀ y βF₀.", "parents": ["k04", "du"]}, {"id": "e09", "title": "Figuras del EKF cinético", "code": "EKF 09", "area": "EKF", "kind": "Figuras", "source": "notebooks/EKF/09_ekf_lima_clean_figures.source.ipynb", "executed": "notebooks/EKF/09_ekf_lima_clean_figures.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Reproduce las trayectorias del EKF 08 con figuras limpias.", "parents": ["e08"]}, {"id": "e11", "title": "Flujo medio sin acumulador", "code": "EKF 11", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/11_ekf_lima_mean_flow_without_accumulator.source.ipynb", "executed": "notebooks/EKF/11_ekf_lima_mean_flow_without_accumulator.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Compara el acumulador de CO₂ con el promedio integrado y sus sensibilidades.", "parents": ["e09"]}, {"id": "e12", "title": "Sensibilidad a varianzas cinéticas", "code": "EKF 12", "area": "EKF", "kind": "Diagnóstico", "source": "notebooks/EKF/12_ekf_lima_sensibilidad_varianzas.source.ipynb", "executed": "notebooks/EKF/12_ekf_lima_sensibilidad_varianzas.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Escala una o varias varianzas de las tres tasas del EKF 09.", "parents": ["e09"]}, {"id": "e13", "title": "Validación G/F LAB022–024", "code": "EKF 13", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/13_ekf_lima_validacion_lab022_024.source.ipynb", "executed": "notebooks/EKF/13_ekf_lima_validacion_lab022_024.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Lleva el EKF 09 al holdout tardío con y sin rellenar el hueco de CO₂.", "parents": ["e09", "p22"]}, {"id": "e14", "title": "EKF S con los dos ajustes del diagnóstico 25", "code": "EKF 14", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/14_ekf_s_comparacion_ponderacion_biomasa.source.ipynb", "executed": "notebooks/EKF/14_ekf_s_comparacion_ponderacion_biomasa.executed.ipynb", "chem": ["S 25"], "gas": ["Gas S"], "summary": "Compara los parámetros offline y causales guardados en el 25 sobre LAB016–024.", "parents": ["d25", "e06"]}, {"id": "e15", "title": "Validación S LAB022–024", "code": "EKF 15", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/15_ekf_s_validacion_lab022_024.source.ipynb", "executed": "notebooks/EKF/15_ekf_s_validacion_lab022_024.executed.ipynb", "chem": ["S 17"], "gas": ["Gas S"], "summary": "Aplica el protocolo del 13 con las tasas de S del EKF 06.", "parents": ["e13", "e06"]}, {"id": "e16", "title": "Crecimiento con cualquiera de los azúcares", "code": "EKF 16", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/16_ekf_gf_crecimiento_azucar_disponible_lab016_024.source.ipynb", "executed": "notebooks/EKF/16_ekf_gf_crecimiento_azucar_disponible_lab016_024.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Permite crecer al quedar solo G o F y protege el consumo del azúcar agotado.", "parents": ["e13"]}, {"id": "e17", "title": "Reparto de YAN tras el pulso", "code": "EKF 17", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/17_ekf_gf_reparto_yan_azucar_residual_lab016_024.source.ipynb", "executed": "notebooks/EKF/17_ekf_gf_reparto_yan_azucar_residual_lab016_024.executed.ipynb", "chem": ["G/F 16"], "gas": ["Gas G/F"], "summary": "Limita la fracción de YAN destinada a biomasa según el azúcar residual al pulso.", "parents": ["e16"]}, {"id": "e18", "title": "Reparto de YAN con G/F 16_2", "code": "EKF 18", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/18_ekf_gf_reparto_yan_quimica_16_2_lab016_024.source.ipynb", "executed": "notebooks/EKF/18_ekf_gf_reparto_yan_quimica_16_2_lab016_024.executed.ipynb", "chem": ["G/F 16_2"], "gas": ["Gas G/F"], "summary": "Repite el ensayo con y sin reparto usando la química guardada del 16_2.", "parents": ["e17", "m162"]}, {"id": "e19", "title": "EKF con S 17 y S 17_2", "code": "EKF 19", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/19_ekf_s_calibracion_17_2_lab016_024.source.ipynb", "executed": "notebooks/EKF/19_ekf_s_calibracion_17_2_lab016_024.executed.ipynb", "chem": ["S 17", "S 17_2"], "gas": ["Gas S"], "summary": "Contrasta las dos calibraciones S del 17_2 en LAB016–024.", "parents": ["m172", "e14", "e06"]}, {"id": "e20", "title": "Ruido de crecimiento condicionado", "code": "EKF 20", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/20_ekf_s_ruido_crecimiento_yan_lab022_024.source.ipynb", "executed": "notebooks/EKF/20_ekf_s_ruido_crecimiento_yan_lab022_024.executed.ipynb", "chem": ["S 17_2"], "gas": ["Gas S"], "summary": "Desactiva el componente de crecimiento de Q cuando falta azúcar o YAN.", "parents": ["e19"]}, {"id": "e21", "title": "CO₂ con y sin umbral", "code": "EKF 21", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/21_ekf_s_gf_sin_umbral_co2_lab016_024.source.ipynb", "executed": "notebooks/EKF/21_ekf_s_gf_sin_umbral_co2_lab016_024.executed.ipynb", "chem": ["S 17_2", "G/F 16_2"], "gas": ["Gas S", "Gas G/F"], "summary": "Quita el umbral de 0,05 g/L/h; S usa densidad para inicializar y graficar azúcar.", "parents": ["e20", "e18"]}, {"id": "e22", "title": "Ganancia reducida para S", "code": "EKF 22", "area": "EKF", "kind": "Filtro", "source": "notebooks/EKF/22_ekf_s_media_ganancia_azucar_lab016_024.source.ipynb", "executed": "notebooks/EKF/22_ekf_s_media_ganancia_azucar_lab016_024.executed.ipynb", "chem": ["S 17_2"], "gas": ["Gas S"], "summary": "Reduce a la mitad la corrección de S tras el primer agotamiento de YAN, sin umbral.", "parents": ["e21"]}, {"id": "ed", "title": "Diagrama del EKF", "code": "EKF · diagrama", "area": "EKF", "kind": "Figuras", "source": "notebooks/EKF/diagrams/ekf_general_block_diagram.source.ipynb", "executed": "notebooks/EKF/diagrams/ekf_general_block_diagram.executed.ipynb", "chem": [], "gas": [], "summary": "Resume las etapas de predicción y actualización del filtro.", "parents": []}], "calibrations": [{"name": "Theta archivados", "category": "Química", "description": "Vectores históricos theta_full, theta_new y theta_defaults. El primer EKF de LAB019 lleva su propio vector legado congelado.", "origin": "h01", "path": "configs/theta"}, {"name": "theta_nv2", "category": "Química", "description": "Química histórica de cinco estados reajustada con LAB004–009. Se guarda en theta_nv2.json.", "origin": "hn", "path": "configs/theta/theta_nv2.json"}, {"name": "Transportadores", "category": "Química", "description": "Formulaciones con y sin transportadores; ajustes químicos LAB004–009 guardados como fit.json por variante.", "origin": "m03", "path": "configs/models"}, {"name": "David 2012", "category": "Química", "description": "Ajuste independiente del modelo de David, con su propia dinámica de nitrógeno y transportadores.", "origin": "m05", "path": "configs/models/david_2012/fit.json"}, {"name": "G/F 16", "category": "Química", "description": "Química G/F archivada, ajustada con LAB004–009 y escala de biomasa 0,50 g/L. Los coeficientes están congelados en el diagnóstico 16 y el notebook principal 16.", "origin": "d16", "path": ""}, {"name": "G/F 16_2", "category": "Química", "description": "Reajuste G/F en LAB004–009 con σX = max(0,06; 0,08·abs(X observado)). Buscar el bloque PARÁMETROS QUÍMICOS COMPLETOS en el ejecutado.", "origin": "m162", "path": ""}, {"name": "S 17", "category": "Química", "description": "Ajuste de azúcar total en LAB004–009 con Kie₀ fijo. Los coeficientes congelados están en el notebook 17.", "origin": "d17", "path": ""}, {"name": "S 17_2", "category": "Química", "description": "Reajuste S con ponderación histórica de biomasa. Buscar PARÁMETROS S 17_2 en el ejecutado; contiene además la referencia S 17.", "origin": "m172", "path": ""}, {"name": "S 25", "category": "Química", "description": "Dos ajustes S en LAB004–009, con temperatura offline y causal. Buscar TEMPERATURE_FIT_PARAMETERS_JSON en el diagnóstico 25 ejecutado.", "origin": "d25", "path": ""}, {"name": "Histórico v3", "category": "CO₂", "description": "Capa histórica con sus coeficientes archivados y variantes Z1/Z2. El primer EKF de LAB019 conserva su propia variante archivada.", "origin": "hz", "path": "configs/co2_reference_parameters.csv"}, {"name": "Gas comparativo", "category": "CO₂", "description": "Ajustes por formulación y partición, guardados en gas_fit.json por modelo. El 04 v2 explora kLa fijo y ganancia reajustada.", "origin": "m03", "path": "configs/models"}, {"name": "Gas diagnóstico", "category": "CO₂", "description": "Ajustes exploratorios propios de cada diagnóstico. Comparar coeficientes por caso en sus resultados ejecutados.", "origin": "", "path": ""}, {"name": "Gas David", "category": "CO₂", "description": "Extensión de David con reservorio y saturación térmica para la comparación del notebook 06.", "origin": "m06", "path": ""}, {"name": "Gas constante", "category": "CO₂", "description": "Capa de solubilidad constante de los diagnósticos 16/17. kLa 0,07468 h⁻¹ y ganancia 0,63524.", "origin": "d16", "path": ""}, {"name": "Gas G/F", "category": "CO₂", "description": "Solubilidad variable. Pareja de referencia kLa 0,15008 h⁻¹ y ganancia 0,64606, ajustada en LAB019–021 y heredada por G/F 16_2.", "origin": "m16", "path": ""}, {"name": "Gas S", "category": "CO₂", "description": "Solubilidad variable. Pareja de referencia kLa 0,13797 h⁻¹ y ganancia 0,65868, ajustada en LAB019–021 y heredada por S 17_2.", "origin": "m17", "path": ""}], "areaOrder": ["Modelos", "EKF", "Ruido del EKF", "Diagnósticos", "Histórico", "Datos"], "roadmap": {"steps-gf": [["m16", "16 · solubilidad variable"], ["e09", "EKF 09 · covarianza"], ["e13", "EKF 13 · holdout"], ["e16", "EKF 16 · crecimiento"], ["e17", "EKF 17 · YAN"], ["e18", "EKF 18 · G/F 16_2"], ["e21", "EKF 21 · sin umbral"]], "steps-s": [["m17", "17 · azúcar total"], ["m172", "17_2 · peso de X"], ["e19", "EKF 19 · calibraciones"], ["e20", "EKF 20 · Q"], ["e21", "EKF 21 · sin umbral"], ["e22", "EKF 22 · ganancia de S"]]}}
+</script>
+<script>
+const {notebooks, calibrations, areaOrder, roadmap} = JSON.parse(document.getElementById('catalog-data').textContent);
+const byId = new Map(notebooks.map(item => [item.id, item]));
+const byCal = new Map(calibrations.map(item => [item.name, item]));
+const byEl = id => document.getElementById(id);
+const search = byEl('search'), calibration = byEl('calibration'), kind = byEl('kind');
+let area = '';
+let selected = byId.has(location.hash.slice(1)) ? location.hash.slice(1) : 'e22';
+
+function node(tag, text, className) {
+  const el = document.createElement(tag);
+  if (text !== undefined) el.textContent = text;
+  if (className) el.className = className;
+  return el;
+}
+
+function button(text, cls, action) {
+  const el = node('button', text, cls);
+  el.type = 'button';
+  el.addEventListener('click', action);
+  return el;
+}
+
+function link(text, href, cls) {
+  const el = node('a', text, cls);
+  el.href = href;
+  return el;
+}
+
+function showItem(id) {
+  if (!byId.has(id)) return;
+  selected = id;
+  location.hash = id;
+  render();
+  const heading = byEl('detail').querySelector('h3');
+  heading.tabIndex = -1;
+  heading.focus({preventScroll:true});
+  if (matchMedia('(max-width:690px)').matches) heading.scrollIntoView({block:'nearest'});
+}
+
+function normalize(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('₂','2');
+}
+
+for (const category of ['Química','CO₂']) {
+  const group = node('optgroup');
+  group.label = category;
+  for (const item of calibrations.filter(cal => cal.category === category)) {
+    group.append(new Option(item.name, item.name));
+  }
+  calibration.append(group);
+}
+for (const type of [...new Set(notebooks.map(item => item.kind))].sort()) kind.append(new Option(type,type));
+
+const steps = new Map();
+for (const [container, items] of Object.entries(roadmap)) {
+  const mount = byEl(container);
+  for (const [i, [id, label]] of items.entries()) {
+    if (i) {
+      const arrow = node('span','→','bullet');
+      arrow.setAttribute('aria-hidden','true');
+      mount.append(arrow);
+    }
+    const el = button(label,'step', () => showItem(id));
+    el.setAttribute('aria-label', label + ', ' + byId.get(id).title);
+    steps.set(el,id);
+    mount.append(el);
+  }
+}
+const areaButtons = new Map();
+for (const name of ['', ...areaOrder]) {
+  const el = button(name || 'Todos','', () => { area = name; renderList(); });
+  areaButtons.set(name,el);
+  byEl('areas').append(el);
+}
+
+function renderList() {
+  for (const [name, el] of areaButtons) el.setAttribute('aria-pressed', String(name === area));
+  const words = normalize(search.value).trim().split(/\s+/).filter(Boolean);
+  const visible = notebooks.filter(item => {
+    const tags = [...item.chem, ...item.gas];
+    const haystack = normalize([item.title,item.area,item.code,item.source,item.summary,...tags].join(' '));
+    return (!area || area === item.area) && (!kind.value || kind.value === item.kind)
+      && (!calibration.value || tags.includes(calibration.value)) && words.every(word => haystack.includes(word));
+  });
+  byEl('count').textContent = visible.length + ' de ' + notebooks.length + ' notebooks';
+  const entries = byEl('entries');
+  entries.replaceChildren();
+  if (visible.length === 0) entries.append(node('p','No hay resultados para esos filtros.','empty'));
+  for (const item of visible) {
+    const row = button(undefined,'entry', () => showItem(item.id));
+    row.dataset.notebook = item.id;
+    row.setAttribute('aria-current', String(selected === item.id));
+    const description = node('span');
+    description.append(node('strong',item.title),node('small',item.code + ' · ' + item.kind));
+    row.append(description, node('span',item.chem.join(' · ') || '—','chem'), node('span',item.gas.join(' · ') || '—','gas'));
+    entries.append(row);
+  }
+}
+
+function detailSection(title) {
+  const section = node('section');
+  section.append(node('h4',title));
+  return section;
+}
+
+function related(parent, title, items) {
+  if (!items.length) return;
+  const section = detailSection(title);
+  const list = node('div',undefined,'tags');
+  for (const item of items) list.append(button(item.code,'tag',() => showItem(item.id)));
+  section.append(list);
+  parent.append(section);
+}
+
+function renderDetail() {
+  const item = byId.get(selected);
+  const detail = byEl('detail');
+  const actions = node('div',undefined,'links');
+  if (item.executed === item.source) {
+    actions.append(link('Abrir notebook', '../' + item.source,'minor-link primary'));
+  } else {
+    if (item.executed) actions.append(link('Abrir resultados', '../' + item.executed,'minor-link primary'));
+    actions.append(link('Abrir fuente','../' + item.source,'minor-link'));
+  }
+  detail.replaceChildren(node('p',item.code + ' · ' + item.kind,'meta'), node('h3',item.title),
+                         node('p',item.summary),node('p',item.source,'path'),actions);
+  for (const [title,names] of [['Química',item.chem],['Capa de CO₂',item.gas]]) {
+    if (!names.length) continue;
+    const section = detailSection(title);
+    const list = node('ul');
+    for (const name of names) {
+      const cal = byCal.get(name);
+      const line = node('li');
+      line.append(node('strong',name + '. '),document.createTextNode(cal.description + ' '));
+      if (cal.path) line.append(link('Parámetros','../' + cal.path));
+      if (cal.origin && cal.origin !== item.id) {
+        line.append(button('Origen', 'tag', () => showItem(cal.origin)));
+      }
+      line.append(button('Filtrar', 'tag', () => { calibration.value = name; area = ''; search.value = ''; kind.value = ''; renderList(); }));
+      list.append(line);
+    }
+    section.append(list);
+    detail.append(section);
+  }
+  related(detail,'Antecedentes',item.parents.map(id => byId.get(id)));
+  related(detail,'Continúa en',notebooks.filter(other => other.parents.includes(item.id)));
+  if (item.id === 'e22') detail.append(node('p','Recalibrar la cola de S sigue pendiente.','note'));
+}
+
+function render() {
+  for (const [el,id] of steps) el.setAttribute('aria-current',String(id === selected));
+  renderList();
+  renderDetail();
+}
+
+for (const el of [search, calibration, kind]) {
+  el.addEventListener(el === search ? 'input' : 'change', renderList);
+}
+byEl('reset').addEventListener('click', () => {
+  search.value = ''; calibration.value = ''; kind.value = ''; area = ''; renderList(); search.focus();
+});
+window.addEventListener('hashchange', () => {
+  const id = location.hash.slice(1);
+  if (byId.has(id) && selected !== id) { selected = id; render(); }
+});
+render();
+</script>
+</body>
+</html>
