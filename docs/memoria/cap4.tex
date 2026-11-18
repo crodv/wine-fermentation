@@ -1,0 +1,338 @@
+% Fuentes de la calibracion:
+% notebooks/16_2_zenteno_recalibration_legacy_biomass_weight.executed.ipynb
+% notebooks/16_3_zenteno_gf_crecimiento_azucar_disponible.executed.ipynb
+% notebooks/17_2_zenteno_single_sugar_legacy_biomass_weight.executed.ipynb
+% Las ecuaciones omiten las protecciones numericas de 1e-8 en denominadores.
+\renewcommand{\tableshortname}{Tabla}
+\chapter{Estimaci\'on de biomasa y nitr\'ogeno}
+\label{cap:estimacion}
+
+\section{Modelo cin\'etico y din\'amico del biorreactor}
+\label{sec:modelo-biorreactor}
+
+Para estimar la biomasa viable y el nitr\'ogeno asimilable por la
+levadura se adaptan los balances de Zenteno y colaboradores~\cite{zenteno2010}
+a un reactor de un solo compartimento. El modelo G/F considera la
+glucosa y la fructosa por separado. El modelo S las representa mediante
+su suma. En ambos modelos, \(X_v\) es la concentraci\'on de biomasa
+viable, \(N\) la de nitr\'ogeno asimilable, \(G\) la de glucosa, \(F\)
+la de fructosa, \(S=G+F\) la de az\'ucares fermentables y \(E\) la de
+etanol. Las concentraciones se expresan en \(\mathrm{g/L}\), el tiempo
+\(t\) en horas y la temperatura del mosto \(T\) en kelvin. Se utiliza
+el perfil experimental de temperatura como entrada del modelo y se
+considera que el mosto est\'a bien mezclado.
+
+\subsection{Crecimiento, muerte y adici\'on de nitr\'ogeno}
+
+El nitr\'ogeno asimilable limita la tasa espec\'ifica de crecimiento
+\(\mu\). El crecimiento cesa cuando se agotan los az\'ucares
+fermentables. La tasa espec\'ifica de muerte \(k_D\) depende de la
+temperatura y del etanol.
+\begin{align}
+  \mu &=
+    \begin{cases}
+      \mu_{\max}(T)\dfrac{N}{N+K_N(T)}, & S>0,\\
+      0, & S=0,
+    \end{cases}
+    \label{eq:c4-crecimiento}\\
+  k_D &=
+    \begin{cases}
+      k_{D0}\exp\!\left[C_{de}E+
+        \dfrac{E_{td}(T-305{,}65)}{305{,}65\,R\,T}\right], & T\ge T_D,\\
+      0, & T<T_D,
+    \end{cases}
+    \label{eq:c4-muerte}\\
+  T_D &= 315{,}89-0{,}1279 E+0{,}0049 E^2-0{,}0001 E^3 .
+    \label{eq:c4-temperatura-muerte}
+\end{align}
+
+Entre adiciones de nitr\'ogeno, los balances de biomasa y
+nitr\'ogeno asimilable son
+\begin{equation}
+  \frac{dX_v}{dt}=(\mu-k_D)X_v,\qquad
+  \frac{dN}{dt}=-\frac{\mu}{Y_{X/N}}X_v .
+  \label{eq:c4-balances-x-n}
+\end{equation}
+El coeficiente \(Y_{X/N}\) es el rendimiento de biomasa por unidad de
+nitr\'ogeno consumido. Una adici\'on en \(t_i\) se representa por el
+salto \(N(t_i^+)=N(t_i^-)+\Delta N_i\), donde \(\Delta N_i\) es la
+concentraci\'on de nitr\'ogeno aportada. Si una muestra coincide con
+una adici\'on, se utiliza el estado inmediatamente anterior al salto.
+
+\subsection{Modelo G/F}
+
+Las tasas espec\'ificas de producci\'on de etanol a partir de glucosa y
+fructosa son
+\begin{align}
+  \beta_G &=
+    \beta_{G\max}(T)\frac{G}{G+K_G(T)}
+    \frac{K_{IE}(T)}{E+K_{IE}(T)}, \label{eq:c4-beta-g}\\
+  \beta_F &=
+    \beta_{F\max}(T)\frac{F}{F+K_F(T)}
+    \frac{K_{IG}(T)}{G+K_{IG}(T)}
+    \frac{K_{IE}(T)}{E+K_{IE}(T)} . \label{eq:c4-beta-f}
+\end{align}
+El etanol inhibe el consumo de ambos az\'ucares. La glucosa, adem\'as,
+inhibe el consumo de fructosa. Los balances de az\'ucar incluyen el
+consumo para el crecimiento, la producci\'on de etanol y el
+mantenimiento celular.
+\begin{align}
+  \frac{dG}{dt} &=
+    -X_v\left[\frac{\mu}{Y_{X/G}}+\frac{\beta_G}{Y_{E/G}}
+               +m(T)\frac{G}{G+F+K_m}\right], \qquad G>0,
+    \label{eq:c4-balance-g}\\
+  \frac{dF}{dt} &=
+    -X_v\left[\frac{\mu}{Y_{X/F}}+\frac{\beta_F}{Y_{E/F}}
+               +m(T)\frac{F}{G+F+K_m}\right], \qquad F>0,
+    \label{eq:c4-balance-f}\\
+  \frac{dE}{dt} &= (\beta_G+\beta_F)X_v .
+    \label{eq:c4-balance-e-gf}
+\end{align}
+El t\'ermino \(K_m=1\,\mathrm{g/L}\) aten\'ua el consumo de az\'ucar
+por mantenimiento cerca del agotamiento. Al agotarse un az\'ucar, su
+concentraci\'on queda en cero. El crecimiento y la captaci\'on de
+nitr\'ogeno pueden continuar mientras quede glucosa o fructosa.
+
+\subsection{Modelo S}
+
+El modelo S conserva los balances de \(X_v\) y \(N\) de la
+ecuaci\'on~\eqref{eq:c4-balances-x-n} y utiliza una sola tasa
+espec\'ifica de producci\'on de etanol.
+\begin{align}
+  \beta_S &=
+    \beta_{S\max}(T)\frac{S}{S+K_S(T)}
+    \frac{K_{IE}(T)}{E+K_{IE}(T)}, \label{eq:c4-beta-s}\\
+  \frac{dS}{dt} &=
+    -X_v\left[\frac{\mu}{Y_{X/S}}+\frac{\beta_S}{Y_{E/S}}
+               +m(T)\frac{S}{S+K_m}\right], \label{eq:c4-balance-s}\\
+  \frac{dE}{dt} &= \beta_S X_v .
+    \label{eq:c4-balance-e-s}
+\end{align}
+El rendimiento \(Y_{X/S}\) se obtiene al sumar los consumos de glucosa
+y fructosa asociados al crecimiento cuando ambos az\'ucares est\'an
+presentes.
+\begin{equation}
+  \frac{1}{Y_{X/S}}=\frac{1}{Y_{X/G}}+\frac{1}{Y_{X/F}} .
+  \label{eq:c4-rendimiento-s}
+\end{equation}
+
+\subsection{Dependencia con la temperatura}
+
+Se emplea la forma de Arrhenius utilizada por Zenteno y
+colaboradores~\cite{zenteno2010}. Para cada par\'ametro \(p\) de la
+Tabla~\ref{tab:c4-dependencia-termica}, \(p_0\) es su valor a la
+temperatura de referencia \(T^*\) y \(E_a\) es la energ\'ia de activaci\'on.
+\begin{equation}
+  p(T)=p_0\exp\!\left[\frac{E_a(T-T^*)}{T^*RT}\right].
+  \label{eq:c4-arrhenius}
+\end{equation}
+La constante de los gases es \(R=8{,}314\,\mathrm{kJ/(kmol\,K)}\).
+Para la mortalidad se utiliza \(E_{td}=130\,000\,\mathrm{kJ/kmol}\) y
+\(C_{de}=0{,}0415\,\mathrm{L/g}\) de etanol, con el umbral \(T_D\)
+de la ecuaci\'on~\eqref{eq:c4-temperatura-muerte}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Constantes para la dependencia t\'ermica de la cin\'etica.}
+  \label{tab:c4-dependencia-termica}
+  \begin{tabular}{lcc}
+    \hline
+    Par\'ametro \(p\) & \(T^*\) [K] & \(E_a\) [kJ/kmol] \\
+    \hline
+    \(\mu_{\max}\) & \(300\) & \(59\,453\) \\
+    \(\beta_{G\max},\ \beta_{F\max},\ \beta_{S\max}\)
+      & \(296{,}15\) & \(11\,000\) \\
+    \(K_N,\ K_G,\ K_F,\ K_S,\ K_{IG},\ K_{IE}\)
+      & \(293{,}15\) & \(46\,055\) \\
+    \(m\) & \(293{,}3\) & \(37\,681\) \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Producci\'on y liberaci\'on de di\'oxido de carbono}
+
+La producci\'on de di\'oxido de carbono incluye un aporte del
+crecimiento y otro de la formaci\'on de etanol, como en Zenteno y
+colaboradores~\cite{zenteno2010}. Se aplica un factor de activaci\'on \(A\)
+en funci\'on del az\'ucar consumido \(\Delta S=S(0)-S(t)\).
+\begin{equation}
+  q_{\mathrm{prod}}=A X_v\left(\frac{\mu}{Y_{X/\mathrm{CO_2}}}
+                         +\frac{\beta}{Y_{E/\mathrm{CO_2}}}\right),
+  \qquad \beta=
+  \begin{cases}
+    \beta_G+\beta_F, & \text{modelo G/F},\\
+    \beta_S, & \text{modelo S}.
+  \end{cases}
+  \label{eq:c4-co2-produccion}
+\end{equation}
+Los rendimientos \(Y_{X/\mathrm{CO_2}}\) y \(Y_{E/\mathrm{CO_2}}\)
+son \(12{,}72\,\mathrm{g\,X/g\,CO_2}\) y
+\(1{,}05\,\mathrm{g\,E/g\,CO_2}\), respectivamente. \(A\) vale cero
+hasta un consumo de \(5\,\mathrm{g/L}\) y uno desde
+\(10\,\mathrm{g/L}\). Entre ambos valores,
+\(A=z^2(3-2z)\) con \(z=(\Delta S-5)/5\), al expresar
+\(\Delta S\) en \(\mathrm{g/L}\).
+
+El balance de di\'oxido de carbono disuelto \(C_d\) limita la
+absorci\'on a la producci\'on disponible y permite la desorci\'on
+cuando \(C_d>C_{\mathrm{sat}}\). Se parte de \(C_d(0)=0\).
+\begin{align}
+  \frac{dC_d}{dt}
+    &= \min\!\left(q_{\mathrm{prod}},\,k_La\max(C_{\mathrm{sat}}-C_d,0)\right)
+       -k_La\max(C_d-C_{\mathrm{sat}},0), \label{eq:c4-co2-disuelto}\\
+  q_{\mathrm{gas}} &= q_{\mathrm{prod}}-\frac{dC_d}{dt}, \qquad
+  q_{\mathrm{mod}} = g_{\mathrm{CO_2}}\,q_{\mathrm{gas}} .
+    \label{eq:c4-co2-flujo}
+\end{align}
+Las tasas \(q\) se expresan por unidad de volumen de mosto, en
+\(\mathrm{g\,CO_2/(L\,h)}\). \(k_La\) es el coeficiente efectivo de
+transferencia y \(g_{\mathrm{CO_2}}\) es la ganancia adimensional de la
+salida del modelo.
+
+La concentraci\'on de saturaci\'on se calcula con la correlaci\'on de
+Lonvaud-Funel y Matsumoto, reproducida por Liger-Belair y
+colaboradores~\cite{ligerbelair2023}.
+\begin{equation}
+  C_{\mathrm{sat}}
+  =3{,}295\,p_{\mathrm{CO_2}}\,
+    \exp\!\left[(7\times10^{-5}a-0{,}02905)T_C
+                  -0{,}0179a-0{,}00111S\right].
+  \label{eq:c4-solubilidad}
+\end{equation}
+En esta correlaci\'on \(C_{\mathrm{sat}}\) queda en \(\mathrm{g/L}\)
+al usar \(T_C=T-273{,}15\) en grados Celsius, \(a=E/7{,}8924\)
+en porcentaje de etanol en volumen, \(S\) en \(\mathrm{g/L}\) y
+\(p_{\mathrm{CO_2}}\) en bar. Se adopt\'o una presi\'on parcial de
+\(1\,\mathrm{bar}\) y se aplic\'o la correlaci\'on de vino al mosto
+en fermentaci\'on.
+
+\subsection{Calibraci\'on}
+
+Se calibraron ambos modelos con LAB004--LAB009 mediante m\'inimos
+cuadrados ponderados, con cotas y dos puntos de partida. Se utilizaron
+las observaciones posteriores al inicio y se conservaron las condiciones
+iniciales corregidas, las temperaturas y las adiciones de nitr\'ogeno.
+Para S se sumaron las mediciones simult\'aneas de glucosa y fructosa.
+
+Cada residuo se dividi\'o por la escala de su variable. Para la
+biomasa se utiliz\'o
+\(\sigma_X=\max(0{,}06,\ 0{,}08|X_{v,\mathrm{obs}}|)\),
+con la concentraci\'on y su escala en \(\mathrm{g/L}\). La escala de
+az\'ucar total se obtuvo como \(\sqrt{\sigma_G^2+\sigma_F^2}\).
+Para el nitr\'ogeno se utiliz\'o el mayor valor entre
+\(0{,}012\,\mathrm{g\,N/L}\) y el \(8\) por ciento de la concentraci\'on
+observada. Para glucosa y fructosa se utiliz\'o el mayor valor entre
+\(2{,}5\,\mathrm{g/L}\) y el \(2{,}5\) por ciento de la concentraci\'on
+observada. Para el etanol se utiliz\'o el mayor valor entre
+\(2\,\mathrm{g/L}\) y el \(2{,}5\) por ciento de la concentraci\'on
+observada.
+En las muestras empleadas para el ajuste, las lecturas de
+nitr\'ogeno asimilable de hasta \(20\,\mathrm{mg\,N/L}\) se
+llevaron a cero y se excluyeron las observaciones tomadas m\'as de
+12 horas despu\'es del agotamiento de nitr\'ogeno. En LAB006 se
+fij\'o en cero la observaci\'on de las 122 horas y se aplic\'o
+el corte despu\'es de las 134 horas. Se conserv\'o la
+concentraci\'on inicial de nitr\'ogeno de cada lote.
+
+Para G/F se conservaron los ocho par\'ametros obtenidos en el ajuste
+previo, en el que el crecimiento se suspend\'ia al agotarse el
+primero de los dos az\'ucares. Con esos valores se simul\'o la
+regla de crecimiento de la ecuaci\'on~\eqref{eq:c4-crecimiento}.
+El promedio de los cuadrados de los residuos ponderados en los
+lotes de calibraci\'on fue \(4{,}7155\) para ambas reglas. En el
+modelo S se ajustaron cinco par\'ametros y se obtuvo un promedio
+de \(5{,}4510\) para las variables \(X_v\), \(N\), \(S\) y \(E\).
+
+Las Tablas~\ref{tab:c4-parametros-gf} y \ref{tab:c4-parametros-s}
+presentan los valores utilizados. Se fij\'o \(K_{N0}\) para obtener
+\(K_N(296{,}15\,\mathrm{K})=0{,}010\,\mathrm{g\,N/L}\), seg\'un
+Zenteno y colaboradores~\cite{zenteno2010}. El valor de \(K_{IE0}\) para S
+procede de una calibraci\'on anterior de G/F. Los par\'ametros de
+la salida de di\'oxido de carbono se conservaron de los ajustes
+previos en LAB019--LAB021.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Par\'ametros del modelo G/F.}
+  \label{tab:c4-parametros-gf}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{4.3cm}clr@{}}
+    \hline
+    S\'imbolo & Descripci\'on & Unidad & Origen & Valor \\
+    \hline
+    \(\mu_0\) & Tasa espec\'ifica m\'axima de crecimiento & \(\mathrm{h^{-1}}\)
+      & Ajustado & \(0{,}086722\) \\
+    \(\beta_{G0}\) & Tasa espec\'ifica m\'axima de producci\'on de etanol a partir de glucosa
+      & \(\mathrm{g\,E/(g\,X\,h)}\) & Ajustado & \(0{,}428291\) \\
+    \(\beta_{F0}\) & Tasa espec\'ifica m\'axima de producci\'on de etanol a partir de fructosa
+      & \(\mathrm{g\,E/(g\,X\,h)}\) & Ajustado & \(0{,}593521\) \\
+    \(K_{N0}\) & Constante de saturaci\'on de nitr\'ogeno & \(\mathrm{g\,N/L}\)
+      & Fijo & \(0{,}008258\) \\
+    \(K_{G0}\) & Constante de saturaci\'on de glucosa & \(\mathrm{g\,G/L}\)
+      & Fijo & \(4{,}400775\) \\
+    \(K_{F0}\) & Constante de saturaci\'on de fructosa & \(\mathrm{g\,F/L}\)
+      & Fijo & \(19{,}296084\) \\
+    \(K_{IG0}\) & Constante de inhibici\'on por glucosa & \(\mathrm{g\,G/L}\)
+      & Ajustado & \(80{,}490799\) \\
+    \(K_{IE0}\) & Constante de inhibici\'on por etanol & \(\mathrm{g\,E/L}\)
+      & Ajustado & \(168{,}120412\) \\
+    \(k_{D0}\) & Tasa espec\'ifica de muerte & \(\mathrm{h^{-1}}\)
+      & Fijo & \(0{,}000440\) \\
+    \(Y_{X/N}\) & Rendimiento de biomasa por nitr\'ogeno & \(\mathrm{g\,X/g\,N}\)
+      & Ajustado & \(5{,}272368\) \\
+    \(Y_{X/G}\) & Rendimiento de biomasa por glucosa & \(\mathrm{g\,X/g\,G}\)
+      & Fijo & \(0{,}966094\) \\
+    \(Y_{X/F}\) & Rendimiento de biomasa por fructosa & \(\mathrm{g\,X/g\,F}\)
+      & Fijo & \(1{,}109896\) \\
+    \(Y_{E/G}\) & Rendimiento de etanol por glucosa & \(\mathrm{g\,E/g\,G}\)
+      & Ajustado & \(0{,}459547\) \\
+    \(Y_{E/F}\) & Rendimiento de etanol por fructosa & \(\mathrm{g\,E/g\,F}\)
+      & Ajustado & \(0{,}510598\) \\
+    \(m_0\) & Coeficiente de mantenimiento & \(\mathrm{g\,S/(g\,X\,h)}\)
+      & Fijo & \(0{,}018339\) \\
+    \(k_La\) & Transferencia de di\'oxido de carbono
+      & \(\mathrm{h^{-1}}\) & Ajuste previo & \(0{,}150080\) \\
+    \(g_{\mathrm{CO_2}}\) & Ganancia de la salida de di\'oxido de carbono
+      & Adimensional & Ajuste previo & \(0{,}646064\) \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Par\'ametros del modelo S.}
+  \label{tab:c4-parametros-s}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{4.3cm}clr@{}}
+    \hline
+    S\'imbolo & Descripci\'on & Unidad & Origen & Valor \\
+    \hline
+    \(\mu_0\) & Tasa espec\'ifica m\'axima de crecimiento & \(\mathrm{h^{-1}}\)
+      & Ajustado & \(0{,}085183\) \\
+    \(\beta_{S0}\) & Tasa espec\'ifica m\'axima de producci\'on de etanol a partir de az\'ucar total
+      & \(\mathrm{g\,E/(g\,X\,h)}\) & Ajustado & \(0{,}899043\) \\
+    \(K_{N0}\) & Constante de saturaci\'on de nitr\'ogeno & \(\mathrm{g\,N/L}\)
+      & Fijo & \(0{,}008258\) \\
+    \(K_{S0}\) & Constante de saturaci\'on de az\'ucar total & \(\mathrm{g\,S/L}\)
+      & Ajustado & \(18{,}439784\) \\
+    \(K_{IE0}\) & Constante de inhibici\'on por etanol & \(\mathrm{g\,E/L}\)
+      & Fijo & \(96{,}265166\) \\
+    \(k_{D0}\) & Tasa espec\'ifica de muerte & \(\mathrm{h^{-1}}\)
+      & Fijo & \(0{,}000440\) \\
+    \(Y_{X/N}\) & Rendimiento de biomasa por nitr\'ogeno & \(\mathrm{g\,X/g\,N}\)
+      & Ajustado & \(5{,}316422\) \\
+    \(Y_{X/S}\) & Rendimiento de biomasa por az\'ucar total & \(\mathrm{g\,X/g\,S}\)
+      & Calculado & \(0{,}516507\) \\
+    \(Y_{E/S}\) & Rendimiento de etanol por az\'ucar total & \(\mathrm{g\,E/g\,S}\)
+      & Ajustado & \(0{,}484283\) \\
+    \(m_0\) & Coeficiente de mantenimiento & \(\mathrm{g\,S/(g\,X\,h)}\)
+      & Fijo & \(0{,}018339\) \\
+    \(k_La\) & Transferencia de di\'oxido de carbono
+      & \(\mathrm{h^{-1}}\) & Ajuste previo & \(0{,}137966\) \\
+    \(g_{\mathrm{CO_2}}\) & Ganancia de la salida de di\'oxido de carbono
+      & Adimensional & Ajuste previo & \(0{,}658678\) \\
+    \hline
+  \end{tabular}
+\end{table}
